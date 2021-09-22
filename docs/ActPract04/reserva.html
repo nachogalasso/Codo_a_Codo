@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/docs/ActPract04/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Oxygen:wght@300;700&display=swap" rel="stylesheet">
+    <title>La cocina de Juan</title>
+</head>
+<body>
+
+    <!-- HEADER START -->
+    <header class="main__header">
+
+        <!-- BARS MOBILE MENU -->
+        <div class="toggle-menu" id="toggle-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav__main">
+
+            <!-- BUTTONS OTHER PAGES -->
+            <ul class="nav__main-list" id="main-menu">
+                <li class="list-item hover"><a href="/docs/ActPract04/index_ac4.html">Home</a></li>
+                <li class="list-item hover"><a href="#">Reservas</a></li>
+                <li class="list-item hover"><a href="/docs/ActPract04/takeaway.html">Take Away</a></li>
+                <li class="list-item hover"><a href="#">Sucursales</a></li>
+            </ul>
+        </nav>
+
+        <!-- TITLE -->
+        <h1 class="main__title">La Cocina de Juan</h1>
+
+        <!-- LOGO -->
+        <figure class="logo" id="logo">
+            <img src="/docs/ActPract04/assets/kitchen_logo2.webp" alt="Juan´s_Logo">
+        </figure>
+    </header>
+    
+    <!-- HEADER END -->
+
+    <!-- MAIN RESERVATION START -->
+
+    <main class="main__section">
+        <h2 class="main__section-title">Reservas</h2>
+        <section class="main__section-about">
+            <form action="" class="reservation__form" autocomplete="off">
+            
+                <label for="diners">Comensales</label>
+                <input type="number" id="diners" name="diners" min="1" max="8" autofocus class="lot">
+                <label for="date">Fecha</label>
+                <input type="date" id="date" name="date" class="size">
+                <div class="meal">
+                    <label for="lunch">Almuerzo</label>
+                    <input type="radio" id="lunch" name="tuck" value="lunch" class="size">
+                    <label for="dinner">Cena</label>
+                    <input type="radio" name="tuck" id="dinner" value="dinner" class="size">
+                </div>
+                <div class="meal-times">
+                    <div class="lunch_time" id="lunch_time">
+                        <label for="time">Hora</label>
+                        <input type="time" id="time" name="time" title="entre las 10:45 a 14:00" class="size">
+                    </div>
+                    <div class="dinner_time" id="dinner_time">
+                        <label for="time">Hora</label>
+                        <input type="time" id="time" name="time" min="19:45:00" max="23:30:00" title="entre las 19:45 a 23:30" class="size">
+                    </div>
+                </div>
+                <label for="phone">Teléfono:</label>
+                <input type="tel" name="phone" id="phone" placeholder="1234-5678" title="Recuerde anteponer el nro de área sin espacios" required class="size">
+                <label for="">Información Adicional:</label>
+                <textarea name="suggestions" id="suggestions" cols="30" rows="10" placeholder="Any ons you want to add?"></textarea>
+                <input type="submit" value="Enviar" class="submit-btn">
+            </form>
+        </section>
+
+    </main>
+
+    <!-- MAIN RESERVATION END -->
+
+    <!-- FOOTER START -->
+
+    <footer class="footer">
+
+        <!-- SOCIAL MEDIA BUTTONS -->
+        <ul class="footer__list">
+            <li class="footer__list-item"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+            <li class="footer__list-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="footer__list-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li class="footer__list-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <p class="footer__text">Derechos Reservados &trade; 2021</p>
+    </footer>
+
+    <!-- FOOTER END -->
+
+    <script src="/docs/ActPract04/ac4_js.js"></script>
+</body>
+</html>
