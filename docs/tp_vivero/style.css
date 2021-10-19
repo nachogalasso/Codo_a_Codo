@@ -67,6 +67,10 @@ img {
     width: 7rem;
 }
 
+.logo img {
+    filter: drop-shadow(.1rem .3rem 2rem var(--lightgreen));
+}
+
 .logo-nav {
     display: none;
 }
@@ -400,6 +404,162 @@ img {
         font-size: 2rem;
     }
 
+}
+
+/* =============
+    5. GALLERY
+   ============= */
+
+.gallery__container,
+.card-info {  
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5rem;
+}
+
+.gallery__container {
+    background-color: var(--lightgreen);
+}
+
+.aside-category {
+    padding: 1rem;
+    border-bottom: .1rem solid var(--darkred);
+}
+
+.aside-category h3 {
+    font-size: 1.6rem;
+    font-family: var(--title);
+    margin: 0;
+    color: var(--darkred)
+}
+
+.aside-category ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin: 0;
+    padding: 0;
+}
+
+.aside-listitem {
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: var(--text);
+    padding: 0.5rem 1rem;
+    color: var(--darkred);
+    cursor: pointer;
+}
+
+.aside-listitem:hover {
+    background-color: var(--darkred);
+    color: var(--lightgreen);
+    border-radius: .5rem;
+}
+
+.gallery__products-seeds,
+.gallery__products-seedlings,
+.gallery__products-subtrates,
+.gallery__products-utensils {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery__products {
+    margin: 1rem auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    transition: .3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 1.4rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+.card-info h3,
+.card-info p {
+    align-self: center;
+    color: var(--darkred);
+}
+
+.card-info h3 {
+    font-size: 1.6rem;
+    font-variant: small-caps;
+    font-family: var(--title);
+    margin: .5rem 0 1rem;
+}
+
+.card-info p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: var(--text);
+    margin: 0 0 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .gallery__container {
+        display: grid;
+        grid-template-columns: 15rem 1fr;
+    }
+
+    .aside-category {
+        position: sticky;
+        top: 18.5%;
+    }
+
+    .aside-category h3 {
+        font-size: 2rem;
+    }
+
+    .aside-category ul {
+        flex-direction: column;
+    }
+
+    .aside-listitem {
+        padding-left: 1rem;
+        margin-top: .5rem;
+        font-size: 1.5rem;
+    }
+
+    .gallery__products-seeds,
+    .gallery__products-seedlings,
+    .gallery__products-subtrates,
+    .gallery__products-utensils {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 0 0 calc(38% - 1rem);
+    }
+
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .card {
+        flex: 0 0 calc(25% - 1rem);
+    }
+
+    .card-info p {
+        font-size: 1.6rem;
+    }
 }
 
 /* =============
