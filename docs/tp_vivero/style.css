@@ -64,8 +64,11 @@ img {
 .logo {
     display: flex;
     margin: 0;
-    padding: .5rem;
-    width: 10rem;
+    width: 7rem;
+}
+
+.logo img {
+    filter: drop-shadow(.1rem .3rem 2rem var(--lightgreen));
 }
 
 .logo-nav {
@@ -146,6 +149,7 @@ img {
     .logo {
         order: 1;
         margin: .5rem 1rem;
+        width: 8rem;
     }
 }
 
@@ -205,7 +209,6 @@ img {
 
 .slide {
     border-radius: 1rem;
-    box-shadow: -.2rem .2rem 3rem black;
 }
 
 /* SLIDE EFECT */
@@ -404,6 +407,162 @@ img {
 }
 
 /* =============
+    5. GALLERY
+   ============= */
+
+.gallery__container,
+.card-info {  
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5rem;
+}
+
+.gallery__container {
+    background-color: var(--lightgreen);
+}
+
+.aside-category {
+    padding: 1rem;
+    border-bottom: .1rem solid var(--darkred);
+}
+
+.aside-category h3 {
+    font-size: 1.6rem;
+    font-family: var(--title);
+    margin: 0;
+    color: var(--darkred)
+}
+
+.aside-category ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin: 0;
+    padding: 0;
+}
+
+.aside-listitem {
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: var(--text);
+    padding: 0.5rem 1rem;
+    color: var(--darkred);
+    cursor: pointer;
+}
+
+.aside-listitem:hover {
+    background-color: var(--darkred);
+    color: var(--lightgreen);
+    border-radius: .5rem;
+}
+
+.gallery__products-seeds,
+.gallery__products-seedlings,
+.gallery__products-subtrates,
+.gallery__products-utensils {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery__products {
+    margin: 1rem auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    transition: .3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 1.4rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+.card-info h3,
+.card-info p {
+    align-self: center;
+    color: var(--darkred);
+}
+
+.card-info h3 {
+    font-size: 1.6rem;
+    font-variant: small-caps;
+    font-family: var(--title);
+    margin: .5rem 0 1rem;
+}
+
+.card-info p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: var(--text);
+    margin: 0 0 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .gallery__container {
+        display: grid;
+        grid-template-columns: 15rem 1fr;
+    }
+
+    .aside-category {
+        position: sticky;
+        top: 18.5%;
+    }
+
+    .aside-category h3 {
+        font-size: 2rem;
+    }
+
+    .aside-category ul {
+        flex-direction: column;
+    }
+
+    .aside-listitem {
+        padding-left: 1rem;
+        margin-top: .5rem;
+        font-size: 1.5rem;
+    }
+
+    .gallery__products-seeds,
+    .gallery__products-seedlings,
+    .gallery__products-subtrates,
+    .gallery__products-utensils {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 0 0 calc(38% - 1rem);
+    }
+
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .card {
+        flex: 0 0 calc(25% - 1rem);
+    }
+
+    .card-info p {
+        font-size: 1.6rem;
+    }
+}
+
+/* =============
     5. CONTACT
    ============= */
 
@@ -411,7 +570,8 @@ img {
     grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    background-color: var(--lightgreen);
 }
 
 .contact-logo {
@@ -419,12 +579,26 @@ img {
 }
 
 .form {
-    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0 5rem;
+    padding: 2rem;
+    border: .1rem solid black;
+    border-radius: .5rem;
+    background-color: rgba(0, 179, 0, 0.3);
+    border-top: 0.1rem solid rgba(0, 179, 0, 0.5);
+    border-left: 0.1rem solid rgba(0, 179, 0, 0.3);
+    border-right: 0.1rem solid rgba(0, 179, 0, 0.3);
+    border-bottom: 0.1rem solid rgba(0, 179, 0, 0.2);
+    backdrop-filter: blur(2.2rem);
+    box-shadow: 0 2.6rem 2.4rem rgba(0, 0, 0, 0.2);
 }
 
 .data {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .data legend {
@@ -432,7 +606,8 @@ img {
     font-size: 2rem;
 }
 
-.data label {
+.data label,
+.data p {
     font-size: 1.5rem;
     font-family: var(--text);
 }
@@ -445,4 +620,62 @@ img {
     outline: none;
     border: none;
     border-bottom: .1rem solid black;
+    background-color: rgba(0, 179, 0, 0.1);
+}
+
+.data input:focus, 
+.data textarea:focus {
+    background-color: rgba(125, 0, 0, 0.4);
+}
+
+.data textarea {
+    resize: none;
+    margin-bottom: .8rem;
+    padding: .5rem;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-opt {
+    display: none;
+}
+
+.form-btn {
+    align-self: flex-end;
+    margin-right: 2rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--darkgreen);
+    color: var(--lightgreen);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.form-btn:hover {
+    background-color: var(--darkred);
+}
+
+.form-btn:active {
+    transform: scale(0.9, 0.9);
+    background-color: var(--darkred);
+    color: var(--green);
+}
+
+@media screen and (min-width: 768px) {
+    .form {
+        width: 65rem;
+    }
+
+    .data label, 
+    .data input, 
+    .data p,
+    .form-btn {
+        font-size: 1.8rem;
+    }
+
+
 }
