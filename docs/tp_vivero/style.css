@@ -16,6 +16,7 @@
 html {
     font-size: 62.5%; 
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -50,7 +51,7 @@ img {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     background-color: var(--darkgreen);
     box-shadow: .2rem 0 3rem rgba(0,0,0,0.8);
 }
@@ -195,6 +196,20 @@ img {
     padding: 0 1.5rem;
 }
 
+.loader {
+    border: .1rem solid  var(--green);
+    border-top: .1rem solid var(--darkred);
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
 .box {
     margin: 0;
 }
@@ -290,7 +305,66 @@ img {
 
 }
 
+.parallax {
+    background-image: url('/docs/tp_vivero/assets/aguacate.webp');
+    width: 100%;
+    min-height: 30rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* TIP´S SECTION */
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.progressbar-container {
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    z-index: 3;
+}
+
+.progressbar {
+    height: 100%;
+    background-color: rgba(228, 69, 69, 0.7);
+    border-radius: 0 .3rem .3rem 0;
+    transition: width 0.8s;
+}
+
+.slideshow {
+    position: relative;
+    z-index: 1;
+    height: 50rem;
+}
+
+.slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+#img2 {
+    left: 100%;
+}
+
+.active {
+    left: 0;
+}
+
+.indicadores {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 2rem;
+    z-index: 2;
+}
+
 .main__section-steps {
     padding: 0 1.5rem;
     margin-bottom: 1.5rem;

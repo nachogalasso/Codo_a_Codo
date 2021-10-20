@@ -1,4 +1,9 @@
 /* Let´s bring the elements */
+/* NAVBAR ELEMENTS */
+const navList = document.getElementById('nav-list');
+const iconMenu = document.getElementById('toggle-menu');
+const mainLogo = document.getElementById('main-logo');
+
 /* FORM ELEMENTS */
 const formValidate = document.getElementById('contact-form');
 const vBtn = document.getElementById('submitBtn');
@@ -8,6 +13,12 @@ const vPhone = document.getElementById('phone');
 const phoneBtn = document.getElementById('phoneradio');
 const phoneOpt = document.getElementById('phoneopt');
 const emailBtn = document.getElementById('emailradio');
+
+/* Navbar EVENT */
+iconMenu.addEventListener('click', () => {
+    mainLogo.classList.toggle('logo-nav');
+    navList.classList.toggle('nav-list-show');
+});
 
 /* Phone Option */
 emailBtn.addEventListener('click', () => {
