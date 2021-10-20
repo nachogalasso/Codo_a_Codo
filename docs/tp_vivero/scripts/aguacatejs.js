@@ -4,27 +4,6 @@ const navList = document.getElementById('nav-list');
 const iconMenu = document.getElementById('toggle-menu');
 const mainLogo = document.getElementById('main-logo');
 
-/* GALLERY ELEMENTS */
-const seeds = document.getElementById('seeds');
-const seedlings = document.getElementById('seedlings');
-const subtrates = document.getElementById('subtrates');
-const utensils = document.getElementById('utensils');
-const viewSeeds = document.querySelector('.seeds');
-const viewSeedlings = document.querySelector('.seedlings');
-const viewSubtrates = document.querySelector('.subtrates');
-const viewUtensils = document.querySelector('.utensils');
-const viewAll = document.querySelector('.all');
-
-/* FORM ELEMENTS */
-const formValidate = document.getElementById('contact-form');
-const vBtn = document.getElementById('submitBtn');
-const vName = document.getElementById('name');
-const vEmail = document.getElementById('email');
-const vPhone = document.getElementById('phone');
-const phoneBtn = document.getElementById('phoneradio');
-const phoneOpt = document.getElementById('phoneopt');
-const emailBtn = document.getElementById('emailradio');
-
 /* Navbar EVENT */
 iconMenu.addEventListener('click', () => {
     mainLogo.classList.toggle('logo-nav');
@@ -32,18 +11,20 @@ iconMenu.addEventListener('click', () => {
 });
 
 /* CAROUSEL IMAGES */
-// const carousel = document.querySelectorAll('.slide-container .slider');
-// const nextImageDelay = 4000;
-// let slideIndex = 0;
-// // carousel[slideIndex].classList.toggle('show'); // setInverval(nextImage, nextImageDelay);
+const carousel = document.querySelectorAll('.slide-container .slider');
+const load = document.querySelector('.loader');
+const nextImageDelay = 4000;
+let slideIndex = 0;
+// carousel[slideIndex].classList.toggle('show'); // setInverval(nextImage, nextImageDelay);
 
-// /* Carousel images */
-// setInterval(() => {
-//     carousel[slideIndex].classList.remove('show');
-//     slideIndex = (slideIndex + 1) % carousel.length;
-//     carousel[slideIndex].classList.toggle('show');
+/* Carousel images */
+setInterval(() => {
+    load.classList.add('section-photo');
+    carousel[slideIndex].classList.remove('show');
+    slideIndex = (slideIndex + 1) % carousel.length;
+    carousel[slideIndex].classList.toggle('show');
     
-// }, nextImageDelay);
+}, nextImageDelay);
 
 
 /* Gallery display */

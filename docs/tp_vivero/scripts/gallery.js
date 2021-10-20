@@ -1,4 +1,9 @@
 /* Let´s bring the elements */
+/* NAVBAR ELEMENTS */
+const navList = document.getElementById('nav-list');
+const iconMenu = document.getElementById('toggle-menu');
+const mainLogo = document.getElementById('main-logo');
+
 /* GALLERY ELEMENTS */
 const seeds = document.getElementById('seeds');
 const seedlings = document.getElementById('seedlings');
@@ -9,6 +14,12 @@ const viewSeedlings = document.querySelector('.seedlings');
 const viewSubtrates = document.querySelector('.subtrates');
 const viewUtensils = document.querySelector('.utensils');
 const viewAll = document.querySelector('.all');
+
+/* Navbar EVENT */
+iconMenu.addEventListener('click', () => {
+    mainLogo.classList.toggle('logo-nav');
+    navList.classList.toggle('nav-list-show');
+});
 
 /* Gallery display */
 viewSeeds.addEventListener('click', () => {
