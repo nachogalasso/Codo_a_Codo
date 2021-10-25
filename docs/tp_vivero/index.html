@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vivero, con una basta experiencia es el manejo de huertas de hogar. Ponemos nuestro conocimiento a su servicio para que pueda desarrollar su propia huerta y disfrutar los productos de su cosecha">
+    <meta name="keywords" content="Vivero, Huerta, Orgánico, Aguacate, Venta, Plantas">
+    <meta name="author" content="Galasso, Ignacio">
     <link rel="stylesheet" href="/docs/tp_vivero/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,17 +32,21 @@
     <meta property="og-title" content="Vivero Aguacate (TP - Codo a Codo)" />
     <meta property="og-type" content="website" />
     <meta property="og-url" content="https://myportfoliogalasso.vercel.app/" />
-    <meta property="og-image" content="/assets/aguacate.webp" />
-    <meta property="og-description" content="Somos un vivero, nuestra experiencia es el manejo de huertas de hogar.Ponemos nuestro conocimiento a su servicio para que pueda desarrollar su propia huerta y disfrutar de su cosecha" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og-image" content="\Codo_a_Codo\docs\tp_vivero\assets\aguacate.webp" />
+    <meta property="og-description" content="Somos un vivero, con una basta experiencia es el manejo de huertas de hogar.Ponemos nuestro conocimiento a su servicio para que pueda desarrollar su propia huerta y disfrutar los productos de su cosecha" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@galasso22">
     <meta name="twitter:title" content="Vivero Aguacate (TP - Codo a Codo)" />
-    <meta name="twitter:description" content="Somos un vivero, nuestra experiencia es el manejo de huertas de hogar.Ponemos nuestro conocimiento a su servicio para que pueda desarrollar su propia huerta y disfrutar de su cosecha" />
-    <meta name="twitter:image" content="/assets/aguacate.webp" />
-    <title>TP - Vivero Aguacate</title>
+    <meta name="twitter:description" content="Somos un vivero, con una basta experiencia es el manejo de huertas de hogar.Ponemos nuestro conocimiento a su servicio para que pueda desarrollar su propia huerta y disfrutar los productos de su cosecha" />
+    <meta name="twitter:image" content="\Codo_a_Codo\docs\tp_vivero\assets\aguacate.webp" />
+    <title>Vivero Aguacate - Home - (TP Codo a Codo)</title>
 </head>
+
 <body>
+
     <!-- HEADER START -->
     <header class="header-sticky">
+        <!-- NAVBAR START -->
         <nav class="main__nav">
             <figure class="logo" id="main-logo">
                 <img src="/docs/tp_vivero/assets/ab_logo3.webp" alt="Logo_Aguacate_Vivero">
@@ -50,6 +57,8 @@
                 <li class="nav__list-item"><a href="/docs/tp_vivero/contact.html">Contáctenos</a></li>
             </ul>
         </nav>
+        <!-- NAVBAR END -->
+        <!-- BURGER BUTTON -->
         <div class="toggle-menu active" id="toggle-menu">
             <i class="fas fa-bars"></i>
         </div>
@@ -59,8 +68,11 @@
     <!-- MAIN START -->
     <main class="main__section">
         <h1 class="first-title">Sobre Nosotros</h1>
+        <!-- SECTION ABOUT START -->
         <section class="main__section-about">
+            <!-- PHOTO SLIDE START -->
             <div class="slide-container">
+
                 <div class="loader"></div>
                 <figure class="section-photo slider box">
                     <img class="slide" id="slide-1" src="/docs/tp_vivero/assets/flower-5348472_1280.webp" alt="Nuestro Lugar">
@@ -74,43 +86,50 @@
                 <figure class="section-photo slider box">
                     <img class="slide" id="slide-5" src="/docs/tp_vivero/assets/vegetables-752153_1280.webp" alt="Resultado de la cosecha">
                 </figure>
-                    
-                    
+
             </div>
+            <!-- PHOTO SLIDE END -->
+
+            <!-- SECTION ABOUT - TEXT - START -->
             <div class="section-text">
                 <p>Cuando elegís tener una huerta, estas eligiendo dar de tu tiempo y de tu espacio, sabemos lo que eso vale, por eso en "Aguacate" generamos un lugar donde vas a encontrar la mejor calidad en plantas y todo lo necesario para poder cuidar de la huerta de la mejor manera. Queremos acompañarte en el cuidado de tu huerta, por eso te esperamos para ayudarte y brindarte los mejores consejos.</p>
                 <p>Contamos con excelentes profesionales, dedicados a asesorar y aconsejar a los clientes. Cada uno de nuestros profesionales dictan asesorías en el cuidado de la huerta. Pueden consultar por los días y horarios en nuestra web.</p>
                 <p>Tenemos lo necesario para que usted pueda montar una huerta en su propia casa. Brindamos asistencia a domicilio y también realizamos entregas.</p>
             </div>
+            <!-- SECTION ABOUT - TEXT - END -->
         </section>
+        <!-- SECTION ABOUT END -->
+
         <div class="parallax"></div>
-        <section id="slideshow-container" class="slideshow-container">
-            <div id="progressbar-container" class="progressbar-container">
-                <div id="progressbar" class="progressbar"></div>
-            </div>
-            <figure class="slideshow">
-                <img src="/docs/tp_vivero/assets/images/sol.webp" alt="Sol" id="img1">
-                <img src="/docs/tp_vivero/assets/images/agua.webp" alt="Agua" id="img2">
-            </figure>
-            <div id="indicadores" class="indicadores"></div>
-        </section>
+
+        <!-- SECTION TIPS START -->
         <section class="main__section-steps">
-            <h2 class="second-title">Tips para tu huerta</h2>
-            <h3>(jardín, balcón o terraza)</h3>
-            <ul class="tips-list">
-                <li class="tips-item">Mínimo 4 horas de pleno sol</li>
-                <li class="tips-item">Una fuente de agua cercana</li>
-                <li class="tips-item">Semillas de temporada</li>
-                <li class="tips-item">Tierra fértil</li>
-                <li class="tips-item">Recipientes / Canteros</li>
-                <li class="tips-item">Herramientas grandes o chicas, según el espacio que dispongamos (laya, pala, rastrillo)</li>
-                <li class="tips-item">Regadera / Manguera</li>
-                <li class="tips-item">Guantes de Jardinería</li>
-            </ul>
+
+            <!-- TIPS START -->
+            <div class="tips-section">
+                <h2 class="second-title">Tips para tu huerta</h2>
+                <h3>(jardín, balcón o terraza)</h3>
+                <ul class="tips-list">
+                    <li class="tips-item">Mínimo 4 horas de pleno sol</li>
+                    <li class="tips-item">Una fuente de agua cercana</li>
+                    <li class="tips-item">Semillas de temporada</li>
+                    <li class="tips-item">Tierra fértil</li>
+                    <li class="tips-item">Recipientes / Canteros</li>
+                    <li class="tips-item">Herramientas</li>
+                    <li class="tips-item">Regadera / Manguera</li>
+                    <li class="tips-item">Guantes de Jardinería</li>
+                </ul>
+            </div>
+            <!-- TIPS PHOTO -->
+            <div class="tips-gallery">
+                <figure>
+                    <img src="/docs/tp_vivero/assets/images/tip-photo.webp" alt="Foto_Huerta" class="img-pos">
+                </figure>
+            </div>
+            <!-- TIPS END -->
         </section>
-
+        <!-- SECTION TIPS END -->
     </main>
-
     
     <!-- MAIN END -->
 
