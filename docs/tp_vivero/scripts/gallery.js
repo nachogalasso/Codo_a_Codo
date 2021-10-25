@@ -32,16 +32,22 @@ viewSeeds.addEventListener('click', () => {
 viewSeedlings.addEventListener('click', () => {
     seedlings.classList.remove('hidden');
     seeds.classList.add('hidden');
+    subtrates.classList.add('hidden');
+    utensils.classList.add('hidden');
 })
 
 viewSubtrates.addEventListener('click', () => {
     subtrates.classList.remove('hidden');
     seedlings.classList.add('hidden');
+    seeds.classList.add('hidden');
+    utensils.classList.add('hidden');
 })
 
 viewUtensils.addEventListener('click', () => {
     utensils.classList.remove('hidden');
     subtrates.classList.add('hidden');
+    seeds.classList.add('hidden');
+    seedlings.classList.add('hidden');
 })
 
 viewAll.addEventListener('click', () => {
