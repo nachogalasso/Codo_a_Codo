@@ -1,0 +1,123 @@
+/* PROJECTS STYLE SHEET */
+/* ========
+    INDEX
+   ======== */
+
+
+/* ==================
+    1. RESET VALUES
+   ================== */
+
+:root {
+    --title: 'Roboto', Arial, Helvetica, sans-serif;
+    --text: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%; 
+    box-sizing: border-box;
+    
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: var(--title);
+}
+
+p, li, a, button {
+    font-family: var(--text);
+}
+
+/* ========
+    HEADER
+   ======== */
+
+.project_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-title {
+    margin: 0;
+    padding: .5rem;
+    font-size: 2rem;
+}
+
+.project_header h3 {
+    margin: 0;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.list-item {
+    list-style-type: none;
+}
+
+/* ========
+    MAIN
+   ======== */
+
+.main__projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===================
+    1. COLOR FLIPPER
+   =================== */
+
+.color__flipper-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color__flipper-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 25rem;
+    border: .1rem solid black;
+}
+
+.color__flipper-btn {
+    width: 10rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
