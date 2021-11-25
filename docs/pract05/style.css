@@ -1,0 +1,57 @@
+/* PROJECTS STYLE SHEET */
+/* ========
+    INDEX
+   ======== */
+
+
+/* ==================
+    1. RESET VALUES
+   ================== */
+
+:root {
+    --title: 'Montserrat', Arial, Helvetica, sans-serif;
+    --text: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%; 
+    box-sizing: border-box;
+    
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(245, 245, 245);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: var(--title);
+}
+
+p, li, a, button {
+    font-family: var(--text);
+}
+
+/* ========
+    HEADER
+   ======== */
