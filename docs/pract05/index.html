@@ -22,45 +22,491 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/docs/pract05/assets/icons/favicon-16x16.png">
     <link rel="manifest" href="/docs/pract05/assets/icons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/docs/pract05/assets/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>Florencia Ureña</title>
+    <title>Florencia Urueña</title>
 </head>
 <body class="grid">
+    <!-- SIDE HEADER START -->
     <header class="left">
         <div class="header">
-            <figure class="header-logo">
-                <img src="/docs/pract05/assets/img/logo_fu2.webp" alt="Florencia_Urueña_logo">
-            </figure>
-            <h1 class="header-title">Florencia Urueña</h1>
-            <h4 class="sub-title">Multidisciplinary Designer</h4>
+            <!-- NAME AND LOGO START -->
+            <div class="name-logo">
+                <figure class="header-logo">
+                    <img src="/docs/pract05/assets/img/logo_fu2.webp" class="logo" alt="Florencia_Urueña_logo">
+                </figure>
+                <h1 class="header-title">Florencia Urueña</h1>
+                <h4 class="sub-title">Multidisciplinary Designer</h4>
+            </div>
+        <!-- NAME AND LOGO END -->
+
+        <!-- NAVBAR START -->
+            <nav class="navbar">
+                <ul class="navbar-list links">
+                    <li class="list-item">Architectural Visualization</li>
+                    <li class="list-item">Product Visualization</li>
+                    <li class="list-item">Motion Graphics</li>
+                    <li class="list-item">Photography</li>
+                    <li class="list-item">Design</li>
+                    <li class="list-item">Web</li>
+                    <li class="list-item">Art Direction</li>
+                    <li class="list-item contact">
+                        <h3 class="contact-title">Contact</h3>
+                        <ul class="contact-list">
+                            <li class="list-item"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i></a></li>
+                            <li class="list-item"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li class="list-item"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- NAVBAR END -->
         </div>
-        <nav class="navbar">
-            <ul class="navbar-list">
-                <li class="list-item">Architectural Visualization</li>
-                <li class="list-item">Product Visualization</li>
-                <li class="list-item">Motion Graphics</li>
-                <li class="list-item">Photography</li>
-                <li class="list-item">Design</li>
-                <li class="list-item">Web</li>
-                <li class="list-item">Art Direction</li>
-            </ul>
-        </nav>
-        
-        <div class="contact">
-            <h3 class="contact-title">Contact</h3>
-            <ul class="contact-list">
-                <li class="list-item"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i></a></li>
-                <li class="list-item"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
-                <li class="list-item"><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
-            </ul>
+        <!-- TOGGLE BUTTON START -->
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
         </div>
+        <!-- TOGGLE BUTTON END -->
     </header>
-    
+    <!-- SIDE HEADER END -->
+
+    <!-- MAIN GALLERY START -->
+    <main class="main-container">
+
+        <!-- ARCHITECTURAL VISUALIZATION START -->
+        <section class="arch-vis">
+            <h3 class="titles">Architectural Visualization</h3>
+            <div class="gallery">
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/stylish_interior.webp" alt="Stylish_interior" class="fade">
+                    <div class="middle">
+                        <p class="text">Stylish interior</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/casa_san_eduardo.webp" alt="House_in_San_Eduardo_Neihborhood" class="fade">
+                    <div class="middle">
+                        <p class="text">House - San Eduardo Neihborhood</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/olivos_house.webp" alt="House_for_Florencia_Lynch" class="fade">
+                    <div class="middle">
+                        <p class="text">House for Florencia Lynch</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/argerich.webp" alt="Apartement" class="fade">
+                    <div class="middle">
+                        <p class="text">Apartement - Argerich</p>
+                        <p class="year">2019</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/netherland.webp" alt="Apartement_Netherland_3D" class="fade">
+                    <div class="middle">
+                        <p class="text">Apartement 3D renders Netherland</p>
+                        <p class="year">2019</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/vulk.webp" alt="Vulk_Counters" class="fade">
+                    <div class="middle">
+                        <p class="text">Counters for Vulk</p>
+                        <p class="year">2018</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/interior_3d.webp" alt="3D_Interior_Houses" class="fade">
+                    <div class="middle">
+                        <p class="text">Houses Interior 3D</p>
+                        <p class="year">2017</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/interior2_3d.webp" alt="3D_Interior_Apartement" class="fade">
+                    <div class="middle">
+                        <p class="text">Apartement Interior 3D</p>
+                        <p class="year">2017</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/nordic_duplex.webp" alt="Nordic_Duplex" class="fade">
+                    <div class="middle">
+                        <p class="text">Nordic Inspiration Duplex</p>
+                        <p class="year">2017</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/exterior_3d.webp" alt="3D_Exterior" class="fade">
+                    <div class="middle">
+                        <p class="text">Exterior on 3D</p>
+                        <p class="year">2017</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/exterior_ny.webp" alt="New_York_Exterior" class="fade">
+                    <div class="middle">
+                        <p class="text">New York Exterior</p>
+                        <p class="year">2017</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/stand.webp" alt="Stand_Carolina_Herrera" class="fade">
+                    <div class="middle">
+                        <p class="text">Stand - Carolina Herrera</p>
+                        <p class="year">2017</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/kitchen.webp" alt="Comfy_Simple_Kitchen" class="fade">
+                    <div class="middle">
+                        <p class="text">Comfy and Simple Kitchen</p>
+                        <p class="year">2017</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/workspace.webp" alt="Workspace" class="fade">
+                    <div class="middle">
+                        <p class="text">Workspace</p>
+                        <p class="year">2017</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/urban_design.webp" alt="Diseño_Urbano_Arch_Project" class="fade">
+                    <div class="middle">
+                        <p class="text">Project: Diseño Urbano Architecture</p>
+                        <p class="year">2016</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/ph_apartement.webp" alt="PH_Apartement_BsAs" class="fade">
+                    <div class="middle">
+                        <p class="text">PH Apartement BsAs</p>
+                        <p class="year">2016</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/white_use.webp" alt="White_house" class="fade">
+                    <div class="middle">
+                        <p class="text">White House</p>
+                        <p class="year">2016</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/int_apartement.webp" alt="Apartment_Interior" class="fade">
+                    <div class="middle">
+                        <p class="text">Apartment Interior</p>
+                        <p class="year">2016</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/studio.webp" alt="Foggy_Studio" class="fade">
+                    <div class="middle">
+                        <p class="text">Foggy Studio</p>
+                        <p class="year">2016</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/details.webp" alt="Details_House_in_Octane" class="fade">
+                    <div class="middle">
+                        <p class="text">Little Details</p>
+                        <p class="year">2016</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/house_ext.webp" alt="House_Exterior" class="fade">
+                    <div class="middle">
+                        <p class="text">House Exterior</p>
+                        <p class="year">2015</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/snowy_ext.webp" alt="Snowy_Exterior" class="fade">
+                    <div class="middle">
+                        <p class="text">Snowy Exterior</p>
+                        <p class="year">2015</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh_vis/toilet_rustic.webp" alt="Fancy_Rustic_Restroom" class="fade">
+                    <div class="middle">
+                        <p class="text">fancy rustic restroom</p>
+                        <p class="year">2015</p>
+                    </div>
+                </figure>
+            </div>
+        </section>
+        <!-- ARCHITECTURAL VISUALIZATION START -->
+
+        <!-- PRODUCT VISUALIZATION START -->
+        <section class="prod-vis">
+            <h3 class="titles">Product Visualization</h3>
+            <div class="gallery">
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/prod_vis/modeling.webp" alt="Product_Modeling" class="fade">
+                    <div class="middle">
+                        <p class="text">Product Modeling</p>
+                        <p class="year">2015</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/prod_vis/gio.webp" alt="Acqua_Di_Gio" class="fade">
+                    <div class="middle">
+                        <p class="text">Acqua Di Gio</p>
+                        <p class="year">2021</p>
+                    </div>
+                </figure>
+            </div>
+        </section>
+        <!-- PRODUCT VISUALIZATION END -->
+
+        <!-- MOTION GRAPHICS START -->
+        <section class="mo-graph">
+            <h3 class="titles">Motion Graphics</h3>
+            <div class="gallery">
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/chile_snow.webp" alt="ChileSnow_Logo" class="fade">
+                    <div class="middle">
+                        <p class="text">Logo: ChileSnow</p>
+                        <p class="year">2021</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/cupida.webp" alt="Cupida_CiberDays" class="fade">
+                    <div class="middle">
+                        <p class="text">Cupida Ciber Days</p>
+                        <p class="year">2021</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/b_day.webp" alt="B-Day_Session" class="fade">
+                    <div class="middle">
+                        <p class="text">B-Day Session</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/home.webp" alt="Home_Session" class="fade">
+                    <div class="middle">
+                        <p class="text">Home Session</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/instagram.webp" alt="Positive_Instagram_Stories" class="fade">
+                    <div class="middle">
+                        <p class="text">Instagram Stories for Positive</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/mammut.webp" alt="Mammut" class="fade">
+                    <div class="middle">
+                        <p class="text">Mammut</p>
+                        <p class="year">2019</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/northface.webp" alt="The_Northface_Ultra_Challenge" class="fade">
+                    <div class="middle">
+                        <p class="text">Northface Ultra Challenge</p>
+                        <p class="year">2015</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/weapons.webp" alt="Weapons_of_Mass_Destruction" class="fade">
+                    <div class="middle">
+                        <p class="text">Infographic: Weapons of Mass Destruction</p>
+                        <p class="year">2015</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/eco.webp" alt="Eco_Infographic" class="fade">
+                    <div class="middle">
+                        <p class="text">Infographic: Eco</p>
+                        <p class="year">2014</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/mo_graph/boulder.webp" alt="Boulder_Logo" class="fade">
+                    <div class="middle">
+                        <p class="text">Logo: Boulder</p>
+                        <p class="year">2014</p>
+                    </div>
+                </figure>
+            </div>
+
+
+        </section>
+
+        <!-- MOTION GRAPHICS END -->
+
+        <!-- PHOTOGRAPHY STAR -->
+        <section class="mo-graph">
+            <h3 class="titles">Photography</h3>
+            <div class="gallery">
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/photo/neptune.webp" alt="Neptuno" class="fade">
+                    <div class="middle">
+                        <p class="text">Neptuno</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/photo/dark_side.webp" alt="Dark_Side" class="fade">
+                    <div class="middle">
+                        <p class="text">Dark Side</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/photo/drinkee.webp" alt="Drinkee" class="fade">
+                    <div class="middle">
+                        <p class="text">Drinkee</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/photo/garden.webp" alt="Macro Garden" class="fade">
+                    <div class="middle">
+                        <p class="text">Macro Garden</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/photo/memories.webp" alt="Memories_Portraits" class="fade">
+                    <div class="middle">
+                        <p class="text">Memories Portraits</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/photo/portraits.webp" alt="Analogic_Portraits" class="fade">
+                    <div class="middle">
+                        <p class="text">Analogic Portraits</p>
+                        <p class="year">2019</p>
+                    </div>
+                </figure>
+            </div>
+
+
+        </section>
+
+        <!-- PHOTOGRAPHY END -->
+
+        <!-- DESIGN STAR -->
+        <section class="mo-graph">
+            <h3 class="titles">Design</h3>
+            <div class="gallery">
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/design/seven.webp" alt="Seven" class="fade">
+                    <div class="middle">
+                        <p class="text">Seven</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/design/chile_snow.webp" alt="Chile_Snow" class="fade">
+                    <div class="middle">
+                        <p class="text">Chile Snow</p>
+                        <p class="year">2020</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/design/food.webp" alt="The_Food_System_Metrics" class="fade">
+                    <div class="middle">
+                        <p class="text">The Food System Metrics</p>
+                        <p class="year">2019</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/design/bussines_card.webp" alt="Symbicore_Business_Cards" class="fade">
+                    <div class="middle">
+                        <p class="text">Symbicore Business Cards</p>
+                        <p class="year">2019</p>
+                    </div>
+                </figure>
+            </div>
+
+
+        </section>
+        <!-- DESIGN END -->
+
+        <!-- WEB STAR -->
+        <section class="mo-graph">
+            <h3 class="titles">Web</h3>
+            <div class="gallery">
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/web/flor_mancini.webp" alt="Web_Flor_Mancini" class="fade">
+                    <div class="middle">
+                        <p class="text">Flor Mancini</p>
+                        <p class="year">2021</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/web/Tupic.webp" alt="Landing_Page_Tupic" class="fade">
+                    <div class="middle">
+                        <p class="text">Landing Page: Tupic</p>
+                        <p class="year">2016</p>
+                    </div>
+                </figure>
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/web/3d_webdesign.webp" alt="3D_Web_Design" class="fade">
+                    <div class="middle">
+                        <p class="text">3D Web Design</p>
+                        <p class="year">2014</p>
+                    </div>
+                </figure>
+            </div>
+
+
+        </section>
+        <!-- WEB END -->
+
+        <!-- ART DIRECTION STAR -->
+        <section class="mo-graph">
+            <h3 class="titles">Art Direction</h3>
+            <div class="gallery">
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/art_dir/bs_as.webp" alt="Bs_As_Live_The_Language" class="fade">
+                    <div class="middle">
+                        <p class="text">Buenos Aires Live "The Languague"</p>
+                        <p class="year">2014</p>
+                    </div>
+                </figure>
+            </div>
+
+
+        </section>
+        <!-- ART DIRECTION END -->
+
+        <!-- <section class="mo-graph">
+            <h3 class="titles"></h3>
+            <div class="gallery">
+                <figure class="container">
+                    <img src="/docs/pract05/assets/img/arh-vis/toilet_rustic.webp" alt="Fancy_Rustic_Restroom" class="fade">
+                    <div class="middle">
+                        <p class="text">fancy rustic restroom</p>
+                        <p class="year">2015</p>
+                    </div>
+                </figure>
+            </div>
+
+
+        </section> -->
+    </main>
+
+    <!-- MAIN GALLERY END -->
+
+    <script src="/docs/pract05/scripts.js"></script>
 </body>
 </html>
