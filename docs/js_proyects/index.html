@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos creados con el fin de practicar Javascript">
+    <meta name="keywords" content="Javascript, Práctica, Proyectos, Practice, Projects">
+    <meta name="author" content="Galasso, Ignacio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,700&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/docs/js_proyects/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/docs/js_proyects/assets/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/docs/js_proyects/assets/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/docs/js_proyects/assets/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/docs/js_proyects/assets/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/docs/js_proyects/assets/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/docs/js_proyects/assets/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/docs/js_proyects/assets/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/docs/js_proyects/assets/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/docs/js_proyects/assets/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/docs/js_proyects/assets/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/js_proyects/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/docs/js_proyects/assets/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/docs/js_proyects/assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/docs/js_proyects/assets/images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta property="og-title" content="Javascript Practice" />
+    <meta property="og-type" content="website" />
+    <meta property="og-url" content="https://myportfoliogalasso.vercel.app/" />
+    <meta property="og-image" content="" />
+    <meta property="og-description" content="Proyectos creados con el fin de practicar Javascript" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@galasso22">
+    <meta name="twitter:title" content="Javascript Practice" />
+    <meta name="twitter:description" content="Proyectos creados con el fin de practicar Javascript" />
+    <meta name="twitter:image" content="" />
+    <title>JS - Mini-Projects</title>
+</head>
+<body>
+<!-- HEADER STARTS -->
+    <header class="project_header">
+        <h1 class="header-title">JAVASCRIPT<span>(Practice Projects)</span></h1>
+        <nav class="project-nav">
+            <figure class="nav-logo">
+                <img src="/docs/js_proyects/assets/images/js_logo.webp" alt="Javascript Logo">
+            </figure>
+            <ul class="project-list links">
+                <li class="list-item">
+                    <a href="#flipper">Color Flipper</a>
+                </li>
+                <li class="list-item">
+                    <a href="#counter">Counter</a>
+                </li>
+                <li class="list-item">
+                    <a href="#review">Our Reviews</a>
+                </li>
+            </ul>
+            <ul class="social-icons">
+                <li>
+                    <a><i class="fab fa-whatsapp"></i></a>
+                </li>
+                <li>
+                    <a><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+            <div class="toggle-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+<!-- HEADER ENDS -->
+
+<!-- MAIN PROJECTS STARTS -->
+<main class="main__projects-container">
+    
+    <!-- PROJECTS COLOR FLIPPER START -->
+
+    <section class="color__flipper-project" id="flipper">
+        <h2 class="projects-title">Color Flipper</h2>
+        <div class="color__flipper-container container">
+            <p class="color__flipper-text">Background color: <span id="flipper-text">#bdc3c7</span></p>
+            <button class="color__flipper-btn" id="flipper-btn">Click Me</button>
+        </div>
+        <p class="right">ONLY create HEX color code <a href="https://www.youtube.com/watch?v=3PHXvlpOkf4&t=421s&ab_channel=freeCodeCamp.org" rel="noopener noreferrer">(John Smilga tutorial)</a></p>
+    </section>
+
+    <!-- PROJECTS COLOR FLIPPER END -->
+
+    <!-- PROJECTS COUNTER START -->
+    <section class="counter-project">
+        <h2 class="projects-title">Counter</h2>
+        <span id="ctr">0</span>
+        <div class="counterbtn-container">
+            <button class="btn decrease">Disminuir</button>
+            <button class="btn reset">Reset</button>
+            <button class="btn increase">Incrementar</button>
+        </div>
+    </section>
+    <!-- PROJECTS COUNTER END -->
+
+    <!-- PROJECTS REVIEW START -->
+    <section class="review-project" id="review">
+        <div class="title">
+            <h2 class="projects-title mg">Our Reviews</h2>
+            <span class="underline"></span>
+        </div>
+        <div class="review-card">
+            <div class="card">
+                <figure class="round">
+                    <span class="quotes">&Prime;</span>
+                    <img src="./assets/images/reviews/dog_avatar.webp" class="rd-img" alt="Person_Avatar">
+                </figure>
+            </div>
+            <div class="card-text">
+                <h4 class="author mg">Chester Pitts</h4>
+                <p class="job mg">Web Designer</p>
+                <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem tenetur quod, perspiciatis dolorum nihil architecto molestiae est perferendis hic quam impedit qui debitis, obcaecati officia alias, deleniti ex recusandae nobis?</p>
+            </div>
+            <div class="card-carousel">
+                <div class="carousel-btn">
+                    <span id="left">&lsaquo;</span>
+                    <span id="right">&rsaquo;</span>
+                </div>
+                <button class="surpriseBtn">Surprise Me</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS REVIEW END -->
+
+
+</main>
+
+<!-- MAIN PROJECTS ENDS -->
+
+<!-- PROJECTS SCRIPTS -->
+<script src="/docs/js_proyects/scripts.js"></script>
+</body>
+</html>

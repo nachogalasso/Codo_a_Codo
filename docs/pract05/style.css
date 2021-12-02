@@ -1,0 +1,521 @@
+/* PROJECTS STYLE SHEET */
+/* ========
+    INDEX
+   ======== */
+/* 
+    1. RESET - 32
+    2. HEADER - 98
+        2.1 Header Container - 97
+        2.2 Logo Container - 113
+            Header MQ 768px - 119
+            Header MQ 1024px - 134
+        2.3 Logo - 157
+            Logo MQ 768px - 179
+            Logo MQ 1024px - 200
+        2.4 Navbar and links - 218
+        2.5 Navbar button - 248
+            Navbar MQ 768px - 280
+            Navbar MQ 1024px - 305
+    3. GALLERY - 339         
+        3.1 Gallery Container - 341
+            Gallery MQ 1024px - 350
+        3.2 Gallery - 360
+            Gallery MQ 768px - 385
+            Gallery MQ 1024px - 404
+        3.3 Image efects - 413
+        3.4 Image text - 445
+            text MQ 768px - 469
+            text MQ 1024px - 482
+        3.5 Gallery display - 494
+    4. Footer - 504 */
+/* ==================
+    1. RESET VALUES
+   ================== */
+
+:root {
+    --title: 'Montserrat', Arial, Helvetica, sans-serif;
+    --text: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%; 
+    box-sizing: border-box;
+    
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(245, 245, 245);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: var(--title);
+}
+
+p, li, a, button {
+    font-family: var(--text);
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: #3e94d1;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .grid {
+        display: grid;
+        grid-template-columns: 35rem 1fr;
+        grid-template-rows: 1fr 5rem;
+    }
+}
+
+/* ===========
+    2. HEADER
+   =========== */
+/* 2.1 Header container */
+.left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(224, 226, 219, .1);
+    -webkit-backdrop-filter: blur(2.2rem);
+    backdrop-filter: blur(2.2rem);
+}
+
+/* 2.2 Logo Container */
+.name-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Header MQ 768px */
+@media screen and (min-width: 768px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name-logo {
+        flex-direction: column;
+    } 
+    
+}
+
+/* Header MQ 1024px */
+@media screen and (min-width: 1024px) {
+
+    .left {
+        /* grid-column: 1 / 2; */
+        align-items: flex-start;
+        justify-content: center;
+        /* height: 10vh; */
+    }
+    
+    .name-logo {
+        margin-bottom: 2rem;
+    }
+    
+    .header {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        padding-bottom: 10rem;
+    }
+
+}
+
+/* 2.3 Logo */
+.header-logo {
+    width: 7rem;
+    height: 7rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.header-title, .sub-title,
+.contact-title {
+    margin: 0;
+}
+
+.header-title {
+    font-size: 2.2rem;
+}
+
+.sub-title {
+    display: none;
+}
+
+/* Logo MQ 768px */
+@media screen and (min-width: 768px) {
+
+    .header-logo {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .header-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .sub-title {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+
+}
+
+/* Logo MQ 1024px */
+@media screen and (min-width: 1024px) {
+
+    .header-logo {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .sub-title {
+        font-size: 1.6rem;
+    }
+
+}
+
+/* 2.4 Navbar and links */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.navbar-list {
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.links {
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-150%);
+} 
+
+.list-item {
+    list-style-type: none;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.list-item:hover {
+    color: rgb(167, 167, 167);
+    cursor: pointer;
+}
+
+/* 2.5 Navbar button */
+.nav-toggle i {
+    font-size: 1.8rem;
+    transition: transform .4s;
+}
+
+.nav-toggle i:hover {
+    color: rgba(167, 167, 167, 1);
+    transform: rotate(-90deg);
+    padding: .2rem;
+    outline: .2rem solid rgba(199, 1, 1, 0.5);
+    cursor: pointer;
+}
+
+.show-links {
+    transform: translateY(0);
+    position: relative;
+}
+
+.contact-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: .5rem 0;
+    width: 8rem;
+}
+
+.contact-list li {
+    padding: 0;
+    margin-top: .5rem;
+}
+
+/* Navbar MQ 768px */
+@media screen and (min-width: 768px) {
+
+    .navbar-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-list {
+        margin-left: 1.5rem;
+    }
+
+    .nav-toggle i {
+        font-size: 2.2rem;
+    }
+
+}
+
+/* Navbar MQ 1024px */
+@media screen and (min-width: 1024px) {
+
+    .navbar-list {
+        flex-direction: column;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links {
+        align-items: flex-start;
+        position: relative;
+        transform: translate(0);
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-list {
+        margin: 0;
+    }
+
+    .list-item {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+    }
+
+}
+
+/* ============
+    3. GALLERY
+   ============ */
+/* 3.1 Gallery Container */   
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+/* Gallery MQ 1024px */
+@media screen and (min-width: 1024px) {
+
+    .main-container {
+        grid-column: 2 / 3;
+        margin: 2rem;
+    }
+
+}
+
+/* 3.2 Gallery */
+.gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titles {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.container {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .1rem .1rem .5rem rgb(82, 82, 81);
+}
+
+/* Gallery MQ 768px */
+@media screen and (min-width: 768px) {
+
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .titles {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+}
+
+/* Gallery MQ 1024px */
+@media screen and (min-width: 1024px) {
+
+    .titles {
+        font-size: 3.5rem;
+    }
+
+}
+
+/* 3.3 Image efects */
+.fade {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    position: absolute;
+    background-color: whitesmoke;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container:hover .fade {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* 3.4 Image text */
+.text {
+    color: black;
+    font-size: 3rem;
+    font-variant: small-caps;
+    text-align: center;
+    padding: 2rem .5rem;
+    margin: 0;
+}
+
+.year {
+    color: rgba(167, 167, 167, 1);
+}
+
+.up {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.up:hover {
+    text-shadow: .1rem .1rem 1rem #000;
+}
+
+/* text MQ 768px */
+@media screen and (min-width: 768px) {
+
+    .text {
+        font-size: 3.5rem;
+    }
+
+    .year {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* text MQ 1024px */
+@media screen and (min-width: 1024px) {
+
+    .text {
+        font-size: 4rem;
+    }
+
+    .year {
+        font-size: 1.8rem;
+    }
+}
+
+/* 3.5 Gallery display */
+.select {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* ========
+    FOOTER
+   ======== */
+/* Footer */
+.footer {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.footer_text {
+    font-size: 1.2rem;
+}
+
+
+
+
