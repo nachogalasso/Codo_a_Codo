@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadata para hacer una PWA (Progresive Web Aplication) -->
+    <!-- Color a la barra / esto aplica para ANDROID -->
+    <meta name="theme-color" content="#cbdbed">
+    <!-- Optimizaciones SEO -->
+    <meta name="description" content="Movie finder created with Vue3 from course 'Vue3 desde cero' - Udemy. It works on real time">
+    <!-- MOBILE -->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <!-- Barra de estado iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- para este comando tenemos 3 propiedades (default, black, black-translucent) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">  
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="shortcut icon" href="/docs/grad_generator/assets/icons/48px_icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/docs/grad_generator/assets/icons/48px_icon.png">
+    <link rel="apple-touch-startup-image" href="/docs/grad_generator/assets/icons/48px_icon.png">
+    <link rel="apple-touch-icon" sizes="16x16" href="/docs/grad_generator/assets/icons/16px_icon.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="/docs/grad_generator/assets/icons/32px_icon.png">
+    <link rel="apple-touch-icon" sizes="64x64" href="/docs/grad_generator/assets/icons/64px_icon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/docs/grad_generator/assets/icons/128px_icon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/docs/grad_generator/assets/icons/144px_icon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/docs/grad_generator/assets/icons/192px_icon.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/docs/grad_generator/assets/icons/256px_icon.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/docs/grad_generator/assets/icons/512px_icon.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/docs/grad_generator/assets/icons/1024px_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/docs/grad_generator/assets/icons/192px_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/grad_generator/assets/icons/32px_icon.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/docs/grad_generator/assets/icons/128px_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/docs/grad_generator/assets/icons/16px_icon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/docs/grad_generator/assets/icons/144px_icon.png">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="/docs/grad_generator/style.css">
+    <title>Gradient Generator</title>
+    <!-- VUE CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <!-- OUR APP - GRADIENT GENERATOR -->
+    <main id="app">
+        <!-- CONTAINER -->
+        <section class="main__container">
+            <h1 class="main__container-title">{{ title }}</h1>
+            <section class="main__container-app">
+                <form action="#" class="app__form"></form>
+            </section>
+        </section>
+    </main>
+
+    <script src="/docs/grad_generator/js/main.js"></script>
+    <script src="/docs/grad_generator/js/mountapp.js"></script>
+</body>
+</html>
