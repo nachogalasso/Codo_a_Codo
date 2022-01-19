@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
     <!-- ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="shortcut icon" href="/docs/grad_generator/assets/icons/48px_icon.png" type="image/png">
     <link rel="apple-touch-icon" href="/docs/grad_generator/assets/icons/48px_icon.png">
     <link rel="apple-touch-startup-image" href="/docs/grad_generator/assets/icons/48px_icon.png">
@@ -48,16 +49,66 @@
 <body>
     <!-- OUR APP - GRADIENT GENERATOR -->
     <main id="app">
-        <!-- CONTAINER -->
-        <section class="main__container">
-            <h1 class="main__container-title">{{ title }}</h1>
-            <section class="main__container-app">
-                <form action="#" class="app__form"></form>
+        <section class="container" :style="setColor">
+            
+            <!-- CONTAINER -->
+            <section class="main__container">
+                <h1 class="main__container-title">{{ title }}</h1>
+                <!-- FORM FOR THE 1ST TWO COLORS -->
+                <section class="main__container-app">
+                    <form action="#" class="color__form">
+                        <!-- 1st COLOR -->
+                        <section class="colors">
+                            <label for="lcolor" class="label_color">C1:
+                                <input type="color" name="color" id="lcolor" class="icolor" v-model="fcolor">
+                            </label>
+                            <label for="deg" class="deg_label">%:
+                                <input type="number" name="deg" id="deg" min="0" max="0" v-model="fstop">
+                            </label>
+                            <p class="text">HEX 1: {{fcolor}}</p>
+                        </section>
+                        <!-- 2nd COLOR  -->
+                        <section class="colors">
+                            <label for="lcolor" class="label_color">C2:
+                                <input type="color" name="color" id="lcolor" class="icolor" v-model="scolor">
+                            </label>
+                            <label for="deg2" class="deg_label">%:
+                                <input type="number" name="deg2" id="deg2" min="0" max="0" v-model="sstop">
+                            </label>
+                            <p class="text">HEX 2: {{scolor}}</p>
+                        </section>
+                        <app-btn></app-btn>
+                    </form>
+                    <!-- GRADIENT PROPERTIES -->
+                    <form action="#" class="gradient__form">
+                        <label for="linear" class="grad_label">Linear
+                            <input type="radio" name="linear_grad" id="linear" value="linear" v-model="picked">
+                        </label>
+                        <label for="linear" class="grad_label">Radial
+                            <input type="radio" name="radial_grad" id="radial" value="radial" v-model="picked">
+                        </label>
+                        <label for="conic" class="grad_label">Conic
+                            <input type="radio" name="conic_grad" id="conic" value="conic" v-model="picked">
+                        </label>
+                    </form>
+                    <!-- BACKGROUND PROPERTY -->
+                    <form action="#" class="bck__form">
+                        <label for="ort" v-if="this.picked === 'linear'" class="show bck_label">Orientation:
+                            <input type="number" name="ort" id="ort" min="0" max="360" v-model="orientation">
+                        </label>
+                        <label for="prop" class="bck_label">Property:
+                            <input type="text" id="prop" :value="setColor">
+                        </label>
+                    </form>
+                </section>
+                <!-- <p>{{setColor}}</p> -->
             </section>
         </section>
+
     </main>
 
     <script src="/docs/grad_generator/js/main.js"></script>
+    <!-- <script src="/docs/grad_generator/components/Color.js"></script> -->
     <script src="/docs/grad_generator/js/mountapp.js"></script>
 </body>
 </html>
