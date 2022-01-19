@@ -1,27 +1,18 @@
 app.component('color', {
     template:`
     <section class="colors">
-        <label for="lcolor" class="label_color">C 1:
-            <input type="color" name="color" id="lcolor" class="icolor" v-model="fcolor">
+        <label for="ncolor" class="label_color">Cn:
+            <input type="color" name="color" id="ncolor" class="icolor" v-model="ncolor">
         </label>
         <label for="deg" class="deg_label">%:
-            <input type="number" name="deg" id="deg" min="0" max="0" v-model="fstop">
+            <input type="number" name="deg" id="deg" min="0" max="0" v-model="nstop">
         </label>
-        <p class="text">HEX 1: {{fcolor}}</p>
+        <p class="text">HEX 1: {{ncolor}}</p>
     </section>
-        <label for="lcolor" class="label_color">C 2:
-            <input type="color" name="color" id="lcolor" class="icolor" v-model="scolor">
-        </label>
-        <label for="deg2" class="deg_label">%:
-            <input type="number" name="deg2" id="deg2" min="0" max="0" v-model="sstop">
-        </label>
-        <p class="text">HEX 2: {{scolor}}</p>
     `,
 
-    data: () => ({
-        fcolor: '#EA0606',
-        scolor: '#000000',
-        fstop: 0,
-        sstop: 0
-    })
+    props: {
+        color: String,
+        deg: Number,
+    }
 })
