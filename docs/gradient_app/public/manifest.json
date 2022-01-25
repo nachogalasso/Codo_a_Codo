@@ -1,0 +1,74 @@
+{
+    "name": "Gradient Generator",
+    "short_name": "Grad VUE",
+    "description": "Gradient background generator for CSS created with Vue3 from course 'Vue3 desde cero' - Udemy. It works on real time",
+    "background_color": "#cbdbed",
+    "theme_color": "#cbdbed",
+    "start_url": "./?umt_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/16px_icon.png",
+            "sizes": "16x16",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/32px_icon.png",
+            "sizes": "32x32",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/48px_icon.png",
+            "sizes": "48x48",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/64px_icon.png",
+            "sizes": "64x64",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/128px_icon.png",
+            "sizes": "128x128",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/144px_icon.png",
+            "sizes": "144x144",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/maskable.png",
+            "sizes": "192x192",
+            "type": "img/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/256px_icon.png",
+            "sizes": "256x256",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/512px_icon.png",
+            "sizes": "512x512",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/vueJS/05_degradados/assets/img/icons/1024px_icon.png",
+            "sizes": "1024x1024",
+            "type": "img/png",
+            "purpose": "any"
+        }
+    ]
+}
