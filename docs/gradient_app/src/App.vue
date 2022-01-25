@@ -1,17 +1,18 @@
 <template>
-  <div id="app">
+  <main id="app">
     <gradient-app></gradient-app>
-  </div>
+  </main>
 </template>
 
 <script>
 
-import GradientApp from "./components/Gradient_app.vue"
+import GradientApp from "./components/Gradient_app.vue";
+
 
 export default {
   name: 'App',
   components: {
-    GradientApp
+    GradientApp,
   }
 }
 </script>
