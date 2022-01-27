@@ -14,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
     <title>JS - Calculator</title>
+    <!-- SCRIPTS -->
+    <script src="/docs/js_calculator/js/Display.js"></script>
+    <script src="/docs/js_calculator/js/Calculator.js"></script>
+    <script src="/docs/js_calculator/js/index.js" defer></script>
 </head>
 <body>
     <!-- HEADER TITLE START -->
@@ -33,28 +37,29 @@
         <section class="numbers">
             <button id="restart">C</button>
             <button >( )</button>
-            <button id="get">%</button>
-            <button id="divide">/</button>
-            <button id="get">7</button>
-            <button id="get">8</button>
-            <button id="get">9</button>
-            <button id="multiply">X</button>
-            <button id="get">4</button>
-            <button id="get">5</button>
-            <button id="get">6</button>
-            <button id="subtract">-</button>
-            <button id="get">1</button>
-            <button id="get">2</button>
-            <button id="get">3</button>
-            <button id="sum">+</button>
+            <button class="operator">%</button>
+            <button class="operator" value="divide">/</button>
+            <button class="get">7</button>
+            <button class="get">8</button>
+            <button class="get">9</button>
+            <button class="operator" value="multiply">X</button>
+            <button class="get">4</button>
+            <button class="get">5</button>
+            <button class="get">6</button>
+            <button class="operator" value="sub">-</button>
+            <button class="get">1</button>
+            <button class="get">2</button>
+            <button class="get">3</button>
+            <button class="operator" value="sum">+</button>
             <button id="sign">+/-</button>
-            <button id="get">0</button>
-            <button id="dot">.</button>
-            <button id="result">=</button>
+            <button class="get">0</button>
+            <button class="get">.</button>
+            <button class="operator" value="equal">=</button>
         </section>
     </main>
     <!-- MAIN CONTAINER END -->
     <!-- HEADER TITLE START -->
-<script src="/docs/js_calculator/main.js"></script>
+
+    
 </body>
 </html>
