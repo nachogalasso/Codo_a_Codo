@@ -4,15 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Javascript Calculator. It works for simple calculations">
     <!-- SEO -->
+    <!-- PWA -->
+    <!-- Primero le damos color a la barra / esto aplica para ANDROID -->
+    <meta name="theme-color" content="#77b5d8">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">  
     <!-- ICONS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/docs/js_calculator/assets/icons/48px_icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/docs/js_calculator/assets/icons/48px_icon.png">
+    <link rel="apple-touch-startup-image" href="/docs/js_calculator/assets/icons/48px_icon.png">
+    <link rel="apple-touch-icon" sizes="16x16" href="/docs/js_calculator/assets/icons/16px_icon.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="/docs/js_calculator/assets/icons/32px_icon.png">
+    <link rel="apple-touch-icon" sizes="64x64" href="/docs/js_calculator/assets/icons/64px_icon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/docs/js_calculator/assets/icons/128px_icon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/docs/js_calculator/assets/icons/144px_icon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/docs/js_calculator/assets/icons/192px_icon.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/docs/js_calculator/assets/icons/256px_icon.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/docs/js_calculator/assets/icons/512px_icon.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/docs/js_calculator/assets/icons/1024px_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/docs/js_calculator/assets/icons/192px_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/js_calculator/assets/icons/32px_icon.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/docs/js_calculator/assets/icons/128px_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/docs/js_calculator/assets/icons/16px_icon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/docs/js_calculator/assets/icons/144px_icon.png">
     <!-- STYLE -->
     <link rel="stylesheet" href="/docs/js_calculator/style.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+    <!-- TWITTER CARD  -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="@galasso22">
+    <meta name="twitter:title" content="JS-Calculator">
+    <meta name="twitter:description" content="Javascript Calculator. It works with simple operations.">
+    <meta name="twitter:image" content="">
+    <!-- OPEN GRAPH PROTOCOL -->
+    <meta property="og:title" content="JS-Calculator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
     <title>JS - Calculator</title>
     <!-- SCRIPTS -->
     <script src="/docs/js_calculator/js/Display.js"></script>
@@ -29,8 +66,8 @@
     <main class="js-container">
         <section class="visor">
             <div class="visor-display">
-                <p id="count" class="count"></p>
-                <p id="visor" class="result">0</p>
+                <p id="count" class="count"> </p>
+                <p id="result" class="result">0</p>
             </div>
             <div class="delete">X</div>
         </section>
