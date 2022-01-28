@@ -11,6 +11,12 @@ class Display {
         this.operationType = undefined;
         this.actualValue = '';
         this.lastValue = '';
+        this.signOp = {
+            sum: '+',
+            sub: '-',
+            multiply: 'x',
+            divide: '/'
+        }
     }
 
     // This is for delete the last number if it´s wrong
@@ -49,7 +55,7 @@ class Display {
     // function to collect values and print them later
     printValues() {
         this.displayCount.textContent = this.actualValue;
-        this.displayResult.textContent = this.lastValue;
+        this.displayResult.textContent = `${this.lastValue} ${this.signOp[this.operationType] || ''}`;
     };
 
     // Now we need to change again our values to numbers so we use parseFloat() method
@@ -62,6 +68,5 @@ class Display {
         if(isNaN(actualValue) || isNaN(lastValue)) return;
         
         this.actualValue = this.calculator[this.operationType](lastValue, actualValue);
-        
     }
 }
