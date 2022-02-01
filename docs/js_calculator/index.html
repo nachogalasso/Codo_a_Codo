@@ -44,12 +44,12 @@
     <meta name="twitter:creator" content="@galasso22">
     <meta name="twitter:title" content="JS-Calculator">
     <meta name="twitter:description" content="Javascript Calculator. It works with simple operations.">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:image" content="/docs/js_calculator/assets/icons/1024px_icon.png">
     <!-- OPEN GRAPH PROTOCOL -->
     <meta property="og:title" content="JS-Calculator" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://codo-a-codo-psi.vercel.app/docs/js_calculator/index.html" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="/docs/js_calculator/assets/icons/1024px_icon.png" />
     <!-- MANIFEST -->
     <link rel="manifest" href="/docs/js_calculator/manifest.json">
     <title>JS - Calculator</title>
@@ -68,29 +68,29 @@
     <main class="js-container">
         <section class="visor">
             <div class="visor-display">
-                <p id="count" class="count"> </p>
-                <p id="result" class="result">0</p>
+                <p id="count" class="count"></p>
+                <p id="result" class="result"></p>
             </div>
-            <div class="delete">X</div>
+            <!-- <div class="delete">X</div> -->
         </section>
         <section class="numbers">
             <button id="restart">C</button>
-            <button >( )</button>
-            <button class="operator">%</button>
-            <button class="operator" value="divide">/</button>
+            <button class="delete">&#8592</button>
+            <button class="operator" value="percentage" title="percentage">%</button>
+            <button class="operator" value="divide" title="divide">/</button>
             <button class="get">7</button>
             <button class="get">8</button>
             <button class="get">9</button>
-            <button class="operator" value="multiply">X</button>
+            <button class="operator" value="multiply" title="multiply">X</button>
             <button class="get">4</button>
             <button class="get">5</button>
             <button class="get">6</button>
-            <button class="operator" value="sub">-</button>
+            <button class="operator" value="sub" title="subtract">-</button>
             <button class="get">1</button>
             <button class="get">2</button>
             <button class="get">3</button>
-            <button class="operator" value="sum">+</button>
-            <button id="sign">+/-</button>
+            <button class="operator" value="sum" title="addition">+</button>
+            <button id="sign" onclick="display.negative()">+/-</button>
             <button class="get">0</button>
             <button class="get">.</button>
             <button class="operator" value="equal">=</button>

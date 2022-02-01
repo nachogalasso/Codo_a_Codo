@@ -41,12 +41,6 @@
             "purpose": "any"
         },
         {
-            "src": "/docs/js_calculator/assets/icons/144px_icon.png",
-            "sizes": "144x144",
-            "type": "img/png",
-            "purpose": "any"
-        },
-        {
             "src": "/docs/js_calculator/assets/icons/192px_icon.png",
             "sizes": "192x192",
             "type": "img/png",
@@ -73,6 +67,12 @@
         {
             "src": "/docs/js_calculator/assets/icons/1024px_icon.png",
             "sizes": "1024x1024",
+            "type": "img/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/docs/js_calculator/assets/icons/144px_icon.png",
+            "sizes": "144x144",
             "type": "img/png",
             "purpose": "any"
         }

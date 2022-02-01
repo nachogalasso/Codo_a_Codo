@@ -15,7 +15,8 @@ class Display {
             sum: '+',
             sub: '-',
             multiply: 'x',
-            divide: '/'
+            divide: '/',
+            percentage: '%'
         }
     }
 
@@ -29,6 +30,11 @@ class Display {
         this.actualValue = '';
         this.lastValue = '';
         this.operationType = undefined;
+        this.printValues();
+    }
+
+    negative() {
+        this.actualValue = -Math.abs(this.actualValue);
         this.printValues();
     }
 

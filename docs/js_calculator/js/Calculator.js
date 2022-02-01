@@ -14,4 +14,9 @@ class Calculator {
     divide(num1, num2) {
         return num1 / num2
     }
+
+    percentage(num1, num2) {
+        return num1 * num2 / 100
+        
+    }
 }

@@ -104,39 +104,6 @@ body {
     padding: 0 .8rem 1rem;
 }
 
-.delete {
-    align-self: flex-end;
-    display: inline-block;
-    position: relative;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-top: .1rem solid black;
-    border-bottom: 1.6rem solid black;
-    border-right: .1rem solid black;
-    text-align: center;
-    background-color: #000;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.delete::before {
-    position: absolute;
-    border-right: 1rem solid black;
-    border-top: .8rem solid transparent;
-    border-bottom:  .8rem solid transparent;
-    content: "";
-    left: -15px;
-    top: 0;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.delete:active {
-    background-color: rgba(255, 0, 0, .8);
-    transform: scale(0.8);
-    transition: transform .3s;
-}
-
 /* =========
     NUMBERS
    ========= */
