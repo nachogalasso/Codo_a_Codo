@@ -10,22 +10,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,700&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/docs/js_proyects/style.css">
+    <link rel="stylesheet" href="/docs/js_projects/style.css">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/docs/js_proyects/assets/images/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/docs/js_proyects/assets/images/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/docs/js_proyects/assets/images/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/docs/js_proyects/assets/images/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/docs/js_proyects/assets/images/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/docs/js_proyects/assets/images/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/docs/js_proyects/assets/images/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/docs/js_proyects/assets/images/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/docs/js_proyects/assets/images/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/docs/js_proyects/assets/images/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/docs/js_proyects/assets/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/docs/js_proyects/assets/images/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/docs/js_proyects/assets/images/icons/favicon-16x16.png">
-    <link rel="manifest" href="/docs/js_proyects/assets/images/icons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="/docs/js_projects/assets/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/docs/js_projects/assets/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/docs/js_projects/assets/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/docs/js_projects/assets/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/docs/js_projects/assets/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/docs/js_projects/assets/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/docs/js_projects/assets/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/docs/js_projects/assets/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/docs/js_projects/assets/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/docs/js_projects/assets/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/js_projects/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/docs/js_projects/assets/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/docs/js_projects/assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/docs/js_projects/assets/images/icons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -48,7 +48,7 @@
         <h1 class="header-title">JAVASCRIPT<span>(Practice Projects)</span></h1>
         <nav class="project-nav">
             <figure class="nav-logo">
-                <img src="/docs/js_proyects/assets/images/js_logo.webp" alt="Javascript Logo">
+                <img src="/docs/js_projects/assets/images/js_logo.webp" alt="Javascript Logo">
             </figure>
             <ul class="project-list links">
                 <li class="list-item">
@@ -140,12 +140,42 @@
 
     <!-- PROJECTS REVIEW END -->
 
+    <!-- TIP GENERATOR START -->
+
+    <section class="tip_form-container">
+        <h2 class="projects-title">Tip Generator</h2>
+        <form action="#" class="tip_form">
+            <label for="money">Ticket Total:
+                <input type="number" name="money" id="money" min="0">
+            </label>
+            <p id="amout" class="show"></p>
+            <label for="tip">Tip %:
+                <input type="number" name="tip" id="tip" min="0" max="100">
+            </label>
+            <p id="tip-value" class="show"></p>
+            <div class="tip-btn">
+                <label for="diners">Total diners:</label>
+                <input type="number" name="diners" id="diners" min="0">
+                <span class="enter-btn">&#x21B3</span>
+            </div>
+            <div class="display">
+                <p id="total" class="show"></p>
+                <p id="pay" class="show"></p>
+            </div>
+
+        </form>
+    </section>
+    <!-- TIP GENERATOR END -->
+
 
 </main>
 
 <!-- MAIN PROJECTS ENDS -->
 
 <!-- PROJECTS SCRIPTS -->
-<script src="/docs/js_proyects/scripts.js"></script>
+<script src="/docs/js_projects/scripts.js"></script>
+<script src="/docs/js_projects/js/colorflipper.js"></script>
+<script src="/docs/js_projects/js/counter.js"></script>
+<script src="/docs/js_projects/js/reviews.js"></script>
 </body>
 </html>
