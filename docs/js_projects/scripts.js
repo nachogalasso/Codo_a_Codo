@@ -21,27 +21,25 @@ const amout = document.getElementById('amout');
 const tipValue = document.getElementById('tip-value');
 const total = document.getElementById('total');
 const pay = document.getElementById('pay');
-
+const display = document.querySelector('.display');
 
 enterBtn.addEventListener('click', () => {
     
     amout.textContent = `Ticket: ${money.value}`;
-    // amout.classList.toggle('show');
     
     let totalTip = (money.value * tip.value) / 100;
     tipValue.textContent = `Tip: ${totalTip}`;
-    // tipValue.classList.toggle('show');
     
     let totalEach = parseInt(totalTip) + parseInt(money.value);
     total.textContent = `Ticket + Tip: ${totalEach}`;
-    // total.classList.toggle('show');
     
     let totalPay =  totalEach / diners.value;
-    pay.textContent = `Total Each: ${totalPay}`;
-    // pay.classList.toggle('show');
-
+    pay.textContent = `Total Each: ${totalPay.toFixed(2)}`;
+    pay.classList.add('pay');
+    console.log(totalPay)
     money.value = '';
     tip.value = '';
     diners.value = '';
+
 })
 
