@@ -624,24 +624,101 @@ input[type=number] {
 /* ================
     5. To-Do LIST
    ================ */
-
 .todoList {
+    background-color: rgba(255, 124, 0, .6);
+    position: relative;
+    width: 50%;
+    border-radius: 2rem;
+    box-shadow: .2rem .2rem 2rem rgba(161, 0, 255, 1);
+}
+
+.ball {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.upleft {
+    top: 2%;
+    left: 8%;
+    background-color: rgba(123, 3, 221, .62);
+    z-index: -1;
+}
+
+.downright {
+    right: 8%;
+    bottom: 2%;
+    background-color: rgba(8, 228, 228, 0.62);
+    z-index: -1;
+}
+
+.todo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 30rem;
+    border: .1rem solid black;
+    border-radius: 2rem;
+    backdrop-filter: blur(2.2rem);
+    -webkit-backdrop-filter: blur(2.2rem);
+    margin: 4.5rem auto;
 }
+
 .data-entry {
     display: flex;
     align-items: center;
 }
 
-.list-item {
+.data-entry p {
+    font-size: 1.4rem;
+    font-family: var(--text);
+    padding-right: .5rem;
+    text-align: center;
+}
+
+.data-entry input {
+    font-size: 1.4rem;
+    font-family: var(--text);
+    margin-right: .5rem;
+    border-radius: 1rem;
+    border: none;
+    padding: .5rem;
+}
+
+.entryBtn {
+    cursor: pointer;
+    background-color: rgba(0, 255, 73, 1);
+    border: none;
+    border-radius: 50%;
+}
+
+.entryBtn:active {
+    transform: scale(0.9);
+    transition: transform .3s;
+    background-color: red;
+    color: whitesmoke;
+}
+
+.entry-list {
+    align-self: flex-start;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+}
+
+.listItem {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .list-text {
+    margin: .5rem 0;
     padding: 0 1rem;
     font-size: 2rem;
+    font-variant: small-caps;
+}
+
+.del {
+    font-size: 1.5rem;
+    cursor: pointer;
 }

@@ -15,7 +15,7 @@ navToggle.addEventListener('click', () => {
 const todoEntry = document.getElementById('entry');
 const entryBtn = document.getElementById('entryBtn');
 const entryList = document.getElementById('entryList');
-const remove = document.querySelectorAll('.del');
+const delItem = document.querySelectorAll('.del');
 
 let list = [];
 
@@ -26,7 +26,7 @@ entryBtn.addEventListener('click', () => {
     // entryList.appendChild(itemList);
     
     if(todoEntry.value === '') {
-        alert('ingresa un elemento');
+        alert('Insert a task');
     }else{
         list.push(todoEntry.value)
     }
@@ -35,12 +35,31 @@ entryBtn.addEventListener('click', () => {
     renderList();
 })
 
+todoEntry.addEventListener('change', () => {
+    
+    if(todoEntry.value === '') {
+        alert('Insert a task');
+    }else{
+        list.push(todoEntry.value)
+    }
+    
+    todoEntry.value = '';
+    renderList();
+})
+
+delItem.forEach(btn => {
+    btn.addEventListener('click', () => {
+        delItem.remove()
+    })
+})
+
 
 function renderList()  {
     let itemList = '';
     for(let i=0; i < list.length; i++) {
         itemList += 
-        `<li class="list-item">
+        `<li class="listItem">
+        <input type="checkbox">
         <p class="list-text">${list[i]}</p>
         <span class="del"><i class="fas fa-trash-alt"></i></span>
         </li>
@@ -51,5 +70,7 @@ function renderList()  {
 
 }
 
+
+
 console.log(list)
-console.log(remove)
+console.log(delItem)
