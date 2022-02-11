@@ -171,14 +171,17 @@
 
     <!-- TO-DO LIST START -->
     <section class="todoList" id="todoList">
-        <h2 class="projects-title">To-Do List</h2>
-        <div class="data-entry">
-            <label for="entry">Enter task:
+        <section class="todo-container">
+            <h2 class="projects-title">To-Do List</h2>
+            <div class="data-entry">
+                <p>Enter task:</p>
                 <input type="text" name="entry" id="entry">
-            </label>
-            <button id="entryBtn">&#x2771</button>
-        </div>
-        <ul id="entryList"></ul>
+                <button id="entryBtn" class="entryBtn">&#x2771</button>
+            </div>
+            <ul id="entryList" class="entry-list"></ul>
+        </section>
+        <div class="ball upleft"></div>
+        <div class="ball downright"></div>
     </section>
     <!-- TO-DO LIST END -->
 
