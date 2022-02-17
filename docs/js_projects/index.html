@@ -173,12 +173,16 @@
     <section class="todoList" id="todoList">
         <section class="todo-container">
             <h2 class="projects-title">To-Do List</h2>
-            <div class="data-entry">
-                <p>Enter task:</p>
-                <input type="text" name="entry" id="entry">
-                <button id="entryBtn" class="entryBtn">&#x2771</button>
-            </div>
-            <ul id="entryList" class="entry-list"></ul>
+            <form class="data-entry">
+                <p class="alert"></p>
+                <div class="input-task">
+                    <input type="text" name="entry" id="entry" placeholder="Enter Task...">
+                    <button type="submit" id="entryBtn" class="entryBtn">Go, Do it!</button>
+                </div>
+            </form>
+            <article id="containerList" class="container-list">
+                <button type="button" class="clear">Clear List</button>
+            </article>
         </section>
         <div class="ball upleft"></div>
         <div class="ball downright"></div>
