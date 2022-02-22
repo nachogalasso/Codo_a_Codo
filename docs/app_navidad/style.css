@@ -1,0 +1,152 @@
+/* CHRISTMAS PRESENTS LIST */
+/* ========
+    INDEX
+   ======== */
+
+/* ==================
+    1. RESET VALUES
+   ================== */
+
+:root {
+  --title: "Mountains of Christmas", Arial, cursive;
+  --text: "Oswald", Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1rem;
+  padding: 0;
+  height: 100vh;
+  background: url(/docs/app_navidad/assets/img/snowman-1090261_1920.webp)
+    no-repeat center fixed;
+  background-size: cover;
+  background-origin: content-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title);
+}
+
+p,
+li,
+a,
+button {
+  font-family: var(--text);
+}
+
+/* =======
+    MAIN
+   ======= */
+.container {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: width 2s;
+  border: 0.1rem solid rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  backdrop-filter: blur(2.2rem);
+  -webkit-backdrop-filter: blur(2.2rem);
+}
+
+.app-title {
+  font-size: 3.5rem;
+  margin: 0 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 50rem;
+    transition: width 2s;
+  }
+  .app-title {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 65rem;
+    transition: width 2s;
+    margin-left: 3rem;
+  }
+}
+
+.gift-entry {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.gift-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 1rem;
+}
+
+.gift-input input {
+  width: 100%;
+  font-size: 1.4rem;
+  font-family: var(--text);
+  border: none;
+  padding: 0.5rem;
+}
+
+.entryBtn {
+  border: none;
+  border-radius: 1rem;
+  background-color: rgba(66, 2, 124, 0.62);
+  font-size: 1.4rem;
+  color: rgba(8, 231, 8, 1);
+  text-align: center;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  outline: 0.2rem solid rgba(66, 2, 124, 0.62);
+  outline-offset: 0.2rem;
+}
+
+.entryBtn:hover {
+  font-weight: 700;
+}
+
+.entryBtn:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+  background-color: rgba(8, 231, 8, 0.62);
+  color: rgba(66, 2, 124, 1);
+}
