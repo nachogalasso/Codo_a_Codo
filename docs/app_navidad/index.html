@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ICONS -->
-  <link rel="apple-touch-icon" sizes="16x16" href="/docs/app_navidad/assets/icons/16px_icon.png" />
-  <link rel="apple-touch-icon" sizes="32x32" href="/docs/app_navidad/assets/icons/32px_icon.png" />
-  <link rel="apple-touch-icon" sizes="48x48" href="/docs/app_navidad/assets/icons/48px_icon.png" />
-  <link rel="apple-touch-icon" sizes="64x64" href="/docs/app_navidad/assets/icons/64px_icon.png" />
-  <link rel="apple-touch-icon" sizes="128x128" href="/docs/app_navidad/assets/icons/128px_icon.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/docs/app_navidad/assets/icons/144px_icon.png" />
-  <link rel="apple-touch-icon" sizes="192x192" href="/docs/app_navidad/assets/icons/192px_icon.png" />
-  <link rel="apple-touch-icon" sizes="256x256" href="/docs/app_navidad/assets/icons/256px_icon.png" />
-  <link rel="apple-touch-icon" sizes="512x512" href="/docs/app_navidad/assets/icons/512px_icon.png" />
-  <link rel="apple-touch-icon" sizes="1024x1024" href="/docs/app_navidad/assets/icons/1024px_icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/docs/app_navidad/assets/icons/maskable_icon_x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/docs/app_navidad/assets/icons/32px_icon.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/docs/app_navidad/assets/icons/16px_icon.png" />
-  <!-- <link rel="manifest" href="/docs/app_navidad/assets/icons/manifest.json" /> -->
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/docs/app_navidad/assets/icons/144px_icon.png" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-   integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-   href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet" />
-  <!-- STYLE -->
-  <link rel="stylesheet" href="style.css" />
-  <title>Lista Regalos</title>
- </head>
- <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="16x16" href="/docs/app_navidad/assets/icons/16px_icon.png" />
+    <link rel="apple-touch-icon" sizes="32x32" href="/docs/app_navidad/assets/icons/32px_icon.png" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/docs/app_navidad/assets/icons/48px_icon.png" />
+    <link rel="apple-touch-icon" sizes="64x64" href="/docs/app_navidad/assets/icons/64px_icon.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="/docs/app_navidad/assets/icons/128px_icon.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/docs/app_navidad/assets/icons/144px_icon.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/docs/app_navidad/assets/icons/192px_icon.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="/docs/app_navidad/assets/icons/256px_icon.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/docs/app_navidad/assets/icons/512px_icon.png" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/docs/app_navidad/assets/icons/1024px_icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/docs/app_navidad/assets/icons/maskable_icon_x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/app_navidad/assets/icons/32px_icon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/docs/app_navidad/assets/icons/16px_icon.png" />
+    <!-- <link rel="manifest" href="/docs/app_navidad/assets/icons/manifest.json" /> -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/docs/app_navidad/assets/icons/144px_icon.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet" />
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista Regalos</title>
+  </head>
+  <body>
   <main class="container">
-   <h2 class="app-title">Regalos</h2>
-   <form class="gift-entry">
-    <p class="alert"></p>
-    <section class="gift-input">
-     <input type="text" name="giftentry" id="g-entry" placeholder="Ingresa Regalo" />
-     <button type="submit" id="entryBtn" class="entryBtn">Agregar</button>
+    <h2 class="app-title">Regalos:</h2>
+    <form class="gift-entry">
+      <p class="alert"></p>
+      <section class="gift-input">
+        <input type="text" name="giftentry" id="ventry" placeholder="Ingresa tus Regalos" />
+        <button type="submit" id="entryBtn" class="entryBtn">Agregar</button>
+      </section>
+    </form>
+    <p class="text">&#x2744 Despierta tu espíritu navideño &#x2744</p>
+   <section class="container-list">
+      <article class="gift-list" id="list">
+     
+      </article>
+      <button type="button" class="clearBtn">Borrar Lista</button>
     </section>
-   </form>
-   <article class="list-container" id="listContainer">
-    <button type="button" class="clearBtn">Borrar Lista</button>
-   </article>
   </main>
  </body>
+
+ <script src="/docs/app_navidad/scripts.js"></script>
 </html>
