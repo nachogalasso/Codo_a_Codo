@@ -9,6 +9,7 @@ const container = document.querySelector(".container-list"); // container List
 const list = document.getElementById("list"); // Gift list
 const deleteAll = document.querySelector(".clearBtn"); // delete all list button
 const text = document.querySelector(".text"); // info text
+const numGifts = document.getElementById("numentry"); // number of gifts
 
 /* Variables for later use */
 let editElement;
@@ -31,17 +32,18 @@ function addItem(e) {
   const id = Math.floor(Math.random() * 1000) + (1).toString();
   // console.log(iValue);
   // console.log(id);
-
+  const num = numGifts.value;
   // FORM ENTRY LOGIC
   // First Element entry
   if (iValue !== "" && editItems === false) {
-    createGiftList(id, iValue);
+    createGiftList(id, iValue, num);
 
     displayAlert("Regalo ingresado", "exito");
     container.classList.add("show-container");
     text.classList.add("container-list");
-    addToLocalStorage(id, iValue);
+    addToLocalStorage(id, iValue, num);
     setBackToDefault();
+    // checkItem(iValue);
   } else if (iValue !== "" && editItems === true) {
     editElement.innerHTML = iValue;
     displayAlert("Regalo Moficicado", "exito");
@@ -107,9 +109,12 @@ function editGift(e) {
 //   let item = getLocalStorage();
 //   item = item.includes(function (items) {
 
-//       if (items.value === iValue) {
-//         displayAlert("Regalo Ingresado", "wrong");
-//       }
+//     if (items.value !== iValue) {
+//       console.log(items)
+//       return items
+//     }else{
+//       displayAlert("Regalo Ingresado", "wrong");
+//     }
 //     });
 //   localStorage.setItem("giftList", JSON.stringify(item));
 // }
@@ -117,6 +122,7 @@ function editGift(e) {
 // All values to Default
 function setBackToDefault() {
   giftEntry.value = "";
+  numGifts.value = "";
   editItems = false;
   editID = "";
   entryBtn.textContent = "Agregar";
@@ -124,8 +130,8 @@ function setBackToDefault() {
 
 /* LOCALSTORAGE */
 // Add items to LocalStorage
-function addToLocalStorage(id, iValue) {
-  const toDo = { id: id, value: iValue };
+function addToLocalStorage(id, iValue, num) {
+  const toDo = { id: id, value: iValue, quantity: num };
   let item = getLocalStorage();
   item.push(toDo);
   localStorage.setItem("giftList", JSON.stringify(item));
@@ -166,7 +172,7 @@ function setupItems() {
   let items = getLocalStorage();
   if (items.length > 0) {
     items.forEach(function (item) {
-      createGiftList(item.id, item.value);
+      createGiftList(item.id, item.value, item.quantity);
     });
     container.classList.add("show-container");
     text.classList.add("container-list");
@@ -174,7 +180,7 @@ function setupItems() {
 }
 
 /* SETUP ITEMS */
-function createGiftList(id, iValue) {
+function createGiftList(id, iValue, num) {
   // New HTML element with its class
   const element = document.createElement("section");
   element.classList.add("gift-item");
@@ -186,7 +192,7 @@ function createGiftList(id, iValue) {
 
   // HTML for the list items
   element.innerHTML = `
-      <p class="gift-text">${iValue}</p>
+      <p class="gift-text">${iValue} x${num}</p>
         <div class="btns">
           <button type="button" class="editBtn btn" title="Editar Regalo">
             <i class="fas fa-edit"></i>
@@ -199,10 +205,8 @@ function createGiftList(id, iValue) {
   // Edit and Delete Buttons
   const deleteBtn = element.querySelector(".deleteBtn");
   const editBtn = element.querySelector(".editBtn");
-  // const checkGift = element.querySelector('.gift-text')
   deleteBtn.addEventListener("click", deleteGift);
   editBtn.addEventListener("click", editGift);
-  // checkGift.addEventListener('submit', checkItem);
 
   list.appendChild(element);
 }
