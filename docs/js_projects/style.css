@@ -825,6 +825,7 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 4rem;
 }
 
 .slide-container {
@@ -832,8 +833,7 @@ input[type="number"] {
   margin: 1rem auto 0;
   width: 70vw;
   height: 40vh;
-  /* max-width: 80rem; */
-  border: 0.1rem solid #000;
+  border: 0.3rem solid #000;
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -846,7 +846,7 @@ input[type="number"] {
 
 @media screen and (min-width: 1024px) {
   .slide-container {
-    height: 70vh;
+    height: 65vh;
   }
 }
 
@@ -865,18 +865,29 @@ input[type="number"] {
 .slide h2 {
   margin: 0;
   padding: 0;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: rgba(224, 255, 253, 0.9);
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .slide h2 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slide h2 {
+    font-size: 6.5rem;
+  }
 }
 
 .img-cont {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 80%;
 }
 
-.slide:nth-child(1) h2 {
+.slide h2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -896,7 +907,7 @@ input[type="number"] {
   font-size: 1.5rem;
   cursor: pointer;
   text-transform: capitalize;
-  margin: 0 0.5rem;
+  margin: 0;
   color: rgba(30, 68, 209, 1);
 }
 
@@ -908,7 +919,7 @@ input[type="number"] {
 }
 
 
-.slide:nth-child(1) {
+/* .slide:nth-child(1) {
     left: 0;
 }
 .slide:nth-child(2) {
@@ -923,4 +934,4 @@ input[type="number"] {
 
 .slide {
     transform: translate();
-}
+} */
