@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Visa Home</title>
+</head>
+<body>
+  <header>
+    <h1 class="header_title">Visa Home</h1>
+    <figure class="logo_img">
+      <img src="/docs/visa/assets/logo.webp" alt="Visa_Logo">
+    </figure>
+  </header>
+  
+  <main>
+    <section class="info">
+      <h3 class="info_title">visa<span>home para socios</span></h3>
+      <ul class="info_list">
+        <li>Información sobre el estado de cuentas de sus tarjetas Visa. Últimos movimientos, liquidaciones y resúmenes de cuenta.</li>
+        <li>Realice el pago puntual o adhiera al débito automático sus facturas de servicios e impuestos a través del Servicio de Pagos Visa.</li>
+        <li>Abone en cuotas fijas el saldo del resumen de dgit addcuenta o los consumos realizados en un pago.</li>
+      </ul>
+    </section>
+    <section class="new_user">
+      <figure class="new_user_img">
+        <img src="/docs/visa/assets/newuser.png" alt="New_User">
+      </figure>
+      <section class="text">
+        <p>Si aún no tiene clave</p>
+        <p>puede obetenerla haciendo <a>click aquí</a></p>
+      </section>
+      <section class="modal">
+        <span class="close">&times;</span>
+        <div class="newuser_info">
+          <h4 class="newuser_title">verificación de identidad - creacion de usuario</h4>
+          <p>la creación de usuario es un breve proceso de preguntas y respuestas destinadas a verificar su identidad</p>
+        
+          <form class="newuser_data">
+            <p>Ingrese la siguiente información:</p>
+            <label for="">Tipo de documento</label>
+            <select name="doc_type" id="doc_type">
+              <option value="ci">Cédula de identidad</option>
+              <option value="dni" selected>Documento Nacional de Identidad</option>
+              <option value="du">Documento Único</option>
+              <option value="lc">Libreta Cívica</option>
+              <option value="le">Libreta de Enrolamiento</option>
+              <option value="pass">Pasaporte</option>
+            </select>
+            <label for="doc_num">Número de Documento</label>
+            <input type="text" name="doc_num" id="doc_num" placeholder="Ingrese Nro de documento sin puntos">
+            <label for="">Género</label>
+            <select name="" id="gender">
+              <option value="" disabled selected>---------</option>
+              <option value="male">Masculino</option>
+              <option value="female">Femenino</option>
+              <option value="none">Neutro</option>
+            </select>
+            <div class="newuser_buttons">
+              <button type="button">Cancelar</button>
+              <button type="submit">Aceptar</button>
+            </div>
+          </form>
+          <p>Nota: el Servicio VisaHome está disponible para todos aquellos socios que posean al menos una terjeta Visa, excepto las tarjetas Visa emitidas por Tarjetas Cuyanas S.A., Tarjeta Naranja S.A. y Tarjetas del Mar S.A.. Ante cualquier duda contáctenos al 0800-999-0109 o vía mail al ConsultasTarjetas@prismamp.com</p>
+        </div>
+      </section>
+      <section class="login">
+
+        <form class="login_form" action="">
+          <label for="">Tipo de Documento</label>
+          <select name="" id="">
+            <option value="">Cédula de Identidad</option>
+            <option value="" selected>Documento Nacional de Identidad</option>
+            <option value="">Documento Único</option>
+            <option value="">Libreta Cívica</option>
+            <option value="">Libreta de Enrolamiento</option>
+            <option value="">Pasaporte</option>
+          </select>
+          <label for="">Número</label>
+          <input type="text" name="" id="" placeholder="Ingrese Nro de documento sin puntos">
+          <label for="">Género</label>
+          <select name="" id="">
+            <option value="" selected disabled>--------</option>
+            <option value="">Masculino</option>
+            <option value="">Femenino</option>
+            <option value="">Neutro</option>
+          </select>
+          <label for="">Contraseña</label>
+          <input type="password" name="" id="">
+          <p><a>Recuperar Contraseña</a></p>
+          <label for="">Usuario</label>
+          <input type="text" name="" id="">
+          <div class="form_recover">
+            <p><a>Obtener usuario</a></p>
+            <p><a>Recuperar usuario</a></p>
+          </div>
+          <div class="buttons">
+            <button type="button">Usar teclado virtual</button>
+            <button type="submit">Ingresar</button>
+          </div>
+        </form>
+      </section>
+    </section>
+    <section class="disclaimer">
+      <p>Los datos que se proporcionen a Prisma Medios de Pago S.A. podrán utilizarse para procesar sus pedidos, solicitudes, denuncias, reclamos, para la relación comercial y fines publicitarios.<b>Disposición DNPDP 10/2008: "El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nro 25.326" y "La DIRECCIÓN NACIONAL DE PROTECCIÓN DE DATOS PERSONALES, Órgano de Control de la Ley Nro 25.326, tiene la atribución de atender a los denuncias y reclamos que se interpongan con relación al incomplimiento de las normas sobre protección de datos personales."</b></p>
+      <p>Ante cualquier duda contáctenos al 0800-999-0109 o vía mail al ConsultasTarjetas@prismamp.com</p>
+    </section>
+  </main>
+</body>
+</html>
