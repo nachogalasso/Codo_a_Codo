@@ -21,11 +21,7 @@
       <ul class="info_list">
         <li>Información sobre el estado de cuentas de sus tarjetas Visa. Últimos movimientos, liquidaciones y resúmenes de cuenta.</li>
         <li>Realice el pago puntual o adhiera al débito automático sus facturas de servicios e impuestos a través del Servicio de Pagos Visa.</li>
-
-        <li>Abone en cuotas fijas el saldo del resumen de cuenta o los consumos realizados en un pago.</ul>li>
-
         <li>Abone en cuotas fijas el saldo del resumen de cuenta o los consumos realizados en un pago.</li>
-
       </ul>
     </section>
     <section class="new_user">
@@ -34,11 +30,11 @@
       </figure>
       <section class="text">
         <p>Si aún no tiene clave</p>
-        <p>puede obetenerla haciendo <a>click aquí</a></p>
+        <p>puede obetenerla haciendo <a id="openModal">click aquí</a></p>
       </section>
-      <section class="modal">
-        <span class="close">&times;</span>
+      <section class="modal" id="myModal">
         <div class="newuser_info">
+          <span class="close">&times;</span>
           <h4 class="newuser_title">verificación de identidad - creacion de usuario</h4>
           <p>la creación de usuario es un breve proceso de preguntas y respuestas destinadas a verificar su identidad</p>
         
@@ -95,7 +91,7 @@
           <input type="password" name="" id="">
           <p><a>Recuperar Contraseña</a></p>
           <label for="">Usuario</label>
-          <input type="text" name="" id="">
+          <input type="text" name="" id="" class="user">
           <div class="form_recover">
             <p><a>Obtener usuario</a></p>
             <p><a>Recuperar usuario</a></p>
@@ -112,5 +108,6 @@
       <p>Ante cualquier duda contáctenos al 0800-999-0109 o vía mail al ConsultasTarjetas@prismamp.com</p>
     </section>
   </main>
+  <script src="/docs/visa/scripts.js"></script>
 </body>
 </html>

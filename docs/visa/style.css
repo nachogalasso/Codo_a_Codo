@@ -170,18 +170,59 @@ li::marker {
   font-weight: bold;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2.2rem);
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
 .newuser_info {
+  display: flex;
+  flex-direction: column;
   border: .1rem solid #000;
-  border-radius: 1rem;
+  border-radius: .5rem;
   margin: 1rem 0;
   padding: 1rem;
-  backdrop-filter: blur(2.2rem);
+  background-color: rgba(206, 206, 206,1);
+}
+
+.close {
+  align-self: flex-end;
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 1);
+  padding-left: .5rem;
+  cursor: pointer;
+}
+
+.close:hover {
+  transform: scale(1.2);
+  transition: transform .3s;
+  font-weight: bold;
+}
+
+.login {
+  margin-top: 2rem;
 }
 
 .newuser_data {
   display: flex;
   flex-direction: column;
-  margin: 3rem 0 1rem 0;
+  margin: 1.5rem 0 1rem 0;
   border-top: .1rem solid #000;
 }
 
@@ -215,40 +256,38 @@ li::marker {
 .login_form {
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
+  /* padding: 1rem; */
   background-color: rgba(241, 241, 241);
   border: .1rem solid #000;
-  /* border-radius: .5rem; */
 }
 
 .login_form label {
-  margin: 0 0 .5rem 1rem;
+  margin: 1.2rem 0 .5rem 2rem;
 }
 
 .login_form input, 
 .login_form select {
-  margin: 0 0 1.2rem 1rem;
-  width: 70%;
-}
-
-input [type="password"] {
-  padding: 0;
+  margin: 0 0 0 2rem;
+  width: 75%;
 }
 
 .login_form p {
   color: rgba(255, 158, 1, 1);
+  margin: .5rem 0 0 2rem;
 }
 
 .form_recover {
   display: flex;
   justify-content: space-around;
   width: 70%;
+  margin-bottom: 1.5rem;
 }
 
 .buttons {
+  display: flex;
+  justify-content: space-between;
   background-color: rgba(206, 206, 206,1);
   padding: 1rem;
-  z-index: 0;
 }
 
 .login {
