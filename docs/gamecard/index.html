@@ -15,78 +15,546 @@
   <main>
     <form>
 
-      <section class="home_team">
-        <div class="hname">
-          <label for="hteam">home team:</label>
-          <input type="text" name="hteam" id="hteam">
-    
-          <label for="hcolor">color</label>
-          <input type="color" name="hcolor" id="hcolor">
-        </div>
-        <div class="hname">
-          <label for="hcoach">head coach:</label>
-          <input type="text" name="hcoach" id="hcoach">
-        </div>
-        
-      </section>
+      <section class="hometeam">
 
-      <section class="coin_toss">
-        <div class="winner">
-          <p>coin toss winner:</p>
-          <div class="win_op">
-            <input type="checkbox" name="winner" id="winner">
-            <label for="winner">home</label>
-            
-            
-            <input type="checkbox" name="kick" id="winner">
-            <label for="kick">kick</label>
-            
-            <input type="checkbox" name="receive" id="winner">
-            <label for="receive">receive</label>
-            
-            <input type="checkbox" name="visitor" id="winner">
-            <label for="visitor">visitor</label>
-            
-            <input type="checkbox" name="defer" id="winner">
-            <label for="defer">defer</label>
-            
-            <input type="checkbox" name="goal" id="winner">
-            <label for="goal">goal</label>
+        <section class="teams">
+          
+          <div class="tname">
+            <label for="hteam">home team:</label>
+            <input type="text" name="hteam" id="hteam">
+            <label for="hcolor">color</label>
+            <input type="text" name="hcolor" id="hcolor" class="shrink">
           </div>
-        </div>
-        <div class="defend">
-          <p>defend:</p>
-          <input type="text" name="defend" id="winner">
-        </div>
+          
+          <div class="tname">
+            <label for="hcoach">head coach:</label>
+            <input type="text" name="hcoach" id="hcoach">
+          </div>
+        
+        </section>
+        
+        <section class="coin_toss">
+          <div class="winner">
+            <p>coin toss winner:</p>
+            
+            <div class="win_op">
+              <input type="checkbox" name="winner" id="winner">
+              <label for="winner">home</label>
+              <input type="checkbox" name="kick" id="winner">
+              <label for="kick">kick</label>
+              <input type="checkbox" name="receive" id="winner">
+              <label for="receive">receive</label>
+              <input type="checkbox" name="visitor" id="winner">
+              <label for="visitor">visitor</label>
+              <input type="checkbox" name="defer" id="winner">
+              <label for="defer">defer</label>
+              <input type="checkbox" name="goal" id="winner">
+              <label for="goal">goal</label>
+            </div>
+
+          </div>
+
+          <div class="defend">
+            <p>defend:</p>
+            <input type="text" name="defend" id="winner">
+          </div>
+
+        </section>
+
+        <section class="captains">
+
+          <div class="capt-spk">
+            <label for="spk_capt">speak captain</label>
+              <input type="text" name="spk_capt" id="spk_capt">
+              <input type="text" name="spk_capt" id="spk_capt">
+              <input type="text" name="spk_capt" id="spk_capt">
+              <input type="text" name="spk_capt" id="spk_capt">
+          </div>
+        
+          <div class="capt-num">
+            <label for="n_capt">no.</label>
+              <input type="number" name="n_capt" id="spk_capt">
+              <input type="number" name="n_capt" id="spk_capt">
+              <input type="number" name="n_capt" id="spk_capt">
+              <input type="number" name="n_capt" id="spk_capt">
+          </div>
+        
+          <div class="capt-pos">
+            <label for="pos_capt">pos.</label>
+              <input type="text" name="pos_capt" id="spk_capt">
+              <input type="text" name="pos_capt" id="spk_capt">
+              <input type="text" name="pos_capt" id="spk_capt">
+              <input type="text" name="pos_capt" id="spk_capt">
+          </div>
+
+        </section>
+
+        <section class="qb_kc">
+
+          <p>quaterback</p>
+          <label for="qb">R</label>
+          <input type="checkbox" name="qbr" id="qb">
+          <label for="qb">L</label>
+          <input type="checkbox" name="qbl" id="qb">
+        
+          <p>kicker</p>
+          <label for="kc">R</label>
+          <input type="checkbox" name="kcr" id="kc">
+          <label for="kc">L</label>
+          <input type="checkbox" name="kcl" id="kc">
+
+          <p>punter</p>
+          <label for="pt">R</label>
+          <input type="checkbox" name="ptr" id="pt">
+          <label for="qb">L</label>
+          <input type="checkbox" name="ptl" id="pt">
+
+        </section>
+        
+        <section class="assistant">
+
+          <div class="trainer">
+            <p>trainer or md on site?:</p>
+            <label for="trainer">Y</label>
+            <input type="checkbox" name="try" id="trainer">
+            <label for="trainer">N</label>
+            <input type="checkbox" name="trn" id="trainer">
+          </div>
+
+          <div class="assist_coach">
+            <p>get back coach</p>
+            <input type="text" name="a_coach" id="a_coach">
+          </div>
+
+        </section>
+
+        <section class="time_out">
+          <p>time outs:</p>
+
+          <div class="to_1st">
+            <div class="to_grid">
+              <p>1st half</p>
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+              <p>qtr:</p>
+              <input type="number" name="to_num1" id="to_num1">
+              <input type="number" name="to_num2" id="to_num2">
+              <input type="number" name="to_num3" id="to_num3">
+              <p>clock</p>
+              <input type="time" name="to_time1" id="to_time1">
+              <input type="time" name="to_time2" id="to_time2">
+              <input type="time" name="to_time3" id="to_time3">
+              <p>player</p>
+              <input type="text" name="to_req1" id="to_req1">
+              <input type="text" name="to_req2" id="to_req2">
+              <input type="text" name="to_req3" id="to_req3">
+            </div>
+          </div>
+
+          <div class="to_grid">
+              <p>2nd half</p>
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+              <p>qtr:</p>
+              <input type="number" name="to_num4" id="to_num4">
+              <input type="number" name="to_num5" id="to_num5">
+              <input type="number" name="to_num6" id="to_num6">
+              <p>clock</p>
+              <input type="time" name="to_time4" id="to_time4">
+              <input type="time" name="to_time5" id="to_time5">
+              <input type="time" name="to_time6" id="to_time6">
+              <p>player</p>
+              <input type="text" name="to_req4" id="to_req4">
+              <input type="text" name="to_req5" id="to_req5">
+              <input type="text" name="to_req6" id="to_req6">
+            </div>
+
+        </section>
+
+        <section class="notes">
+          <p>Notes</p>
+          <textarea name="notes" id="notes" placeholder="Put your notes here..."></textarea>
+        </section>
+
+        <section class="score">
+          <p>scoring / home</p>
+
+          <div class="st_score">
+            <div class="to_grid2">
+              <p>qtr</p>
+              <p>time</p>
+              <p>score</p>
+              <input type="number" name="sc_qtr1" id="sc_qtr1">
+              <input type="time" name="sc_time1" id="sc_time1">
+              <input type="text" name="sc_score1" id="sc_score1">
+              <input type="number" name="sc_qtr2" id="sc_qtr2">
+              <input type="time" name="sc_time2" id="sc_time2">
+              <input type="text" name="sc_score2" id="sc_score2">
+              <input type="number" name="sc_qtr3" id="sc_qtr3">
+              <input type="time" name="sc_time3" id="sc_tim3e">
+              <input type="text" name="sc_score3" id="sc_score3">
+              <input type="number" name="sc_qtr4" id="sc_qtr4">
+              <input type="time" name="sc_time4" id="sc_time4">
+              <input type="text" name="sc_score4" id="sc_score4">
+              <input type="number" name="sc_qtr5" id="sc_qtr5">
+              <input type="time" name="sc_time5" id="sc_time5">
+              <input type="text" name="sc_score5" id="sc_score5">
+            </div>
+          </div>
+        
+          <div class="to_grid2">
+              <p>qtr</p>
+              <p>time</p>
+              <p>score</p>
+              <input type="number" name="sc_qtr6" id="sc_qtr6">
+              <input type="time" name="sc_time6" id="sc_time6">
+              <input type="text" name="sc_score6" id="sc_score6">
+              <input type="number" name="sc_qtr7" id="sc_qtr7">
+              <input type="time" name="sc_time7" id="sc_time7">
+              <input type="text" name="sc_score7" id="sc_score7">
+              <input type="number" name="sc_qtr8" id="sc_qtr8">
+              <input type="time" name="sc_time8" id="sc_time8">
+              <input type="text" name="sc_score8" id="sc_score8">
+              <input type="number" name="sc_qtr9" id="sc_qtr9">
+              <input type="time" name="sc_time9" id="sc_time9">
+              <input type="text" name="sc_score9" id="sc_score9">
+              <input type="number" name="sc_qtr10" id="sc_qtr">
+              <input type="time" name="sc_time10" id="sc_time10">
+              <input type="text" name="sc_score10" id="sc_score10">
+            </div>
+
+        </section>
+
+        <section class="penalties">
+          <p>penalties / home</p>
+
+          <div class="pen_grid">
+            <p>qtr</p>
+            <p>time</p>
+            <p>foul</p>
+            <p>player</p>
+            <input type="number" name="pn_qtr1" id="pn_qtr1">
+            <input type="time" name="pn_time1" id="pn_time1">
+            <input type="text" name="pn_foul1" id="pn_foul1">
+            <input type="text" name="pn_player1" id="pn_player1">
+            <input type="number" name="pn_qtr2" id="pn_qtr2">
+            <input type="time" name="pn_time2" id="pn_time2">
+            <input type="text" name="pn_foul2" id="pn_foul2">
+            <input type="text" name="pn_player2" id="pn_player2">
+            <input type="number" name="pn_qtr3" id="pn_qtr3">
+            <input type="time" name="pn_time3" id="pn_time3">
+            <input type="text" name="pn_foul3" id="pn_foul3">
+            <input type="text" name="pn_player3" id="pn_player3">
+            <input type="number" name="pn_qtr4" id="pn_qtr4">
+            <input type="time" name="pn_time4" id="pn_time4">
+            <input type="text" name="pn_foul4" id="pn_foul4">
+            <input type="text" name="pn_player4" id="pn_player4">
+          </div>
+
+        </section>
+
+        <section class="doctor">
+          <p>players with doctors letters:</p>
+          <input type="text" name="pl_doctor" id="pl_doctor">
+          <input type="text" name="pl_doctor" id="pl_doctor">
+        </section>
+
+        <section class="notes">
+          <p>Notes</p>
+          <textarea name="notes" id="notes" placeholder="Put your notes here..."></textarea>
+        </section>
+
       </section>
 
-      <section class="home_capt">
+      <section class="visitorteam">
 
-        <div class="home_capt-spk">
-          <label for="spk_capt">speak captain</label>
-            <input type="text" name="spk_capt" id="spk_capt">
-            <input type="text" name="spk_capt" id="spk_capt">
-            <input type="text" name="spk_capt" id="spk_capt">
-            <input type="text" name="spk_capt" id="spk_capt">
-        </div>
+        <section class="teams">
+
+          <div class="tname">
+            <label for="vteam">visiting team:</label>
+            <input type="text" name="vteam" id="vteam">
+            <label for="vcolor">color</label>
+            <input type="text" name="vcolor" id="vcolor" class="shrink">
+          </div>
+
+          <div class="tname">
+            <label for="vcoach">head coach:</label>
+            <input type="text" name="vcoach" id="vcoach">
+          </div>
         
-        <div class="home_capt-num">
-          <label for="n_capt">no.</label>
-            <input type="number" name="n_capt" id="spk_capt">
-            <input type="number" name="n_capt" id="spk_capt">
-            <input type="number" name="n_capt" id="spk_capt">
-            <input type="number" name="n_capt" id="spk_capt">
-        </div>
+        </section>
+
+        <section class="captains">
+
+          <div class="capt-spk">
+            <label for="vspk_capt">speak captain</label>
+              <input type="text" name="vspk_capt1" id="vspk_capt1">
+              <input type="text" name="vspk_capt2" id="vspk_capt2">
+              <input type="text" name="vspk_capt3" id="vspk_capt3">
+              <input type="text" name="vspk_capt4" id="vspk_capt4">
+          </div>
         
-        <div class="home_capt-pos">
-          <label for="pos_capt">pos.</label>
-            <input type="text" name="pos_capt" id="spk_capt">
-            <input type="text" name="pos_capt" id="spk_capt">
-            <input type="text" name="pos_capt" id="spk_capt">
-            <input type="text" name="pos_capt" id="spk_capt">
-        </div>
+          <div class="capt-num">
+            <label for="n_capt">no.</label>
+              <input type="number" name="vn_capt1" id="vspk_capt1">
+              <input type="number" name="vn_capt2" id="vspk_capt2">
+              <input type="number" name="vn_capt3" id="vspk_capt3">
+              <input type="number" name="vn_capt4" id="vspk_capt4">
+          </div>
         
+          <div class="capt-pos">
+            <label for="pos_capt">pos.</label>
+              <input type="text" name="vpos_capt1" id="vspk_capt1">
+              <input type="text" name="vpos_capt2" id="vspk_capt2">
+              <input type="text" name="vpos_capt3" id="vspk_capt3">
+              <input type="text" name="vpos_capt4" id="vspk_capt4">
+          </div>
+        </section>
+
+        <section class="qb_kc">
+          <p>quaterback</p>
+          <label for="vqb">R</label>
+          <input type="checkbox" name="vqbr" id="vqb">
+          <label for="vqb">L</label>
+          <input type="checkbox" name="vqbl" id="vqb">
+        
+          <p>kicker</p>
+          <label for="vkc">R</label>
+          <input type="checkbox" name="vkcr" id="vkc">
+          <label for="vkc">L</label>
+          <input type="checkbox" name="vkcl" id="vkc">
+
+          <p>punter</p>
+          <label for="vpt">R</label>
+          <input type="checkbox" name="vptr" id="vpt">
+          <label for="vpt">L</label>
+          <input type="checkbox" name="vptl" id="vpt">
+        </section>
+        
+        <section class="assistant">
+
+          <div class="trainer">
+            <p>trainer or md on site?:</p>
+            <label for="vtrainer">Y</label>
+            <input type="checkbox" name="vtry" id="vtrainer">
+            <label for="vtrainer">N</label>
+            <input type="checkbox" name="tvrn" id="vtrainer">
+          </div>
+          
+          <div class="assist_coach">
+            <p>get back coach</p>
+            <input type="text" name="va_coach" id="va_coach">
+          </div>
+        </section>
+
+        <section class="time_out">
+          <p>time outs:</p>
+
+          <div class="to_1st">
+            <div class="to_grid">
+              <p>1st half</p>
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+
+              <p>qtr:</p>
+              <input type="number" name="vto_num1" id="vto_num1">
+              <input type="number" name="vto_num2" id="vto_num2">
+              <input type="number" name="vto_num3" id="vto_num3">
+
+              <p>clock</p>
+              <input type="time" name="vto_time1" id="vto_time1">
+              <input type="time" name="vto_time2" id="vto_time2">
+              <input type="time" name="vto_time3" id="vto_time3">
+
+              <p>player</p>
+              <input type="text" name="vto_req1" id="vto_req1">
+              <input type="text" name="vto_req2" id="vto_req2">
+              <input type="text" name="vto_req3" id="vto_req3">
+            </div>
+          </div>
+
+          <div class="to_grid">
+              <p>2nd half</p>
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+
+              <p>qtr:</p>
+              <input type="number" name="v2to_num4" id="v2to_num4">
+              <input type="number" name="v2to_num5" id="v2to_num5">
+              <input type="number" name="v2to_num6" id="v2to_num6">
+
+              <p>clock</p>
+              <input type="time" name="v2to_time4" id="v2to_time4">
+              <input type="time" name="v2to_time5" id="v2to_time5">
+              <input type="time" name="v2to_time6" id="v2to_time6">
+
+              <p>player</p>
+              <input type="text" name="v2to_req4" id="v2to_req4">
+              <input type="text" name="v2to_req5" id="v2to_req5">
+              <input type="text" name="v2to_req6" id="v2to_req6">
+            </div>
+
+        </section>
+
+        <section class="ballpos">
+          <p>ball position</p>
+
+          <div class="ball_grid">
+            <p>1st<br> quarter</p>
+            <p>yard</p>
+            <p>down</p>
+            <p>dist.</p>
+            <p>yd. line</p>
+            <p>clip</p>
+            <input type="number" name="ballpos_1qt" id="ballpos_1qt">
+            <input type="number" name="ballpos_1qt" id="ballpos_1qt">
+            <input type="number" name="ballpos_1qt" id="ballpos_1qt">
+            <input type="number" name="ballpos_1qt" id="ballpos_1qt">
+            <input type="number" name="ballpos_1qt" id="ballpos_1qt">
+          </div>
+
+          <div class="ball_grid2">
+            <p>3rd<br> quarter</p>
+            <p>yard</p>
+            <p>down</p>
+            <p>dist.</p>
+            <p>yd. line</p>
+            <p>clip</p>
+            <input type="number" name="ballpos_3qt" id="ballpos_3qt">
+            <input type="number" name="ballpos_3qt" id="ballpos_3qt">
+            <input type="number" name="ballpos_3qt" id="ballpos_3qt">
+            <input type="number" name="ballpos_3qt" id="ballpos_3qt">
+            <input type="number" name="ballpos_3qt" id="ballpos_3qt">
+          </div>
+
+        </section>
+
+        <!-- <section class="notes">
+          <p>Notes</p>
+          <textarea name="notes" id="notes" placeholder="Put your notes here..."></textarea>
+        </section> -->
+
+        <section class="score">
+          <p>scoring / visitor</p>
+
+          <div class="st_score">
+            <div class="to_grid2">
+              <p>qtr</p>
+              <p>time</p>
+              <p>score</p>
+              <input type="number" name="vsc_qtr1" id="vsc_qtr1">
+              <input type="time" name="vsc_time1" id="vsc_time1">
+              <input type="text" name="vsc_score1" id="vsc_score1">
+              <input type="number" name="vsc_qtr2" id="vsc_qtr2">
+              <input type="time" name="vsc_time2" id="vsc_time2">
+              <input type="text" name="vsc_score2" id="vsc_score2">
+              <input type="number" name="vsc_qtr3" id="vsc_qtr3">
+              <input type="time" name="vsc_time3" id="vsc_time3">
+              <input type="text" name="vsc_score3" id="vsc_score3">
+              <input type="number" name="vsc_qtr4" id="vsc_qtr4">
+              <input type="time" name="vsc_time4" id="vsc_time4">
+              <input type="text" name="vsc_score4" id="vsc_score4">
+              <input type="number" name="vsc_qtr5" id="vsc_qtr5">
+              <input type="time" name="vsc_time5" id="vsc_time5">
+              <input type="text" name="vsc_score5" id="vsc_score5">
+            </div>
+          </div>
+        
+          <div class="to_grid2">
+              <p>qtr</p>
+              <p>time</p>
+              <p>score</p>
+              <input type="number" name="vsc_qtr6" id="vsc_qtr6">
+              <input type="time" name="vsc_time6" id="vsc_time6">
+              <input type="text" name="vsc_score6" id="vsc_score6">
+              <input type="number" name="vsc_qtr7" id="vsc_qtr7">
+              <input type="time" name="vsc_time7" id="vsc_time7">
+              <input type="text" name="vsc_score7" id="vsc_score7">
+              <input type="number" name="vsc_qtr8" id="vsc_qtr8">
+              <input type="time" name="vsc_time8" id="vsc_time8">
+              <input type="text" name="vsc_score8" id="vsc_score8">
+              <input type="number" name="vsc_qtr9" id="vsc_qtr9">
+              <input type="time" name="vsc_time9" id="vsc_time9">
+              <input type="text" name="vsc_score9" id="vsc_score9">
+              <input type="number" name="vsc_qtr10" id="vsc_qtr10">
+              <input type="time" name="vsc_time10" id="vsc_time10">
+              <input type="text" name="vsc_score10" id="vsc_score10">
+            </div>
+        </section>
+
+        <section class="penalties">
+          <p>penalties / visitor</p>
+
+          <div class="pen_grid">
+            <p>qtr</p>
+            <p>time</p>
+            <p>foul</p>
+            <p>player</p>
+            <input type="number" name="vpn_qtr1" id="vpn_qtr1">
+            <input type="time" name="vpn_time1" id="vpn_time1">
+            <input type="text" name="vpn_foul1" id="vpn_foul1">
+            <input type="text" name="vpn_player1" id="vpn_player1">
+            <input type="number" name="vpn_qtr2" id="vpn_qtr2">
+            <input type="time" name="vpn_time2" id="vpn_time2">
+            <input type="text" name="vpn_foul2" id="vpn_foul2">
+            <input type="text" name="vpn_player2" id="vpn_player2">
+            <input type="number" name="vpn_qtr3" id="vpn_qtr3">
+            <input type="time" name="vpn_time3" id="vpn_time3">
+            <input type="text" name="vpn_foul3" id="vpn_foul3">
+            <input type="text" name="vpn_player3" id="vpn_player3">
+            <input type="number" name="vpn_qtr4" id="vpn_qtr4">
+            <input type="time" name="vpn_time4" id="vpn_time4">
+            <input type="text" name="vpn_foul4" id="vpn_foul4">
+            <input type="text" name="vpn_player4" id="vpn_player4">
+          </div>
+        </section>
+
+        <section class="doctor">
+          <p>players with doctors letters:</p>
+          <input type="text" name="vpl_doctor" id="vpl_doctor">
+          <input type="text" name="vpl_doctor" id="vpl_doctor">
+        </section>
+
+        <section class="notes">
+          <p>Notes</p>
+          <textarea name="notes" id="notes" placeholder="Put your notes here..."></textarea>
+        </section>
+
       </section>
+
+      <section class="game_time">
+        <p>game time</p>
+        <div class="game_grid">
+          <p>1st qtr</p>
+          <label for="1start">start</label>
+          <input type="time" name="1start" id="1start">
+          <label for="1end">end</label>
+          <input type="time" name="1end" id="1end">
+          <p>2st qtr</p>
+          <label for="2start">start</label>
+          <input type="time" name="2start" id="2start">
+          <label for="2end">end</label>
+          <input type="time" name="2end" id="2end">
+          <p>3st qtr</p>
+          <label for="3start">start</label>
+          <input type="time" name="3start" id="3start">
+          <label for="3end">end</label>
+          <input type="time" name="3end" id="3end">
+          <p>4st qtr</p>
+          <label for="4start">start</label>
+          <input type="time" name="4start" id="4start">
+          <label for="4end">end</label>
+          <input type="time" name="4end" id="4end">
+        </div>
+
+      </section>
+
+      <input type="submit" value="Send">
+
     </form>
   </main>
 </body>
