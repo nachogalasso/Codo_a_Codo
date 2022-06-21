@@ -31,7 +31,7 @@ html:focus-within {
 
 body {
   width: 42rem;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: .5rem;
   border: .2rem solid #000;
 }
@@ -46,7 +46,7 @@ form {
 }
 
 p, label, input,
-h1, h3 {
+h1, h3, button {
   font-variant: small-caps;
 }
 
@@ -54,31 +54,41 @@ h1, h3 {
 .header {
   margin: 0;
   display: flex;
+  justify-content: space-between;
 }
 
-.header h1 {
-  flex: 0 0 calc(80% - 1rem);
+.home_header {
+  width: 25rem;
   font-size: 4rem;
   margin: 0;
   padding: 0.5rem 1rem;
   background-color: var(--1stcolor);
   color: var(--2ndcolor);
+  cursor: pointer;
 }
 
-.header h3 {
-  margin: 0 0 0 .5rem;
+.visitor {
+  margin: 0 .2rem;
   background-color: var(--2ndcolor);
   color: var(--1stcolor);
   font-size: 1.5rem;
   padding: 1rem;
-  flex-grow: 1;
-  text-align: center;
-  line-height: 2.5;
-  border-radius: 1rem;
+  align-self: center;
+  line-height: 2;
+  border-radius:1rem;
+  cursor: pointer;
 }
 
-.header h3 > a {
-  cursor: pointer;
+.both_cards {
+  align-self: center;
+  text-align: center;
+  margin: 0;
+  padding: 1.2rem 0;
+  font-size: 2.5rem;
+  width: 12rem;
+  color: rgb(254, 100, 5);
+  background-color: rgba(6, 3, 2, 0.8);
+  border-radius: 1rem;
 }
 
 /* ======
@@ -116,7 +126,7 @@ h1, h3 {
   border: none;
 }
 
-/* VISITOR TEAM */
+/* VISITOR TEAM HEADER */
 .shrink {
   width: 15%;
   border: none;
@@ -296,7 +306,8 @@ h1, h3 {
   border: .1rem solid #000;
 }
 
-.to_grid p {
+.to_grid p,
+.to_grid label {
   margin: 0;
   padding: .2rem 0;
   font-size: 1.2rem;
@@ -341,7 +352,7 @@ h1, h3 {
 
 /* SCORE */
 /* score container is on line 256 */
-/* score p title is in line 126 and in line 263 */
+/* score p title is in line 126 */
 
 .to_grid2 {
   display: grid;
@@ -350,7 +361,8 @@ h1, h3 {
 }
 
 .to_grid2 p,
-.pen_grid p,
+.to_grid2 label,
+.pen_grid label,
 .game_grid p {
   margin: 0;
   padding: .2rem 0;
@@ -367,7 +379,7 @@ h1, h3 {
 
 /* PENALTIES */
 /* penalties title is on line 127 */
-/* penalties p is on line 343 */
+/* penalties label style is on line 365*/
 .penalties {
   margin: .5rem 0;
 }
@@ -390,7 +402,7 @@ h1, h3 {
   border: .1rem solid #000;
 }
 
-.doctor p {
+.doctor label {
   margin: 0;
   padding: .1rem .3rem;
   font-size: 1.5rem;
@@ -402,21 +414,40 @@ h1, h3 {
   border: .1px solid #000;
 }
 
-/* SUBMIT BUTTON */
-input[type="submit"] {
-  align-self: flex-end;
-  margin: 1.5rem 1rem;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  border-radius: .5rem;
-}
-
 /* VISITOR TEAM */
 .visitorteam {
-  margin-top: .8rem;
+  margin-top: 2rem;
   border-top: 1rem solid #000;
+  display: none;
 }
 
+/* CARD TRANSITIONS */
+
+.show {
+  display: block;
+  margin: 0;
+  border-top: none;
+}
+
+.hide {
+  display: none;
+}
+
+.home_title {
+  margin: 0 auto;
+  background-color: var(--2ndcolor);
+  color: var(--1stcolor);
+  font-size: 1.5rem;
+  padding: 1rem;
+  align-self: center;
+  line-height: 2;
+  border-radius:1rem;
+  cursor: pointer;
+}
+
+.visitor_title {
+  flex: 0 0 calc(68% - 1rem);
+}
 /* BALL POSITION */
 /* container is in line 258 */
 /* p style is in line 135 */
@@ -433,7 +464,9 @@ input[type="submit"] {
 }
 
 .ball_grid p,
-.ball_grid2 p {
+.ball_grid label,
+.ball_grid2 p,
+.ball_grid2 label {
   margin: 0;
   font-size: 1.2rem;
   text-align: center;
@@ -550,4 +583,26 @@ input[type="submit"] {
 .game_grid input[type="time"]::-webkit-calendar-picker-indicator { 
   background: none; 
   display:none; 
+}
+
+/* BUTTON´s - SHOW ALL and SUBMIT */
+.show_cards {
+  align-self: center;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  width: 5rem;
+  text-align: center;
+  background-color: rgb(102, 220, 247);
+  box-shadow: .1rem .1rem .5rem #000;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  align-self: flex-end;
+  margin: 1.5rem 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
 }
