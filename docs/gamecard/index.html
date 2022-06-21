@@ -9,8 +9,9 @@
 </head>
 <body>
   <header class="header home">
-    <h1>Home</h1>
-    <h3><a>Visitor</a></h3>
+    <h1 class="home_header" id="homeHeader">Home</h1>
+    <h3 class="visitor" id="visitorHeader">Visitor</h3>
+    <button class="show_cards">view cards</button>
   </header>
   <main>
     <form>
@@ -137,15 +138,15 @@
               <p>1</p>
               <p>2</p>
               <p>3</p>
-              <p>qtr:</p>
+              <label for="to_num">qtr:</label>
               <input type="number" name="to_num1" id="to_num1">
               <input type="number" name="to_num2" id="to_num2">
               <input type="number" name="to_num3" id="to_num3">
-              <p>clock</p>
+              <label for="to_time">clock</label>
               <input type="time" name="to_time1" id="to_time1">
               <input type="time" name="to_time2" id="to_time2">
               <input type="time" name="to_time3" id="to_time3">
-              <p>player</p>
+              <label for="to_req">player</label>
               <input type="text" name="to_req1" id="to_req1">
               <input type="text" name="to_req2" id="to_req2">
               <input type="text" name="to_req3" id="to_req3">
@@ -157,15 +158,15 @@
               <p>1</p>
               <p>2</p>
               <p>3</p>
-              <p>qtr:</p>
+              <label for="to_num2nd">qtr:</label>
               <input type="number" name="to_num4" id="to_num4">
               <input type="number" name="to_num5" id="to_num5">
               <input type="number" name="to_num6" id="to_num6">
-              <p>clock</p>
+              <label for="to_time2nd">clock</label>
               <input type="time" name="to_time4" id="to_time4">
               <input type="time" name="to_time5" id="to_time5">
               <input type="time" name="to_time6" id="to_time6">
-              <p>player</p>
+              <label for="to_req2nd">player</label>
               <input type="text" name="to_req4" id="to_req4">
               <input type="text" name="to_req5" id="to_req5">
               <input type="text" name="to_req6" id="to_req6">
@@ -183,9 +184,9 @@
 
           <div class="st_score">
             <div class="to_grid2">
-              <p>qtr</p>
-              <p>time</p>
-              <p>score</p>
+              <label for="sc_qtr">qtr</label>
+              <label for="sc_time">time</label>
+              <label for="sc_score">score</label>
               <input type="number" name="sc_qtr1" id="sc_qtr1">
               <input type="time" name="sc_time1" id="sc_time1">
               <input type="text" name="sc_score1" id="sc_score1">
@@ -205,9 +206,9 @@
           </div>
         
           <div class="to_grid2">
-              <p>qtr</p>
-              <p>time</p>
-              <p>score</p>
+              <label for="sc2_qtr">qtr</label>
+              <label for="sc2_time">time</label>
+              <label for="sc2_score">score</label>
               <input type="number" name="sc_qtr6" id="sc_qtr6">
               <input type="time" name="sc_time6" id="sc_time6">
               <input type="text" name="sc_score6" id="sc_score6">
@@ -231,10 +232,10 @@
           <p>penalties / home</p>
 
           <div class="pen_grid">
-            <p>qtr</p>
-            <p>time</p>
-            <p>foul</p>
-            <p>player</p>
+            <label for="pen_qtr">qtr</label>
+            <label for="pen_time">time</label>
+            <label for="pen_foul">foul</label>
+            <label for="pen_player">player</label>
             <input type="number" name="pn_qtr1" id="pn_qtr1">
             <input type="time" name="pn_time1" id="pn_time1">
             <input type="text" name="pn_foul1" id="pn_foul1">
@@ -256,7 +257,7 @@
         </section>
 
         <section class="doctor">
-          <p>players with doctors letters:</p>
+          <label for="doctor_letter">players with doctors letters:</label>
           <input type="text" name="pl_doctor" id="pl_doctor">
           <input type="text" name="pl_doctor" id="pl_doctor">
         </section>
@@ -359,17 +360,17 @@
               <p>2</p>
               <p>3</p>
 
-              <p>qtr:</p>
+              <label for="vto_num">qtr:</label>
               <input type="number" name="vto_num1" id="vto_num1">
               <input type="number" name="vto_num2" id="vto_num2">
               <input type="number" name="vto_num3" id="vto_num3">
 
-              <p>clock</p>
+              <label for="vto_time">clock</label>
               <input type="time" name="vto_time1" id="vto_time1">
               <input type="time" name="vto_time2" id="vto_time2">
               <input type="time" name="vto_time3" id="vto_time3">
 
-              <p>player</p>
+              <label for="vto_req">player</label>
               <input type="text" name="vto_req1" id="vto_req1">
               <input type="text" name="vto_req2" id="vto_req2">
               <input type="text" name="vto_req3" id="vto_req3">
@@ -382,17 +383,17 @@
               <p>2</p>
               <p>3</p>
 
-              <p>qtr:</p>
+              <label for="v2to_num">qtr:</label>
               <input type="number" name="v2to_num4" id="v2to_num4">
               <input type="number" name="v2to_num5" id="v2to_num5">
               <input type="number" name="v2to_num6" id="v2to_num6">
 
-              <p>clock</p>
+              <label for="v2to_time">clock</label>
               <input type="time" name="v2to_time4" id="v2to_time4">
               <input type="time" name="v2to_time5" id="v2to_time5">
               <input type="time" name="v2to_time6" id="v2to_time6">
 
-              <p>player</p>
+              <label for="v2to_req">player</label>
               <input type="text" name="v2to_req4" id="v2to_req4">
               <input type="text" name="v2to_req5" id="v2to_req5">
               <input type="text" name="v2to_req6" id="v2to_req6">
@@ -405,11 +406,11 @@
 
           <div class="ball_grid">
             <p>1st<br> quarter</p>
-            <p>yard</p>
-            <p>down</p>
-            <p>dist.</p>
-            <p>yd. line</p>
-            <p>clip</p>
+            <label for="ball_yard">yard</label>
+            <label for="ball_down">down</label>
+            <label for="ball_dist">dist.</label>
+            <label for="ball_ydline">yd. line</label>
+            <label for="ball_clip">clip</label>
             <input type="number" name="ballpos_1qt" id="ballpos_1qt">
             <input type="number" name="ballpos_1qt" id="ballpos_1qt">
             <input type="number" name="ballpos_1qt" id="ballpos_1qt">
@@ -419,11 +420,11 @@
 
           <div class="ball_grid2">
             <p>3rd<br> quarter</p>
-            <p>yard</p>
-            <p>down</p>
-            <p>dist.</p>
-            <p>yd. line</p>
-            <p>clip</p>
+            <label for="ball_yard3">yard</label>
+            <label for="ball_down3">down</label>
+            <label for="ball_dist3">dist.</label>
+            <label for="ball_ydline3">yd. line</label>
+            <label for="ball_clip3">clip</label>
             <input type="number" name="ballpos_3qt" id="ballpos_3qt">
             <input type="number" name="ballpos_3qt" id="ballpos_3qt">
             <input type="number" name="ballpos_3qt" id="ballpos_3qt">
@@ -433,19 +434,14 @@
 
         </section>
 
-        <!-- <section class="notes">
-          <p>Notes</p>
-          <textarea name="notes" id="notes" placeholder="Put your notes here..."></textarea>
-        </section> -->
-
         <section class="score">
           <p>scoring / visitor</p>
 
           <div class="st_score">
             <div class="to_grid2">
-              <p>qtr</p>
-              <p>time</p>
-              <p>score</p>
+              <label for="vsc_qtr">qtr</label>
+              <label for="vsc_time">time</label>
+              <label for="vsc_score">score</label>
               <input type="number" name="vsc_qtr1" id="vsc_qtr1">
               <input type="time" name="vsc_time1" id="vsc_time1">
               <input type="text" name="vsc_score1" id="vsc_score1">
@@ -465,9 +461,9 @@
           </div>
         
           <div class="to_grid2">
-              <p>qtr</p>
-              <p>time</p>
-              <p>score</p>
+              <label for="vsc2_qtr">qtr</label>
+              <label for="vsc2_time">time</label>
+              <label for="vsc2_score">score</label>
               <input type="number" name="vsc_qtr6" id="vsc_qtr6">
               <input type="time" name="vsc_time6" id="vsc_time6">
               <input type="text" name="vsc_score6" id="vsc_score6">
@@ -490,10 +486,10 @@
           <p>penalties / visitor</p>
 
           <div class="pen_grid">
-            <p>qtr</p>
-            <p>time</p>
-            <p>foul</p>
-            <p>player</p>
+            <label for="vpn_qtr">qtr</label>
+            <label for="vpn_time">time</label>
+            <label for="vpn_foul">foul</label>
+            <label for="vpn_player">player</label>
             <input type="number" name="vpn_qtr1" id="vpn_qtr1">
             <input type="time" name="vpn_time1" id="vpn_time1">
             <input type="text" name="vpn_foul1" id="vpn_foul1">
@@ -514,7 +510,7 @@
         </section>
 
         <section class="doctor">
-          <p>players with doctors letters:</p>
+          <label for="vpl_doctor">players with doctors letters:</label>
           <input type="text" name="vpl_doctor" id="vpl_doctor">
           <input type="text" name="vpl_doctor" id="vpl_doctor">
         </section>
@@ -557,5 +553,7 @@
 
     </form>
   </main>
+
+  <script src="/docs/gamecard/script.js"></script>
 </body>
 </html>
