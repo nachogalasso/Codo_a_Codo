@@ -4,39 +4,54 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Style sheet-->
   <link rel="stylesheet" href="/docs/gamecard/style.css">
   <title>Game Card</title>
 </head>
 <body>
+  
+<!--  CARD HEADER START -->
   <header class="header home">
     <h1 class="home_header" id="homeHeader">Home</h1>
     <h3 class="visitor" id="visitorHeader">Visitor</h3>
-    <button class="show_cards">view cards</button>
+    <button class="show_cards">view both cards</button>
   </header>
+  <!--  CARD HEADER END -->
+
+  <!--  MAIN START -->
   <main>
-    <form>
 
+    <!--  CARD FORM START -->
+    <form action="#" class="card_form">
+
+      <!--  HOME TEAM CARD CONTAINER START -->
       <section class="hometeam">
-
+        <!--  HOME TEAM NAME AND COACH START -->
         <section class="teams">
           
           <div class="tname">
-            <label for="hteam">home team:</label>
+            <label for="hteam">home team</label>
             <input type="text" name="hteam" id="hteam">
             <label for="hcolor">color</label>
             <input type="text" name="hcolor" id="hcolor" class="shrink">
           </div>
           
           <div class="tname">
-            <label for="hcoach">head coach:</label>
+            <label for="hcoach">head coach</label>
             <input type="text" name="hcoach" id="hcoach">
           </div>
         
         </section>
-        
+        <!--  HOME TEAM NAME AND COACH END -->
+
+        <!--  HOME TEAM COIN TOSS START -->
         <section class="coin_toss">
           <div class="winner">
-            <p>coin toss winner:</p>
+            <p>coin toss winner</p>
             
             <div class="win_op">
               <input type="checkbox" name="winner" id="winner">
@@ -56,12 +71,14 @@
           </div>
 
           <div class="defend">
-            <p>defend:</p>
+            <p>defend</p>
             <input type="text" name="defend" id="winner">
           </div>
 
         </section>
+        <!--  HOME TEAM COIN TOSS END -->
 
+        <!--  HOME TEAM CAPTAINS START -->
         <section class="captains">
 
           <div class="capt-spk">
@@ -89,7 +106,9 @@
           </div>
 
         </section>
+        <!--  HOME TEAM CAPTAINS END -->
 
+        <!--  HOME TEAM QB, KC, PT START -->
         <section class="qb_kc">
 
           <p>quaterback</p>
@@ -111,11 +130,13 @@
           <input type="checkbox" name="ptl" id="pt">
 
         </section>
-        
+        <!--  HOME TEAM QB, KC, PT END -->
+
+        <!--  HOME TEAM ASSISTANT START -->
         <section class="assistant">
 
           <div class="trainer">
-            <p>trainer or md on site?:</p>
+            <p>trainer or md on site ?</p>
             <label for="trainer">Y</label>
             <input type="checkbox" name="try" id="trainer">
             <label for="trainer">N</label>
@@ -128,9 +149,11 @@
           </div>
 
         </section>
+        <!--  HOME TEAM ASSISTANT END -->
 
+        <!--  HOME TEAM TIME OUTS START -->
         <section class="time_out">
-          <p>time outs:</p>
+          <p>time outs</p>
 
           <div class="to_1st">
             <div class="to_grid">
@@ -138,7 +161,7 @@
               <p>1</p>
               <p>2</p>
               <p>3</p>
-              <label for="to_num">qtr:</label>
+              <label for="to_num">qtr</label>
               <input type="number" name="to_num1" id="to_num1">
               <input type="number" name="to_num2" id="to_num2">
               <input type="number" name="to_num3" id="to_num3">
@@ -158,7 +181,7 @@
               <p>1</p>
               <p>2</p>
               <p>3</p>
-              <label for="to_num2nd">qtr:</label>
+              <label for="to_num2nd">qtr</label>
               <input type="number" name="to_num4" id="to_num4">
               <input type="number" name="to_num5" id="to_num5">
               <input type="number" name="to_num6" id="to_num6">
@@ -173,12 +196,16 @@
             </div>
 
         </section>
+        <!--  HOME TEAM TIME OUTS END -->
 
+        <!--  GAME CARD NOTES START -->
         <section class="notes">
           <p>Notes</p>
           <textarea name="notes" id="notes" placeholder="Put your notes here..."></textarea>
         </section>
+        <!--  GAME CARD NOTES END -->
 
+        <!--  HOME TEAM SCORE START -->
         <section class="score">
           <p>scoring / home</p>
 
@@ -227,7 +254,9 @@
             </div>
 
         </section>
+        <!--  HOME TEAM SCORE END -->
 
+        <!--  HOME TEAM PENALTIES START -->
         <section class="penalties">
           <p>penalties / home</p>
 
@@ -255,38 +284,47 @@
           </div>
 
         </section>
-
+        <!--  HOME TEAM PENALTIES END -->
+        
+        <!--  HOME TEAM DOCTOR LETTER START -->
         <section class="doctor">
-          <label for="doctor_letter">players with doctors letters:</label>
+          <label for="doctor_letter">players with doctors letters</label>
           <input type="text" name="pl_doctor" id="pl_doctor">
           <input type="text" name="pl_doctor" id="pl_doctor">
         </section>
+        <!--  HOME TEAM DOCTOR LETTER END -->
 
+        <!--  GAME CARD NOTES START -->
         <section class="notes">
           <p>Notes</p>
           <textarea name="notes" id="notes" placeholder="Put your notes here..."></textarea>
         </section>
+        <!--  GAME CARD NOTES END -->
 
       </section>
+      <!--  HOME TEAM CARD CONTAINER END -->
 
+      <!--  VISITOR TEAM CARD CONTAINER START -->
       <section class="visitorteam">
-
+        <!--  VISITOR TEAM NAME AND COACH START -->
         <section class="teams">
 
           <div class="tname">
-            <label for="vteam">visiting team:</label>
+            <label for="vteam">visiting team</label>
             <input type="text" name="vteam" id="vteam">
             <label for="vcolor">color</label>
             <input type="text" name="vcolor" id="vcolor" class="shrink">
           </div>
 
           <div class="tname">
-            <label for="vcoach">head coach:</label>
+            <label for="vcoach">head coach</label>
             <input type="text" name="vcoach" id="vcoach">
           </div>
         
         </section>
+        <!--  VISITOR TEAM NAME AND COACH END -->
 
+        <!--  VISITOR TEAM CAPTAINS START -->
         <section class="captains">
 
           <div class="capt-spk">
@@ -313,7 +351,9 @@
               <input type="text" name="vpos_capt4" id="vspk_capt4">
           </div>
         </section>
+        <!--  VISITOR TEAM CAPTAINS END -->
 
+        <!--  VISITOR TEAM QB, KC, PT START -->
         <section class="qb_kc">
           <p>quaterback</p>
           <label for="vqb">R</label>
@@ -333,11 +373,13 @@
           <label for="vpt">L</label>
           <input type="checkbox" name="vptl" id="vpt">
         </section>
+        <!--  VISITOR TEAM QB, KC, PT END -->
         
+        <!--  VISITOR TEAM ASSISTANT START -->
         <section class="assistant">
 
           <div class="trainer">
-            <p>trainer or md on site?:</p>
+            <p>trainer or md on site ?</p>
             <label for="vtrainer">Y</label>
             <input type="checkbox" name="vtry" id="vtrainer">
             <label for="vtrainer">N</label>
@@ -349,7 +391,9 @@
             <input type="text" name="va_coach" id="va_coach">
           </div>
         </section>
+        <!--  VISITOR TEAM ASSISTANT END -->
 
+        <!--  VISITOR TEAM TIME OUTS START -->
         <section class="time_out">
           <p>time outs:</p>
 
@@ -360,7 +404,7 @@
               <p>2</p>
               <p>3</p>
 
-              <label for="vto_num">qtr:</label>
+              <label for="vto_num">qtr</label>
               <input type="number" name="vto_num1" id="vto_num1">
               <input type="number" name="vto_num2" id="vto_num2">
               <input type="number" name="vto_num3" id="vto_num3">
@@ -383,7 +427,7 @@
               <p>2</p>
               <p>3</p>
 
-              <label for="v2to_num">qtr:</label>
+              <label for="v2to_num">qtr</label>
               <input type="number" name="v2to_num4" id="v2to_num4">
               <input type="number" name="v2to_num5" id="v2to_num5">
               <input type="number" name="v2to_num6" id="v2to_num6">
@@ -400,7 +444,9 @@
             </div>
 
         </section>
+        <!--  VISITOR TEAM TIME OUTS END -->
 
+        <!--  VISITOR TEAM BALL POSITION START -->
         <section class="ballpos">
           <p>ball position</p>
 
@@ -433,7 +479,9 @@
           </div>
 
         </section>
+        <!--  VISITOR TEAM BALL POSITION END -->
 
+        <!--  VISITOR TEAM SCORE START -->
         <section class="score">
           <p>scoring / visitor</p>
 
@@ -481,7 +529,9 @@
               <input type="text" name="vsc_score10" id="vsc_score10">
             </div>
         </section>
+        <!--  VISITOR TEAM SCORE END -->
 
+        <!--  VISITOR TEAM PENALTIES START -->
         <section class="penalties">
           <p>penalties / visitor</p>
 
@@ -508,20 +558,27 @@
             <input type="text" name="vpn_player4" id="vpn_player4">
           </div>
         </section>
+        <!--  VISITOR TEAM PENALTIES END -->
 
+        <!--  VISITOR TEAM DOCTOR START -->
         <section class="doctor">
-          <label for="vpl_doctor">players with doctors letters:</label>
+          <label for="vpl_doctor">players with doctors letters</label>
           <input type="text" name="vpl_doctor" id="vpl_doctor">
           <input type="text" name="vpl_doctor" id="vpl_doctor">
         </section>
+        <!--  VISITOR TEAM DOCTOR END -->
 
+        <!--  GAME CARD NOTES START -->
         <section class="notes">
           <p>Notes</p>
           <textarea name="notes" id="notes" placeholder="Put your notes here..."></textarea>
         </section>
+        <!--  GAME CARD NOTES END -->
 
       </section>
+      <!--  VISITOR TEAM CARD CONTAINER END -->
 
+      <!--  GAME TIME START -->
       <section class="game_time">
         <p>game time</p>
         <div class="game_grid">
@@ -548,11 +605,32 @@
         </div>
 
       </section>
+      <!--  GAME TIME END -->
 
-      <input type="submit" value="Send">
-
+        <input type="submit" value="Send">
+      
     </form>
+    <!--  CARD FORM END -->
   </main>
+  <!--  MAIN END -->
+
+  <!-- EMAIL MODAL START -->
+  <section class="modal" id="myModal">
+
+        <div class="email_info">
+
+          <!-- <span class="close" title="Close">&times;</span> -->
+          <h4 class="email_title">Enter your email to send all the card data</h4>
+
+          <form action="#" class="email_data">
+            <label for="card_email">Email</label>
+            <input type="email" name="card_email" id="card_email" placeholder="user@email.com">
+            <input type="submit" value="Enter" title="send email">
+          </form>
+        </div>
+      </section>
+    </section>
+  <!-- EMAIL MODAL END -->
 
   <script src="/docs/gamecard/script.js"></script>
 </body>

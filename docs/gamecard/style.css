@@ -8,10 +8,11 @@
    ================== */
 
 :root {
-  --title: Arial, Helvetica, sans-serif;
+  --title: 'Ubuntu', Arial, Helvetica, sans-serif;
   --text: Arial, Helvetica, sans-serif;
   --1stcolor: #000;
   --2ndcolor: #ffd700;
+  --homecolor: rgba(113, 169, 247);
 }
 
 html {
@@ -19,6 +20,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0; 
+  font-family: var(--title);
 }
 
 html:focus-within {
@@ -50,23 +52,27 @@ h1, h3, button {
   font-variant: small-caps;
 }
 
-/* HEADER */
+/* ========
+    HEADER
+   ======== */
+
+/* Header */
 .header {
   margin: 0;
   display: flex;
   justify-content: space-between;
 }
-
+/* Home team title */
 .home_header {
   width: 25rem;
   font-size: 4rem;
   margin: 0;
   padding: 0.5rem 1rem;
-  background-color: var(--1stcolor);
-  color: var(--2ndcolor);
+  background-color: var(--homecolor);
+  color: var(--1stcolor);
   cursor: pointer;
 }
-
+/* visitor team title */
 .visitor {
   margin: 0 .2rem;
   background-color: var(--2ndcolor);
@@ -78,7 +84,7 @@ h1, h3, button {
   border-radius:1rem;
   cursor: pointer;
 }
-
+/* button for both cards */
 .both_cards {
   align-self: center;
   text-align: center;
@@ -112,7 +118,7 @@ h1, h3, button {
   margin: 0;
   padding: .5rem;
   font-size: 1.5rem;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
 }
 
 .shrink {
@@ -148,6 +154,7 @@ h1, h3, button {
   flex: 0 0 calc(60% - 1rem);
 }
 
+/* various p styles */
 .coin_toss p,
 .time_out > p,
 .score > p,
@@ -167,7 +174,7 @@ h1, h3, button {
 .win_op {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
   border: .1rem solid #000;
   margin: 0 .5rem 0 0;
 }
@@ -191,7 +198,7 @@ h1, h3, button {
 .capt-num label,
 .capt-pos label {
   font-size: 1.5rem;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
   display: block;
   text-align: center;
   border-top: .1rem solid #000;
@@ -218,7 +225,7 @@ h1, h3, button {
 /* QB, KICKER AND PUNTER */
 .qb_kc {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border: .1rem solid #000;
 }
@@ -227,7 +234,7 @@ h1, h3, button {
   margin: 0;
   padding: .5rem 1rem;
   font-size: 1.2rem;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
 }
 
 /* ASSISTANT OR MEDIC */
@@ -250,7 +257,7 @@ h1, h3, button {
   padding: 0 .2rem;
   height: 100%;
   font-size: 1.5rem;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
   text-align: center;
 }
 
@@ -276,7 +283,8 @@ h1, h3, button {
   font-variant: small-caps;
 }
 
-/* TIME OUTS */
+/* TIME OUTS - SCORE - BALL POSITION */
+/* TO - Score - Ball Position container style */
 .time_out,
 .score,
 .ballpos {
@@ -284,7 +292,7 @@ h1, h3, button {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+/* TO - Score - Ball Position p style */
 .time_out p,
 .score > p,
 .ballpos > p {
@@ -297,8 +305,8 @@ h1, h3, button {
   flex: 0 0 calc(50% - 1rem);
 }
 
-/* Time out header is on line 132 */
-
+/* Time out header is on line 157 */
+/* TO grid style */
 .to_grid {
   display: grid;
   grid-template-columns: repeat(4, 5rem);
@@ -314,7 +322,7 @@ h1, h3, button {
   text-align: center;
   line-height: 1.2;
   height: 100%;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
 }
 
 .to_grid input {
@@ -338,7 +346,7 @@ h1, h3, button {
   margin: 0;
   padding: 0 .2rem .2rem .2rem;
   font-size: 1.5rem;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
   height: 100%;
 }
 
@@ -351,9 +359,9 @@ h1, h3, button {
 }
 
 /* SCORE */
-/* score container is on line 256 */
-/* score p title is in line 126 */
-
+/* score container is on line 287 */
+/* score p title is in line 158 */
+/* Score grid style */
 .to_grid2 {
   display: grid;
   grid-template-columns: 5.5rem 9rem 5.5rem;
@@ -368,7 +376,7 @@ h1, h3, button {
   padding: .2rem 0;
   font-size: 1.2rem;
   text-align: center;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
 }
 
 .to_grid2 input,
@@ -378,8 +386,8 @@ h1, h3, button {
 }
 
 /* PENALTIES */
-/* penalties title is on line 127 */
-/* penalties label style is on line 365*/
+/* penalties title is on line 159 */
+/* penalties label style is on line 371*/
 .penalties {
   margin: .5rem 0;
 }
@@ -406,7 +414,7 @@ h1, h3, button {
   margin: 0;
   padding: .1rem .3rem;
   font-size: 1.5rem;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
 }
 
 .doctor input {
@@ -448,9 +456,10 @@ h1, h3, button {
 .visitor_title {
   flex: 0 0 calc(68% - 1rem);
 }
+
 /* BALL POSITION */
-/* container is in line 258 */
-/* p style is in line 135 */
+/* container is in line 288 */
+/* p style is in line 160 */
 .ballpos {
   margin: 0.3rem 0;
 }
@@ -470,7 +479,7 @@ h1, h3, button {
   margin: 0;
   font-size: 1.2rem;
   text-align: center;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
 }
 
 .ball_grid p:first-child,
@@ -498,7 +507,7 @@ h1, h3, button {
   flex-direction: column;
 }
 
-/* p style is in line 136 */
+/* p style is in line 161 */
 
 .game_grid {
   display: grid;
@@ -507,7 +516,7 @@ h1, h3, button {
   border: .1rem solid #000;
 }
 
-/* game_grid p general style is in line 344 */
+/* game_grid p general style is in line 372 */
 
 .game_grid p {
   border: .1rem solid #000;
@@ -573,7 +582,7 @@ h1, h3, button {
   text-align: center;
   font-size: 1.2rem;
   border: .1rem solid #000;
-  background-color: var(--2ndcolor);
+  background-color: var(--homecolor);
 }
 
 .game_grid input {
@@ -594,15 +603,128 @@ h1, h3, button {
   border: none;
   width: 5rem;
   text-align: center;
-  background-color: rgb(102, 220, 247);
+  background-color: rgb(226, 137, 82);
   box-shadow: .1rem .1rem .5rem #000;
   cursor: pointer;
 }
 
-input[type="submit"] {
+.card_form input[type="submit"] {
   align-self: flex-end;
   margin: 1.5rem 1rem;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   border-radius: .5rem;
+  cursor: pointer;
+}
+
+.card_form input[type="submit"]:active {
+  transform: scale(0.9);
+  background-color: rgba(0, 255, 0, 0.5);
+  color: #000;
+  border: .1rem solid #000;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1.2rem);
+}
+
+.show_modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+/* Form container */
+.email_info {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  margin: 1rem 0;
+  padding: .5rem;
+  border: .1rem solid #000;
+  border-radius: 1rem;
+  background-color: rgba(113, 169, 247, 0.5);
+}
+
+.close {
+  align-self: flex-end;
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 1);
+  padding-right: .5rem;
+  cursor: pointer;
+}
+
+.close:hover {
+  transform: scale(1.2);
+  transition: transform .3s;
+  font-weight: bold;
+}
+
+.close:active {
+  transform: scale(0.9);
+  transition: transform .3s;
+  color: #000;
+}
+
+.email_title {
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.email_data {
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.email_data label {
+  font-size: 1.5rem;
+  margin: 0 0 .5rem;
+  color: #fff;
+}
+
+.email_data input[type="email"] {
+  border: none;
+  border-bottom: .1rem solid #000;
+  padding: .5rem .8rem;
+  background-color: inherit;
+  font-variant: normal;
+}
+
+.email_data input[type="email"]:focus {
+  border: none;
+  outline: none;
+  border-bottom: .1rem solid #fff;
+  transition: border-bottom .3s;
+}
+
+.email_data input[type="email"]::placeholder {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.email_data input[type="submit"] {
+  align-self: flex-end;
+  margin: 3rem 0 1rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.email_data input[type="submit"]:active {
+  transform: scale(0.8);
+  transition: transform .2s;
+  background-color: rgba(0, 255, 0, 0.5);
 }
