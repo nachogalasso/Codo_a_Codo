@@ -144,6 +144,10 @@ h1, h3, button {
   border: none;
 }
 
+.tname input {
+  padding-left: .5rem;
+}
+
 
 /* COIN TOSS */
 .coin_toss {
