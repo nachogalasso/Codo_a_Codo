@@ -1,0 +1,751 @@
+/* GAMECARD STYLESHEET */
+/* ========
+    INDEX
+   ======== */
+
+/* ==================
+    1. RESET VALUES
+   ================== */
+
+:root {
+  --title: 'Ubuntu', Arial, Helvetica, sans-serif;
+  --text: Arial, Helvetica, sans-serif;
+  --1stcolor: #000;
+  --2ndcolor: #ffd700;
+  --homecolor: rgba(113, 169, 247);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  font-family: var(--title);
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 42rem;
+  margin: 2rem auto;
+  padding: .5rem;
+  border: .2rem solid #000;
+}
+
+main {
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+p, label, input,
+h1, h3, button {
+  font-variant: small-caps;
+}
+
+/* ========
+    HEADER
+   ======== */
+
+/* Header */
+.header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+/* Home team title */
+.home_header {
+  width: 25rem;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--homecolor);
+  color: var(--1stcolor);
+  cursor: pointer;
+}
+/* visitor team title */
+.visitor {
+  margin: 0 .2rem;
+  background-color: var(--2ndcolor);
+  color: var(--1stcolor);
+  font-size: 1.5rem;
+  padding: 1rem;
+  align-self: center;
+  line-height: 2;
+  border-radius:1rem;
+  cursor: pointer;
+}
+/* button for both cards */
+.both_cards {
+  align-self: center;
+  text-align: center;
+  margin: 0;
+  padding: 1.2rem 0;
+  font-size: 2.5rem;
+  width: 12rem;
+  color: rgb(254, 100, 5);
+  background-color: rgba(6, 3, 2, 0.8);
+  border-radius: 1rem;
+}
+
+/* ======
+    MAIN 
+   ====== */
+
+/* HOME TEAM */
+.teams {
+  display: flex;
+  flex-direction: column;
+  margin: .3rem 0;
+}
+
+.tname {
+  display: flex;
+  margin: 0 0 .3rem;
+  border: .1rem solid #000;
+}
+
+.tname label {
+  margin: 0;
+  padding: .5rem;
+  font-size: 1.5rem;
+  background-color: var(--homecolor);
+}
+
+.shrink {
+  width: 15%;
+  border: none;
+}
+
+#vcoach,
+#vteam {
+  flex-grow: 1;
+  border: none;
+}
+
+/* VISITOR TEAM HEADER */
+.shrink {
+  width: 15%;
+  border: none;
+}
+
+#hcoach,
+#hteam {
+  flex-grow: 1;
+  border: none;
+}
+
+.tname input {
+  padding-left: .5rem;
+}
+
+
+/* COIN TOSS */
+.coin_toss {
+  display: flex;
+}
+
+.winner {
+  flex: 0 0 calc(60% - 1rem);
+}
+
+/* various p styles */
+.coin_toss p,
+.time_out > p,
+.score > p,
+.penalties > p,
+.ballpos > p,
+.game_time > p {
+  margin: 0;
+  padding: 0 .5rem .2rem;
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  border-radius: .8rem .8rem 0 0;
+}
+
+.win_op {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: var(--homecolor);
+  border: .1rem solid #000;
+  margin: 0 .5rem 0 0;
+}
+
+.win_op label {
+  font-size: 1.5rem;
+  padding: 0 .6rem 0 .1rem;
+}
+
+.defend input[type="text"] {
+  height: 4rem;
+}
+
+/* SPEAK CAPTAIN */
+.captains {
+  display: flex;
+  margin: .5rem 0;
+}
+
+.capt-spk label,
+.capt-num label,
+.capt-pos label {
+  font-size: 1.5rem;
+  background-color: var(--homecolor);
+  display: block;
+  text-align: center;
+  border-top: .1rem solid #000;
+  border-bottom: .1rem solid #000;
+}
+
+.capt-spk input {
+  width: 30rem;
+  border-left: none;
+  border-right: none;
+  border-top: .1rem solid #000;
+  border-bottom: .1rem solid #000;
+}
+
+.capt-num input,
+.capt-pos input {
+  width: 5rem;
+  border-left: none;
+  border-right: none;
+  border-top: .1rem solid #000;
+  border-bottom: .1rem solid #000;
+}
+
+/* QB, KICKER AND PUNTER */
+.qb_kc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: .1rem solid #000;
+}
+
+.qb_kc p {
+  margin: 0;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  background-color: var(--homecolor);
+}
+
+/* ASSISTANT OR MEDIC */
+.assistant {
+  display: flex;
+  margin: .3rem 0;
+  justify-content: space-between;
+}
+
+.trainer {
+  display: flex;
+  flex: 0 0 calc(40% - 1rem);
+  border: .1rem solid #000;
+  margin-right: .3rem;
+}
+
+.trainer p,
+.assist_coach p {
+  margin: 0 .5rem 0 0;
+  padding: 0 .2rem;
+  height: 100%;
+  font-size: 1.5rem;
+  background-color: var(--homecolor);
+  text-align: center;
+}
+
+.trainer label,
+.trainer input[type="checkbox"] {
+  align-self: center;
+}
+
+.assist_coach {
+  display: flex;
+  border: .1rem solid #000;
+}
+
+.assist_coach p {
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.assist_coach input {
+  border: none;
+  font-size: 1.2rem;
+  padding-left: .3rem;
+  font-variant: small-caps;
+}
+
+/* TIME OUTS - SCORE - BALL POSITION */
+/* TO - Score - Ball Position container style */
+.time_out,
+.score,
+.ballpos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* TO - Score - Ball Position p style */
+.time_out p,
+.score > p,
+.ballpos > p {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.to_1st,
+.st_score {
+  flex: 0 0 calc(50% - 1rem);
+}
+
+/* Time out header is on line 157 */
+/* TO grid style */
+.to_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 5rem);
+  justify-content: center;
+  border: .1rem solid #000;
+}
+
+.to_grid p,
+.to_grid label {
+  margin: 0;
+  padding: .2rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.2;
+  height: 100%;
+  background-color: var(--homecolor);
+}
+
+.to_grid input {
+  text-align: center;
+}
+
+.to_grid input[type="time"]::-webkit-calendar-picker-indicator { 
+  background: none; 
+  display:none; 
+}
+
+/* TEXTAREA - NOTES */
+.notes {
+  display: flex;
+  flex-direction: column;
+  margin: .5rem 0;
+  border: .1rem solid #000;
+}
+
+.notes p {
+  margin: 0;
+  padding: 0 .2rem .2rem .2rem;
+  font-size: 1.5rem;
+  background-color: var(--homecolor);
+  height: 100%;
+}
+
+.notes textarea {
+  padding: .2rem;
+  width: 100%;
+  height: 10rem;
+  resize: none;
+  border: none;
+}
+
+/* SCORE */
+/* score container is on line 287 */
+/* score p title is in line 158 */
+/* Score grid style */
+.to_grid2 {
+  display: grid;
+  grid-template-columns: 5.5rem 9rem 5.5rem;
+  border: .1rem solid #000;
+}
+
+.to_grid2 p,
+.to_grid2 label,
+.pen_grid label,
+.game_grid p {
+  margin: 0;
+  padding: .2rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: var(--homecolor);
+}
+
+.to_grid2 input,
+.pen_grid input {
+  text-align: center;
+  border: .1rem solid #000;
+}
+
+/* PENALTIES */
+/* penalties title is on line 159 */
+/* penalties label style is on line 371*/
+.penalties {
+  margin: .5rem 0;
+}
+
+.pen_grid {
+  display: grid;
+  grid-template-columns: 5.5rem 9rem 6rem 1fr;
+  border: .1rem solid #000;
+}
+
+.pen_grid input[name$="player"] {
+  text-align: left;
+  padding-left: .5rem;
+}
+
+/* DOCTOR SECTION */
+.doctor {
+  display: flex;
+  flex-direction: column;
+  border: .1rem solid #000;
+}
+
+.doctor label {
+  margin: 0;
+  padding: .1rem .3rem;
+  font-size: 1.5rem;
+  background-color: var(--homecolor);
+}
+
+.doctor input {
+  padding: .1rem .3rem;
+  border: .1px solid #000;
+}
+
+/* VISITOR TEAM */
+.visitorteam {
+  margin-top: 2rem;
+  border-top: 1rem solid #000;
+  display: none;
+}
+
+/* CARD TRANSITIONS */
+
+.show {
+  display: block;
+  margin: 0;
+  border-top: none;
+}
+
+.hide {
+  display: none;
+}
+
+.home_title {
+  margin: 0 auto;
+  background-color: var(--2ndcolor);
+  color: var(--1stcolor);
+  font-size: 1.5rem;
+  padding: 1rem;
+  align-self: center;
+  line-height: 2;
+  border-radius:1rem;
+  cursor: pointer;
+}
+
+.visitor_title {
+  flex: 0 0 calc(68% - 1rem);
+}
+
+/* BALL POSITION */
+/* container is in line 288 */
+/* p style is in line 160 */
+.ballpos {
+  margin: 0.3rem 0;
+}
+
+.ball_grid,
+.ball_grid2 {
+  display: grid;
+  grid-template-columns: repeat(6, 6.73rem);
+  grid-template-rows: 2rem 5rem;
+  border: .1rem solid #000;
+}
+
+.ball_grid p,
+.ball_grid label,
+.ball_grid2 p,
+.ball_grid2 label {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: var(--homecolor);
+}
+
+.ball_grid p:first-child,
+.ball_grid2 p:first-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  padding-top: 2.5rem;
+  font-weight: bold;
+}
+
+.ball_grid input,
+.ball_grid2 input {
+  font-size: 2rem;
+  text-align: center;
+  border: .1rem solid #000;
+}
+
+.ball_grid2 {
+  margin: .2rem 0;
+}
+
+/* GAME TIME */
+.game_time {
+  display: flex;
+  flex-direction: column;
+}
+
+/* p style is in line 161 */
+
+.game_grid {
+  display: grid;
+  grid-template-columns: repeat(8, 5.05rem);
+  grid-template-rows: 1.5rem 1.5rem 5rem;
+  border: .1rem solid #000;
+}
+
+/* game_grid p general style is in line 372 */
+
+.game_grid p {
+  border: .1rem solid #000;
+  padding: 0;
+}
+
+.game_grid p:first-child {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.game_grid p:nth-of-type(2) {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+}
+
+.game_grid p:nth-of-type(3) {
+  grid-column: 5 / 7;
+  grid-row: 1 / 2;
+}
+
+.game_grid p:last-of-type {
+  grid-column: 7 / 9;
+  grid-row: 1 / 2;
+}
+
+/* game_grid label style */
+.game_grid label:first-child {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.game_grid label:nth-of-type(2) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.game_grid label:nth-of-type(3) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.game_grid label:nth-of-type(4) {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+.game_grid label:nth-of-type(5) {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+.game_grid label:nth-of-type(6) {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+.game_grid label:nth-of-type(7) {
+  grid-column: 7 / 8;
+  grid-row: 2 / 3;
+}
+.game_grid label:nth-of-type(8) {
+  grid-column: 8 / 9;
+  grid-row: 2 / 3;
+}
+
+.game_grid label {
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  border: .1rem solid #000;
+  background-color: var(--homecolor);
+}
+
+.game_grid input {
+  border: .1rem solid #000;
+}
+
+.game_grid input[type="time"]::-webkit-calendar-picker-indicator { 
+  background: none; 
+  display:none; 
+}
+
+/* BUTTON´s - SHOW ALL and SUBMIT */
+.show_cards {
+  align-self: center;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  width: 5rem;
+  text-align: center;
+  background-color: rgb(226, 137, 82);
+  box-shadow: .1rem .1rem .5rem #000;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card_form input[type="submit"] {
+  /* align-self: flex-end; */
+  margin: 1.5rem 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.emailBtn {
+  width: 10rem;
+  margin: 1.5rem 1rem;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  background-color: rgb(226, 137, 82);
+  cursor: pointer;
+}
+
+.card_form input[type="submit"]:active,
+.emailBtn:active {
+  transform: scale(0.9);
+  background-color: rgba(0, 255, 0, 0.5);
+  color: #000;
+  border: .1rem solid #000;
+}
+
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1.2rem);
+}
+
+.show_modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+/* Form container */
+.email_info {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  margin: 1rem 0;
+  padding: .5rem;
+  border: .1rem solid #000;
+  border-radius: 1rem;
+  background-color: rgba(113, 169, 247, 0.5);
+}
+
+.close {
+  align-self: flex-end;
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 1);
+  padding-right: .5rem;
+  cursor: pointer;
+}
+
+.close:hover {
+  transform: scale(1.2);
+  transition: transform .3s;
+  font-weight: bold;
+}
+
+.close:active {
+  transform: scale(0.9);
+  transition: transform .3s;
+  color: #000;
+}
+
+.email_title {
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.email_data {
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.email_data label {
+  font-size: 1.5rem;
+  margin: 0 0 .5rem;
+  color: #fff;
+}
+
+.email_data input[type="email"] {
+  border: none;
+  border-bottom: .1rem solid #000;
+  padding: .5rem .8rem;
+  background-color: inherit;
+  font-variant: normal;
+}
+
+.email_data input[type="email"]:focus {
+  border: none;
+  outline: none;
+  border-bottom: .1rem solid #fff;
+  transition: border-bottom .3s;
+}
+
+.email_data input[type="email"]::placeholder {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.email_data input[type="submit"] {
+  align-self: flex-end;
+  margin: 3rem 0 1rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.email_data input[type="submit"]:active {
+  transform: scale(0.8);
+  transition: transform .2s;
+  background-color: rgba(0, 255, 0, 0.5);
+}
