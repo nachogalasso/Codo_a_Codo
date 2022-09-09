@@ -1,0 +1,182 @@
+/* DATA BASE STYLE SHEET */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;700&display=swap');
+/* ========
+    INDEX
+   ======== */
+
+/* ==================
+    1. RESET VALUES
+   ================== */
+
+/* :root {
+  --title: "Roboto", Arial, Helvetica, sans-serif;
+  --text: "Ubuntu", Arial, Helvetica, sans-serif;
+} */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle, rgba(157,141,241,1) 13%, rgba(184,205,248,1) 51%, rgba(149,242,217,1) 89%);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* ==========
+    2. FORM
+   ========== */
+.container {
+  margin: 2rem 0;
+  padding: .5rem;
+  /* border: .1rem solid #000; */
+  width: 40.5rem;
+  border-radius: .5rem;
+  backdrop-filter: blur(2.2rem);
+  box-shadow: .2rem .2rem 1rem .5rem rgba(0, 0, 0, 0.5);
+  transition: width 1.5s;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.form label {
+  margin: 0;
+  padding: .2rem;
+  background-color: #ff5;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  width: 5rem;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form input {
+  padding: .4rem .2rem;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+.form input:focus {
+  border-bottom: .1rem solid red;
+}
+
+.form select {
+  padding: .4rem .2rem;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+.button {
+  padding: .5rem .8rem;
+  border-radius: .5rem;
+  border: none;
+  background-color: #ff5;
+
+}
+
+/* galaxy fold media query 717px */
+@media screen and (min-width: 710px) {
+
+  .container {
+    width: 65rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .form label, input, 
+  select, button {
+    font-size: 1.8rem;
+  }
+  
+  .form label {
+    width: 7rem;
+  }
+  
+  .form input {
+    flex-grow: 1;
+    margin: 0 1rem;
+  }
+
+  .button {
+    margin-left: 1rem;
+  }
+
+}
+
+/* ==============
+    3. ToDo LIST
+   ============== */
+.tasks {
+  display: grid;
+  grid-template-columns: 15rem 15rem 3rem 3rem;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.text:nth-child(even) {
+  color:rgb(255, 238, 0);
+  filter: drop-shadow(.1rem .1rem 1rem #000);
+}
+
+.tasks button {
+  border: none;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+  color: #fff;
+}
+
+/* Galaxy Fold media query 717px */
+@media screen and (min-width: 710px) {
+
+  .tasks {
+    grid-template-columns: 30rem 15rem 8rem 8rem;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
+}
