@@ -150,7 +150,7 @@ if(indexedDB && form) {
     console.log(e.target)
     if(e.target.dataset.type == 'update') {
       getData(e.target.dataset.key);
-    }else if(e.target.dataset.key == 'delete') {
+    }else if(e.target.dataset.type == 'delete') {
       deleteData(e.target.dataset.key)
     }
   })
