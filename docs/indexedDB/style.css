@@ -8,10 +8,10 @@
     1. RESET VALUES
    ================== */
 
-/* :root {
-  --title: "Roboto", Arial, Helvetica, sans-serif;
-  --text: "Ubuntu", Arial, Helvetica, sans-serif;
-} */
+:root {
+  --rusian: #714955;
+  --salmon: #7B886B;
+}
 
 html {
   font-size: 62.5%;
@@ -37,9 +37,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(circle, rgba(157,141,241,1) 13%, rgba(184,205,248,1) 51%, rgba(149,242,217,1) 89%);
+  background: radial-gradient(circle, rgba(157,141,241,1) 13%, rgba(184,205,248,1) 51%, rgba(149, 242, 217, 1) 89%);
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+.title {
+  background: linear-gradient(to right, var(--rusian) 10%, var(--salmon) 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite alternate;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* ==========
@@ -72,6 +93,7 @@ body {
   font-size: 1.4rem;
   text-align: center;
   font-weight: bold;
+  color: var(--rusian)
 }
 
 .form input {
@@ -97,7 +119,7 @@ body {
   border-radius: .5rem;
   border: none;
   background-color: #ff5;
-
+  color: var(--rusian)
 }
 
 /* galaxy fold media query 717px */
@@ -105,6 +127,7 @@ body {
 
   .container {
     width: 65rem;
+    padding: 1rem;
   }
 
   .title {
@@ -146,6 +169,7 @@ body {
   font-size: 1.5rem;
   font-variant: small-caps;
   font-weight: bold;
+  color: var(--rusian);
 }
 
 .text:nth-child(even) {
@@ -173,7 +197,7 @@ body {
 @media screen and (min-width: 710px) {
 
   .tasks {
-    grid-template-columns: 30rem 15rem 8rem 8rem;
+    grid-template-columns: 30rem 12rem 8rem 8rem;
   }
 
   .text {

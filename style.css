@@ -1,0 +1,51 @@
+/* MAIN STYLE SHEET */
+
+/* ==================
+    1. RESET VALUES
+   ================== */
+
+:root {
+  --roboto: 'Roboto Slab', Arial, Helvetica, serif;
+  --ubuntu: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  font-family: var(--roboto);
+  font-size: 3rem;
+}
+
+p {
+  font-family: var(--roboto);
+  font-size: 2rem;
+}
+
+.list-item {
+  list-style-type: none;
+  margin: 1.5rem 0;
+  font-family: var(--ubuntu);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.list-item a {
+  text-decoration: none;
+}
