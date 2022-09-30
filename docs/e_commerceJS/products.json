@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "sys": { "id" : "1" },
+      "fields": {
+        "title": "celery",
+        "price": 0.45,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/celery.webp" } } }
+      }
+    },
+    {
+      "sys": { "id" : "2" },
+      "fields": {
+        "title": "ciboulette",
+        "price": 0.35,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/ciboulette.webp" } } }
+      }
+    },
+    {
+      "sys": { "id" : "3" },
+      "fields": {
+        "title": "green onions",
+        "price": 0.45,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/greenonions.webp" } } }
+      }
+    },
+    {
+      "sys": { "id" : "4" },
+      "fields": {
+        "title": "lettuce",
+        "price": 0.35,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/lettuce.webp" } } }
+      }
+    },
+    {
+      "sys": { "id" : "5" },
+      "fields": {
+        "title": "mint",
+        "price": 1.10,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/mint.webp" } } }
+      }
+    },
+    {
+      "sys": { "id" : "6" },
+      "fields": {
+        "title": "parsley",
+        "price": 0.25,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/parsley.webp" } } }
+      }
+    },
+    {
+      "sys": { "id" : "7" },
+      "fields": {
+        "title": "rosemary",
+        "price": 0.95,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/rosemary.webp" } } }
+      }
+    },
+    {
+      "sys": { "id" : "8" },
+      "fields": {
+        "title": "sage",
+        "price": 0.75,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/sage.webp" } } }
+      }
+    },
+    {
+      "sys": { "id" : "9" },
+      "fields": {
+        "title": "thyme",
+        "price": 0.55,
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/thyme.webp" } } }
+      }
+    }
+  ]
+}
