@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="E-Commerce para practicar JS">
+  <meta name="keywords" content="javascript, practicar, js, practice, projects, E-Commerce">
+  <meta name="author" content="Galasso, Ignacio">
+  <!-- Meta for TWITTER and OPEN GRAPH -->
+  <meta property="og-title" content="Javascript Practice" />
+  <meta property="og-type" content="website" />
+  <meta property="og-url" content="https://myportfoliogalasso.vercel.app/" />
+  <meta property="og-image" content="" />
+  <meta property="og-description" content="E-Commerce para practicar JS" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@galasso22">
+  <meta name="twitter:title" content="Javascript Practice" />
+  <meta name="twitter:description" content="E-Commerce para practicar JS" />
+  <meta name="twitter:image" content="" />
+  <!-- STYLE SHEET -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- ICONS -->
+  <link rel="shortcut icon" href="./assets/icons/48px_icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/icons/48px_icon.png">
+  <link rel="apple-touch-startup-image" href="./assets/icons/48px_icon.png">
+  <link rel="apple-touch-icon" sizes="16x16" href="./assets/icons/16px_icon.png">
+  <link rel="apple-touch-icon" sizes="32x32" href="./assets/icons/32px_icon.png">
+  <link rel="apple-touch-icon" sizes="64x64" href="./assets/icons/64px_icon.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="./assets/icons/128px_icon.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/144px_icon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="./assets/icons/192px_icon.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="./assets/icons/256px_icon.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="./assets/icons/512px_icon.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="./assets/icons/1024px_icon.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="./assets/icons/192px_icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/32px_icon.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="./assets/icons/128px_icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/16px_icon.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./assets/icons/144px_icon.png">
+  <!-- FONT AWESOME KIT -->
+  <script src="https://kit.fontawesome.com/ef268928f6.js" crossorigin="anonymous"></script>
+  <title>Aguacate Store</title>
+</head>
+<body>
+  <header>
+
+    <!-- NAVBAR START -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <span class="nav-icon">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+        <img class="logo" src="./assets/images/ab_logo.svg" alt="Aguacate_Logo">
+        <div class="cart-btn">
+          <span class="nav-icon">
+            <i class="fa-solid fa-cart-plus"></i>
+          </span>
+          <!-- this is the counter of our cart -->
+          <div class="cart-items">0</div>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- HERO START -->
+    <section class="hero">
+      <div class="banner">
+        <h1 class="banner-title">gardening products</h1>
+        <button class="banner-btn">shop now</button>
+      </div>
+    </section>
+    <!-- HERO END -->
+
+    <!-- PRODCUTS START -->
+    <main class="products">
+      <section class="section-title">
+        <h2>our products</h2>
+      </section>
+      <section class="products-center">
+        <!-- First single product -->
+        <!-- <article class="product">
+          <figure class="img-container">
+            <img src="./assets/images/huerta/celery.webp" alt="celery_apio" class="product-img">
+            <button class="bag-btn" data-id="1">
+              <i class="fa-solid fa-cart-shopping"></i>
+              add to cart
+            </button>
+          </figure>
+          <h3>Apio</h3>
+          <h4>€1.25</h4>
+        </article> -->
+        <!-- First single product -->
+      </section>
+
+    </main>
+    <!-- PRODCUTS END -->
+
+    <!-- CART START -->
+    <aside class="cart-overlay">
+      <section class="cart">
+        <span class="close-cart">
+          <i class="fa-solid fa-square-xmark"></i>
+        </span>
+        <h2>your cart</h2>
+        <div class="cart-content">
+          <!-- cart item start -->
+          <!-- <div class="cart-item">
+            <img src="./assets/images/huerta/celery.webp" alt="product">
+            <div class="cart-description">
+              <h4>celery</h4>
+              <h5>€1.25</h5>
+              <span class="remove-item">
+                <i class="fa-sharp fa-solid fa-trash"></i>
+              </span>
+            </div>
+            <div class="cart-quantity">
+              <i class="fa-sharp fa-solid fa-chevron-up"></i>
+              <p class="item-amount">1</p>
+              <i class="fa-sharp fa-solid fa-chevron-down"></i>
+            </div>
+          </div> -->
+          <!-- cart item end -->
+        </div>
+        <!-- cart footer -->
+        <div class="cart-footer">
+          <h3>your total: $ <span class="cart-total">0</span></h3>
+          <button class="clear-cart banner-btn">clear cart</button>
+        </div>
+      </section>
+    </aside>
+    <!-- CART END -->
+
+  </header>
+  <!-- SCRIPTS -->
+  <script src="./app.js" type="text/javascript"></script>
+</body>
+</html>
