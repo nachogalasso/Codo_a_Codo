@@ -11,7 +11,6 @@ const productsDOM = document.querySelector('.products-center'); // fetch the pro
 
 // item where we place the information from the localStorage. Is the CART
 let cartLocalStorage = []
-console.log(cartLocalStorage)
 // create a variable to collect all the buttons so we can use them later
 let buttonDOM = []
 
@@ -93,7 +92,7 @@ class UI {
       button.addEventListener('click', (e) => {
         e.target.textContent = "In Cart";
         e.target.disabled = true;
-        console.log(inCart)
+        // console.log(inCart)
         // we are gonna want to get the item from our localStorage
         // 1. GET THE PRODUCTS (put them in a variable)
         // let cartItem = Storage.getProducts(id) // now we sent the items to our empty cart array, again we use a destructor
@@ -101,7 +100,7 @@ class UI {
         // console.log(cartItem)
         // 2. ADD THE PRODUCTS TO THE CART. instaed of using the pop() method, again we use the deconstructor
         cartLocalStorage = [...cartLocalStorage,cartItem];
-        console.log(cartLocalStorage)
+        // console.log(cartLocalStorage)
         // 3. SAVE CART IN LOCALSTORAGE
         // we do this, so if the pages refresh or the window is close, the user can access again to the cart
         // we put the function at the storage class
@@ -149,8 +148,8 @@ class UI {
             <div class="cart-description">
               <h4>${item.title}</h4>
               <h5>$${item.price}</h5>
-              <span class="remove-item" data-id=${item.id}>
-                <i class="fa-sharp fa-solid fa-trash"></i>
+              <span class="remove-item">
+                <i class="fa-sharp fa-solid fa-trash" data-id=${item.id}></i>
               </span>
             </div>
             <div class="cart-quantity">
@@ -190,6 +189,86 @@ class UI {
   hideCart() {
     cartOverlay.classList.remove('transparentBgc');
     cartDOM.classList.remove('showCart');
+  }
+
+  cartLogic() {
+    // 1. we select the 'remove all' cart button
+    clearCartBtn.addEventListener('click', () => {
+      this.clearCart() 
+    })
+    // 2. functionality of the remove and increase or decrease btns from our cart content. We access to them using the e.target
+    cartContent.addEventListener('click', (e) => {
+      // console.log(e.target) // we use this to see where we clicked
+      if (e.target.classList.contains("fa-trash")) {
+        let removeItem = e.target;
+        let id = removeItem.dataset.id;
+        // remember we need to go up to remove all the element from the DOM
+        cartContent.removeChild(
+          removeItem.parentElement.parentElement.parentElement
+        );
+        this.removeItems(id);
+      } else if (e.target.classList.contains("fa-chevron-up")) {
+        let addAmount = e.target;
+        let id = addAmount.dataset.id;
+        let tempItem = cartLocalStorage.find(item => item.id === id);
+        tempItem.amount = tempItem.amount + 1;
+        // now we need to update the values from our cart
+        Storage.saveCart(cartLocalStorage);
+        this.setCartValues(cartLocalStorage);
+        addAmount.nextElementSibling.textContent = tempItem.amount;
+      }else if(e.target.classList.contains("fa-chevron-down")) {
+        let subAmount = e.target;
+        let id = subAmount.dataset.id;
+        let tempItem = cartLocalStorage.find(item => item.id === id);
+        tempItem.amount = tempItem.amount - 1;
+        if(tempItem.amount > 0) {
+          Storage.saveCart(cartLocalStorage);
+          this.setCartValues(cartLocalStorage);
+          subAmount.previousElementSibling.textContent = tempItem.amount;
+        }else{
+          cartContent.removeChild(subAmount.parentElement.parentElement);
+          this.removeItems(id)
+        }
+      }
+      
+    })
+        
+      
+  }
+  
+
+  // here we setup the method to clear the cart
+  clearCart() {
+    // console.log(this) we can see that this reference to the 'remove all cart button'. It´s important where 'this' is pointing
+    // so be careful. Here again we are gonna be looking for the id, so we use map() method again
+    let cartItems = cartLocalStorage.map(item => item.id);
+    // we loop trough the array to get the id and remove the items
+    cartItems.forEach(id => this.removeItems(id))
+    // now lets remove all the items from the div, we use the while loop
+    while(cartContent.children.length > 0) {
+      cartContent.removeChild(cartContent.children[0])
+    }
+    // don´t forget to hide the cart once all the items are removed
+    this.hideCart()
+  }
+
+  // we use this method because we want to use it later with an other functionality
+  removeItems(id) {
+    cartLocalStorage = cartLocalStorage.filter(item => item.id !== id);
+    // we update the cart value
+    this.setCartValues(cartLocalStorage);
+    // to give us the last value of the cart
+    Storage.saveCart(cartLocalStorage)
+    // and we want to access the buttons so we can add again items to the cart, so we create an other method, we use the id from the
+    // removed item
+    let button = this.getSingleButton(id);
+    button.disabled = false;
+    button.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>add to cart`;
+  }
+
+  // to get again the buttons usen the id getting them from the array buttonDOM
+  getSingleButton(id) {
+    return buttonDOM.find(button => button.dataset.id === id)
   }
 }
 
@@ -240,5 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
    Storage.saveProducts(products) // remember... to get back the information we need to use JSON.Parse
   }).then(() => { // we use an other then so it will deploy after all our products are display. At the ui class we configure the function
     ui.getBagButtons()
+    // we ad a new logic for the cart to add more items or remove them all
+    ui.cartLogic()
   })
 })
