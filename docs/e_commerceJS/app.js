@@ -263,7 +263,7 @@ class UI {
     // removed item
     let button = this.getSingleButton(id);
     button.disabled = false;
-    button.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>add to cart`;
+    button.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>add to cart`;  
   }
 
   // to get again the buttons usen the id getting them from the array buttonDOM
