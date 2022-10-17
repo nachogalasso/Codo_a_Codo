@@ -1,0 +1,427 @@
+{
+  "items": [
+    {
+      "sys": { "id" : "1"},
+      "fields": {
+        "title": "apio",
+        "price": 120,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/apio.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "2"},
+      "fields": {
+        "title": "cebolla de verdeo",
+        "price": 130,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/cebolladeverdeo.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "3"},
+      "fields": {
+        "title": "ciboulette",
+        "price": 100,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/ciboulette.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "4"},
+      "fields": {
+        "title": "lechuga",
+        "price": 150,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/lechuga.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "5"},
+      "fields": {
+        "title": "menta",
+        "price": 150,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/menta.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "6"},
+      "fields": {
+        "title": "oregano",
+        "price": 100,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/oregano.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "7"},
+      "fields": {
+        "title": "perejil",
+        "price": 100,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/perejil.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "8"},
+      "fields": {
+        "title": "romero",
+        "price": 110,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/romero.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "9"},
+      "fields": {
+        "title": "salvia",
+        "price": 130,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/salvia.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "10"},
+      "fields": {
+        "title": "tomillo",
+        "price": 130,
+        "category": "huerta",
+        "image": { "fields": { "file": { "url": "./assets/images/huerta/tomillo.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "11"},
+      "fields": {
+        "title": "caja de semillas",
+        "price": 250,
+        "category": "semillas",
+        "image": { "fields": { "file": { "url": "./assets/images/semillas/cajadesemillas.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "12"},
+      "fields": {
+        "title": "semillas aromáticas",
+        "price": 350,
+        "category": "semillas",
+        "image": { "fields": { "file": { "url": "./assets/images/semillas/semillasaromaticas.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "13"},
+      "fields": {
+        "title": "semillas AS",
+        "price": 180,
+        "category": "semillas",
+        "image": { "fields": { "file": { "url": "./assets/images/semillas/semillasAS.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "14"},
+      "fields": {
+        "title": "semillas hortalizas",
+        "price": 220,
+        "category": "semillas",
+        "image": { "fields": { "file": { "url": "./assets/images/semillas/semillashortalizas.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "15"},
+      "fields": {
+        "title": "semillas letho",
+        "price": 210,
+        "category": "semillas",
+        "image": { "fields": { "file": { "url": "./assets/images/semillas/semillasLetho.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "16"},
+      "fields": {
+        "title": "semillas orgánicas",
+        "price": 240,
+        "category": "semillas",
+        "image": { "fields": { "file": { "url": "./assets/images/semillas/semillasorganicas.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "17"},
+      "fields": {
+        "title": "compost Loma Verde",
+        "price": 350,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/compostLomaVerde.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "18"},
+      "fields": {
+        "title": "humus de lombriz Don Calvino",
+        "price": 200,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/humusdelombrizDonCalvino.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "19"},
+      "fields": {
+        "title": "mezcla interior Landiner",
+        "price": 450,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/mezclainteriorLandiner.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "20"},
+      "fields": {
+        "title": "piedras perlita",
+        "price": 100,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/piedrasperlita.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "21"},
+      "fields": {
+        "title": "sulfato de hierro Landiner",
+        "price": 180,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/sulfatodehierroLandiner.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "22"},
+      "fields": {
+        "title": "sustrato huerta terrafertil",
+        "price": 170,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/sustrato_huerta_terrafertil.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "23"},
+      "fields": {
+        "title": "terrafertilcactussuculentas",
+        "price": 180,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/sustratohuertaterrafertil.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "24"},
+      "fields": {
+        "title": "tierra abonada Loma Verde",
+        "price": 220,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/sustratohuertaterrafertil.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "25"},
+      "fields": {
+        "title": "tierra compost",
+        "price": 140,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/tierracompost.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "26"},
+      "fields": {
+        "title": "turba",
+        "price": 110,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/turba.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "27"},
+      "fields": {
+        "title": "turba Landiner 10lt",
+        "price": 140,
+        "category": "sustratos",
+        "image": { "fields": { "file": { "url": "./assets/images/sustratos/tierracompost.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "28"},
+      "fields": {
+        "title": "aceite neem",
+        "price": 80,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/aceite_neem.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "29"},
+      "fields": {
+        "title": "almacigo 25 alveolos",
+        "price": 50,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/almacigo_25_alveolos.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "30"},
+      "fields": {
+        "title": "almacigo 72 alveolos",
+        "price": 120,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/almacigo_72_alveolos.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "31"},
+      "fields": {
+        "title": "almacigo 128 alveolos",
+        "price": 140,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/almacigo_128_alveolos.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "32"},
+      "fields": {
+        "title": "arrancadoryuyos",
+        "price": 160,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/arrancador_yuyos.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "33"},
+      "fields": {
+        "title": "insecticida acaricida gleba",
+        "price": 80,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/insecticida_acaricida_gleba.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "34"},
+      "fields": {
+        "title": "jabón potásico solfos",
+        "price": 160,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/jabon_potasico_solfos.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "35"},
+      "fields": {
+        "title": "macetas largas",
+        "price": 80,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/macetas_largas.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "36"},
+      "fields": {
+        "title": "mesa de cultivo x2",
+        "price": 250,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/mesa_de_cultivo_2.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "37"},
+      "fields": {
+        "title": "mesa de cultivo 4",
+        "price": 340,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/mesa_de_cultivo_4.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "38"},
+      "fields": {
+        "title": "pala ancha tramontina",
+        "price": 170,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/pala_ancha_tramontina.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "39"},
+      "fields": {
+        "title": "pala angosta plastico",
+        "price": 120,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/pala_angosta_plastico.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "40"},
+      "fields": {
+        "title": "pala galvanizada",
+        "price": 200,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/pala_galvanizada.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "41"},
+      "fields": {
+        "title": "pala plastica ancha",
+        "price": 150,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/pala_plastica_ancha.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "42"},
+      "fields": {
+        "title": "pulverizador",
+        "price": 120,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/pulverizador.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "43"},
+      "fields": {
+        "title": "rastrillo",
+        "price": 100,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/rastrillo.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "44"},
+      "fields": {
+        "title": "regadera plastica",
+        "price": 230,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/regadera_plastica.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "45"},
+      "fields": {
+        "title": "saca yuyos",
+        "price": 120,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/saca_yuyos.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "46"},
+      "fields": {
+        "title": "sistemico grhesa plaguicida",
+        "price": 160,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/sistemico_grhesa_plaguicida.webp"}}}
+      }
+    },
+    {
+      "sys": { "id" : "47"},
+      "fields": {
+        "title": "tijera poda",
+        "price": 150,
+        "category": "utensillos",
+        "image": { "fields": { "file": { "url": "./assets/images/utensillos/tijera_podar.webp"}}}
+      }
+    }
+  ]
+}
