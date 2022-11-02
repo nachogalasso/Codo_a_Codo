@@ -5,6 +5,7 @@ const form = document.querySelector('.input-form');
 const inputData = document.getElementById('msgInput');
 const itemData = document.querySelector('.posts-container');
 const alertMsg = document.querySelector('.msgAlert');
+const submitBn = document.querySelector('.submitBtn');
 
 // APP LOGIC
 
@@ -14,7 +15,10 @@ let editItems = false;
 let editID = "";
 
 // form
-form.addEventListener('submit', addItem)
+form.addEventListener('submit', addItem);
+
+// Set data from localStorga with the page being loaded
+window.addEventListener('DOMContentLoaded', setItems)
 
 // add task
 function addItem(e) {
@@ -22,12 +26,17 @@ function addItem(e) {
   const taskValue = inputData.value.toLowerCase();
   const randomId = Math.floor(Math.random() * 1000) + (1).toString();
   
-  if(taskValue !== "" ) {
-    // & editItem === false
+  if (taskValue !== "" && editItems === false) {
     createTaskList(randomId, taskValue);
-    displayAlert('task added', 'good')
-    dataStorage(randomId, taskValue); 
-  }else{
+    displayAlert("task added", "good");
+    dataStorage(randomId, taskValue);
+    setToDefault()
+  } else if (taskValue !== "" && editItems === true) {
+    editEl.innerHTML = taskValue;
+    displayAlert('Task Changed', 'good');
+    editLocalStorage(editID, taskValue);
+    setToDefault();
+  }else {
     displayAlert("You forgot to post something!!", "wrong");
   }
   
@@ -50,31 +59,45 @@ function addItem(e) {
 //   } else if(taskValue !== "" && )
 // }
 
+
+// ALERT MESSAGES
 function displayAlert(text, action) {
   alertMsg.textContent = text
   alertMsg.classList.add(`alert-${action}`)
 
   setTimeout(function () {
     (alertMsg.textContent = ""), alertMsg.classList.remove(`alert-${action}`)
-  }, 1500)
+  }, 1000)
 }
 
-itemData.addEventListener("click", (e) => {
-  console.log(e.target)
-  const itemPost = [... document.querySelectorAll('.post-item')] 
-  itemPost.forEach(ids => {
-    let id = ids.dataset.id
-    removeItemStorage(id);
-  })
-  if (e.target.classList.contains("delete")) {
-    e.target.parentElement.parentElement.remove();
-    // inputData.value = "";
-  } else {
-    inputData.value = e.target.parentElement.previousElementSibling.innerText;
-    alertMsg.textContent = "Edit you Task";
-    e.target.parentElement.parentElement.remove();
-  }
-});
+// DELETE TASKS
+function deleteItem(e) {
+  const element = e.currentTarget.parentElement.parentElement
+  const id = element.id
+  itemData.removeChild(element)
+  displayAlert('Item removed', 'good');
+  setToDefault()
+  removeItemStorage(id)
+}
+
+// EDIT TASKS
+function editItem(e) {
+  const element = e.currentTarget.parentElement.parentElement
+  editEl = e.currentTarget.parentElement.parentElement.childNodes[1];
+  inputData.value = editEl.innerHTML;
+  editItems = true;
+  editID = element.id;
+  submitBn.textContent = "Edit"
+  inputData.focus()
+}
+
+// SET TO DEFAULT
+function setToDefault() {
+  inputData.value = "";
+  editItems = false;
+  editID = "";
+  submitBn.textContent = "Post";
+}
 
 
 // Let´s storage the data in an object
@@ -102,7 +125,7 @@ function editLocalStorage(randomId, taskValue) {
   let items = getLocalStorage();
   items = items.map(function (item) {
     if (item.id === randomId) {
-      item.value = taskValue;
+      item.text = taskValue;
     }
     return item;
   });
@@ -110,20 +133,43 @@ function editLocalStorage(randomId, taskValue) {
 }
 
 
-
+// Get Items from localStorage
 function getLocalStorage() {
   return localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
 }
 
+// Set Items from localStorage
+function setItems() {
+  let items = getLocalStorage();
+  if (items.length > 0) {
+    items.forEach(function (item) {
+      createTaskList(item.id, item.text);
+    });
+    
+  }
+}
+
 function createTaskList(randomId, taskValue) {
-  itemData.innerHTML += `
-    <div class="post-item" data-id=${randomId}>
+  const fragment = document.createDocumentFragment()
+  const task = document.createElement('div');
+  task.classList.add('post-item');
+  const attr = document.createAttribute('id');
+  attr.value = randomId;
+  task.setAttributeNode(attr);
+
+  task.innerHTML += `
+    
       <p>${taskValue}</p>
       <span class="options">
-        <i class="fas fa-edit"></i>
-        <i class="fas fa-trash-alt delete"></i>
-      </span>
-    </div>`;
+        <i class="fas fa-edit edit" title="Edit"></i>
+        <i class="fas fa-trash-alt delete" title="Delete"></i>
+      </span>`;
 
+  fragment.appendChild(task);
+  itemData.appendChild(fragment);
   inputData.value = "";
+  const deleteBtn = task.querySelector('.delete');
+  const editBtn = task.querySelector('.edit');
+  deleteBtn.addEventListener('click', deleteItem);
+  editBtn.addEventListener('click', editItem);
 }
