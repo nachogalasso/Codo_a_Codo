@@ -6,5 +6,5 @@
    "editor.defaultFormatter": "esbenp.prettier-vscode",
    "editor.autoIndent": "full",
    "prettier.tabWidth": 3,
-   "editor.letterSpacing": 2
+   "editor.letterSpacing": 1
 }
