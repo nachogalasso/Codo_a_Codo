@@ -1,0 +1,68 @@
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Rubik:wght@400;700&display=swap');
+
+
+/* ===== 1. RESET ===== */
+:root {
+  --title: 'Rubik', Arial, Helvetica, sans-serif;
+  --text: 'Kanit', Arial, Helvetica, sans-serif;
+  --mainTransition: all 0.3s linear;  
+  /* muzli colors */
+  --mainTitleYCrayola: rgba(244, 211, 94, 1);
+  --mainTextBeige: rgba(235, 235, 211, 1);
+  --mainBgcIndigoDye: rgba(8, 61, 119, 1);
+  --mainDarkgreen: rgba(0,224,0);
+  --mainDarkred: rgba(224,0,0);
+  --mainSpacing: .1rem;
+  --secondBabyBEyes: rgba(179, 213, 250, 1);
+}
+
+html {
+  font-size: 62.5%; 
+  scroll-behavior: smooth;
+  /* background-color: var(--mainBgcIndigoDye); */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
+  object-fit: contain;
+}
+
+/* ===== 1. MAIN START ===== */
+.main_container {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 117rem;
+  padding: 0 1rem;
+}
+
+.cards-display {
+  width:  90vw;
+  margin: 0 auto;
+  max-width:  117rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1.5rem;
+  row-gap: 2rem;
+  grid-auto-flow: dense;
+}
+
+.card-container {
+  height: 40rem;
+  overflow-y: hidden;
+  transition: height  2s ease-in-out;
+}
+
+.card-container:hover {
+  height: 100%;
+  overflow-y: visible;
+}
+/* ===== 1. RESET ===== */
