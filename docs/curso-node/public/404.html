@@ -1,0 +1,23 @@
+<!-- PARA RENDERIZAR UNA WEB, TENEMOS QUE CREAR UNA CARPETA POR FUERA DE SRC QUE SE LLAME 'PUBLIC'
+EN ELLA ES DONDE PONDREMOS LOS ARCHIVOS DE CSS, IMÁGENES, MUSICA O HTML, PERO EN ELLA COLOCAMOS
+TODOS AQUELLOS ARCHIVOS QUE NO VAN A CAMBIAR, O SEA, NO SON DINÁMICOS. SI LAS COSAS SE VAN A 
+MODIFICAR EN TIEMPO REAL, EN ESOS CASOS UTILIZAMOS UN MOTOR DE PLANTILLAS -->
+<!-- Este tipo de web es donde aplican los archivos estáticos o static -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="/css/style.css">
+   <title>Arch. Estaticos</title>
+</head>
+<body>
+   <!-- Creamos una página de error 404 super sencilla, esto es por si alguna página no existe, entonces le indicamos al servidor que nos traiga aquí. Recordar que en ella podemos direccionar a otras -->
+   <h1>404</h1>
+   <p>NOT FOUND</p>
+   <a href="/">Go Home</a>
+</body>
+</html>
+
+<!-- En nuestro 'appexpress' vamos a tener tener que colocar una nueva ruta, por debajo de nuestra app.use() lo que va a suceder es que si no encuentra ninguna ruta, lo que va a suceder es que va a ingresar a la nueva que ingresemos. En esta nueva ruta también tendremos que crear una function (req, res) => {} -->
