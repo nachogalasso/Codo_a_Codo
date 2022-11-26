@@ -128,3 +128,59 @@ app.listen(3000, () => {
 // Una vez que tenemos esto le tenemos que indicar a nuestro controlador que renderize este elemento.
 // Para ello vamos a index.controller, que como antes enviábamos un mensaje, ahora lo cambiamos para que renderize
 // nuestra plantilla de pug dentro de views
+
+
+// MONGODB y MONGOOSE
+// MongoDB utiliza esquemas o modelos de datos, lo que hacen es asegurar que tanto el contenido que se envia como
+// el que se reciba, cumpla ciertas normas y ciertos formatos. Tendremos que crear una carpeta nueva dentro de src
+// con el nombre de 'models' y en ella un nuevo archivo de javascript, para este caso llamaremos pokemon.model.js
+// Dentro del mismo tendremos que usar mongoose
+// qWrko7J5d0bW88ot -- PASSWORD
+
+// CONECT OUR DATABASE
+// mongodb+srv://imgalasso:<password>@cluster0.cwir3tp.mongodb.net/?retryWrites=true&w=majority
+
+
+// const { MongoClient, ServerApiVersion } = require("mongodb");
+// const uri =
+//    "mongodb+srv://imgalasso:<password>@cluster0.cwir3tp.mongodb.net/?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, {
+//    useNewUrlParser: true,
+//    useUnifiedTopology: true,
+//    serverApi: ServerApiVersion.v1,
+// });
+// client.connect((err) => {
+//    const collection = client.db("test").collection("devices");
+//    // perform actions on the collection object
+//    client.close();
+// });
+
+
+// Cuando creamos una base de datos, tenemos que poner nombres distintos para la 'database' y para el
+// 'collection', de lo contrario nos dará error . También tendremos problemas si el nombre de la collection
+// termina en g, x o j. Es importante que sea un plural contemplado por mongodb. Dentro de pokemons es donde
+// vamos a añadir nuestros documentos, son los registros.
+// En 'Insert Document' es donde podremos ingresar nuestros registros, nos permite especificar qué tipo de dato
+// estamos ingresando. El 'id' lo genera mongodb automáticamente ya que es el que usa para identificar el 
+// registro. Luego lo leemos con el módulo de mongoose
+
+// Para instalar mongoose tenemos que utilizar el comando 'npm install mongoose' (el --save no es muy necesario)
+// tenemos que asegurarnos de que sea una dependencia de 'producción' y luego lo tendremos que configurar.
+// En nuestra carpeta 'src' tendremos que crear una nueva que sea "dbConnection", ya que allí es donde guardaremos
+// nuestra conexión a la base de datos. Luego dentro de ella tendremos que crear un archivo javascript al cual
+// podemos llamar "connection.js"
+
+
+// PARA NO ESTAR ESCRIBIENDO TODO EL TIEMPO "node src/appexpress", en el package.json en donde se encuentra
+// 'scripts', puedo borrar la que se crea por defecto 'test' y crear uno nuevo para reemplazar el comando y no
+// tener que ingresarlo todo el tiempo, para ello creamos:
+// "start": "node src/appexpress"
+// luego para ejecutar el comando con solamente poner "npm start" el programa entiende que tiene que ejecutar ese
+// mismo comando para levantar el servidor.
+// Por otro lado podemos instalar nodemon, el cual va a estar atento a cualquier cambio que hagamos en nuestro
+// servidor y de tal forma ejecutará el servidor de forma automática. Para instalarlo tenemos que colocar el
+// siguiente comando: npm install -g nodemon
+// luego para utilzarlo tenemos que colocar nodemon src/appexpress
+// podemos crear en nuestro .json debajo de start el comando 'dev' el cual nos permite correr nodemon
+// "dev": "nodemon src/appexpress"
+// pero para ejecutarlo en la consola tenemos que colocar el comando "npm run dev"

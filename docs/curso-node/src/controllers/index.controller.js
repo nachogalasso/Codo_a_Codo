@@ -5,19 +5,38 @@
 
 const controller = {}
 
+// importamos nuestra conexión a la db en nuestra carpeta dbConnection
+import main from '../dbConnection/connection.js'
+
+// importamos nuestro modelo de base de datos
+import PokeModel from '../models/pokemon.model.js'
+
 // Para PUG
 // recordar del texto colocarlo como string
-const title = "INDEX DESDE EL SERVIDOR con pug Y una VARIABLE";
+// const title = "INDEX DESDE EL SERVIDOR con pug Y una VARIABLE"; tiene que ir dentro de nuestro controller.index
 
 // controller.name = 'Pepe'; - Aqui le asignamos una propiedad
 // controller.saludar = () => console.log('Hola'); - Aquí le asignamos un método
 // controller.saludar() - si ejecutamos eso veremos que nos sale un Hola en la consola
 // ahora construimos nuestra función:
-controller.index = (req, res) => {
+controller.index = async (req, res) => {
    // res.send('La conexión ha sido correcta desde index.controller')
    // ahora vamos a renderizar el mensaje con la plantilla de pug
    // res.render('index'), pero ahora le vamos a agregar las variables que lo hacemos mediante un objeto
-   res.render('index', {title}) // podemos colocar tambien {title:title}
+   // para recuperar todos los datos de nuestra coleccion tenemos que usar .find() recordar que antes de importar
+   // nuestro PokeModel tenes que utilizar el await, porque se conecta a una base de datos. No olvidar que
+   // tenemos que guardar los datos que nos llegan, por eso tenemos que ponerlo dentro de una variable
+   // cuando termin de cargar veremos que podemos hacer un console.log() de toda nuestra base
+   try {
+      const title = "INDEX DESDE EL SERVIDOR con pug Y una VARIABLE";
+      await main()
+      // console.log('Connection OK') ahora que sabemos que se conecta, importamos la PokeModel
+      const allPokemons = await PokeModel.find()
+      console.log(allPokemons)
+      res.render('index', {title}) // podemos colocar tambien {title:title}
+   }catch(err){
+      console.error(err)
+   }
 
 };
 // (req, res) => {
