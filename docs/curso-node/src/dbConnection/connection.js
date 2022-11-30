@@ -11,13 +11,6 @@ const dbname = "pokedex";
 // ruta de acceso a nuestra BD, recordar que conviene utilizar el template literal string ``
 const uri = `mongodb+srv://imgalasso:${password}@cluster0.cwir3tp.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
-// probamos algo
-// main().catch(err => console.log(err))
-
-// async function main() {
-//    await mongoose.connect("mongodb://localhost:3000/test");
-// }
-
 // si colocamos mongoose.connect(uri), nos va a funcionar pero tendremos muchos problemas
 // por si hace falta {useNewUrlParser: true, useUnifiedTopology: true}
 async function main() {
