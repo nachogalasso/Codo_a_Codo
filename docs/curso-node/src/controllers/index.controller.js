@@ -31,7 +31,7 @@ controller.index = async (req, res) => {
       const title = "INDEX DESDE EL SERVIDOR con pug Y una VARIABLE";
       await main()
       // console.log('Connection OK') ahora que sabemos que se conecta, importamos la PokeModel
-      const allPokemons = await PokeModel.find()
+      const allPokemons = await PokeModel.find()   
       console.log(allPokemons)
       res.render('index', {title}) // podemos colocar tambien {title:title}
    }catch(err){
