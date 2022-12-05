@@ -4,7 +4,7 @@ import mongodb from 'mongodb';
 import mongoose from 'mongoose';
 // from mongodb we want to access the id
 const ObjectID = mongodb.ObjectId;
-
+console.log(ObjectID)
 let reviews
 
 export default class ReviewsDAO {

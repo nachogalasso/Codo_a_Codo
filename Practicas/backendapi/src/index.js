@@ -21,8 +21,6 @@
 import app from './server.js';
 import mongoose from 'mongoose';
 import mongodb from 'mongodb';
-import router from './api/reviews.route.js';
-// import main from './dbConnection/connection.js';
 import ReviewsDAO from './dao/reviewsDAO.js'; // Interacting with the data base
 
 // but we need to send the database connection to the ReviewsDAO and we will do it after the .then and before

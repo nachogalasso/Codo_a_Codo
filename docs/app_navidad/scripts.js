@@ -10,6 +10,9 @@ const list = document.getElementById("list"); // Gift list
 const deleteAll = document.querySelector(".clearBtn"); // delete all list button
 const text = document.querySelector(".text"); // info text
 const numGifts = document.getElementById("numentry"); // number of gifts
+const modal = document.querySelector('.modal'); // modal form
+const openModal = document.querySelector('.modalBtn'); // open modal
+const closeModal = document.querySelector('.closeModal') // close modal
 
 /* Variables for later use */
 let editElement;
@@ -210,3 +213,12 @@ function createGiftList(id, iValue, num) {
 
   list.appendChild(element);
 }
+
+
+openModal.addEventListener('click', () => {
+  modal.classList.add('show');
+})
+
+closeModal.addEventListener('click', () => {
+  modal.classList.remove('show')
+})
