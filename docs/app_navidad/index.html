@@ -22,8 +22,7 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/docs/app_navidad/assets/icons/144px_icon.png" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+     <script src="https://kit.fontawesome.com/ef268928f6.js" crossorigin="anonymous"></script>
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,24 +33,45 @@
     <title>Lista de Regalos</title>
   </head>
   <body>
-  <main class="container">
-    <h2 class="app-title">Regalos:</h2>
-    <form class="gift-entry">
-      <p class="alert"></p>
-      <section class="gift-input">
-        <input type="text" name="giftentry" id="ventry" placeholder="Ingresa tus Regalos" />
-        <input type="url" name="giftlink" id="giftlink" placeholder="https:\\imagegift">
-        <input type="number" name="giftentry" id="numentry" placeholder="0" title="Cantidad de regalos" min="0">
-        <button type="submit" id="entryBtn" class="entryBtn">Agregar</button>
-      </section>
-    </form>
-    <p class="text">&#x2744 Despierta tu espíritu navideño &#x2744</p>
-   <section class="container-list">
-      <article class="gift-list" id="list">
-     
-      </article>
-      <button type="button" class="clearBtn">Borrar Lista</button>
+    <!-- Entry Modal Form Start -->
+    <section class="modal" id="modalEntry">
+      <span class="closeModal"><i class="fa-solid fa-xmark"></i></span>
+      <form class="gift-entry">
+        <p class="alert"></p>
+        <section class="gift-input">
+          <input type="text" name="giftentry" id="ventry" placeholder="Ingresa tus Regalos" />
+          <input type="url" name="giftlink" id="giftlink" placeholder="https:\imagegift">
+          <input type="text" name="giftentry" id="ventry" placeholder="Regalar a..." />
+          <input type="number" name="giftentry" id="numentry" placeholder="0" title="Cantidad de regalos" min="0">
+          <section class="btn-section">
+            <button type="submit" id="closeBtn" class="Btn close">Cancelar</button>
+            <button type="submit" id="entryBtn" class="Btn entry">Agregar</button>
+          </section>
+        </section>
+      </form>
     </section>
+    <!-- Entry Modal Form End -->
+  <main class="container">
+    <!-- Title Start -->
+    <h2 class="app-title">Regalos:</h2>
+    <!-- Title End -->
+    
+    <button class="Btn modalBtn">Agregar</button>
+    <!-- Alert Start -->
+    <p class="text">&#x2744 Despierta tu espíritu navideño &#x2744</p>
+    <!-- Alert End -->
+
+    <!-- List Container Start -->
+    <section class="container-list">
+      <article class="gift-list" id="list">
+        
+      </article>
+      <!-- Delete Start -->
+      <button type="button" class="clearBtn">Borrar Lista</button>
+      <!-- Delete End -->
+
+    </section>
+    <!-- List Container End -->
   </main>
  </body>
 

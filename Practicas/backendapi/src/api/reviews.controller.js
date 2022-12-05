@@ -6,7 +6,7 @@ export default class ReviewsController {
    // POST DATA
    static async apiPostReview(req, res, next) {
       try {
-         const movieId = req.body.movieId;
+         const movieId = parseInt(req.body.movieId);
          const review = req.body.review;
          const user = req.body.user;
 
@@ -43,7 +43,7 @@ export default class ReviewsController {
    static async apiUpdateReview(req, res, next) {
       try {
          // here the data is from the params
-         const reviewId = req.params.id;
+         const reviewId = mongoose.Types.ObjectId(req.params.id);
          // here the data is from the body
          const review = req.body.review;
          const user = req.body.user;
@@ -75,7 +75,7 @@ export default class ReviewsController {
    static async apiDeleteReview(req, res, next) {
       try {
          // get data from params
-         const reviewId = req.params.id;
+         const reviewId = mongoose.Types.ObjectId(req.params.id);
          const reviewResponse = await ReviewsDAO.deleteReview(reviewId);
          res.json({status: "success"});
       }catch (e) {
