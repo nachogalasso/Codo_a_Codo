@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadata para hacer una PWA (Progresive Web Aplication) -->
+    <!-- Color a la barra / esto aplica para ANDROID -->
+    <meta name="theme-color" content="#cbdbed">
+    <!-- Optimizaciones SEO -->
+    <meta name="description" content="Gradient Generator made with JS">
+    <!-- MOBILE -->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <!-- Barra de estado iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- para este comando tenemos 3 propiedades (default, black, black-translucent) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">  
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/ef268928f6.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/docs/grad_generator_js/assets/icons/48px_icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/docs/grad_generator_js/assets/icons/48px_icon.png">
+    <link rel="apple-touch-startup-image" href="/docs/grad_generator_js/assets/icons/48px_icon.png">
+    <link rel="apple-touch-icon" sizes="16x16" href="/docs/grad_generator_js/assets/icons/16px_icon.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="/docs/grad_generator_js/assets/icons/32px_icon.png">
+    <link rel="apple-touch-icon" sizes="64x64" href="/docs/grad_generator_js/assets/icons/64px_icon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/docs/grad_generator_js/assets/icons/128px_icon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/docs/grad_generator_js/assets/icons/144px_icon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/docs/grad_generator_js/assets/icons/192px_icon.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/docs/grad_generator_js/assets/icons/256px_icon.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/docs/grad_generator_js/assets/icons/512px_icon.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/docs/grad_generator_js/assets/icons/1024px_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/docs/grad_generator_js/assets/icons/192px_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/grad_generator_js/assets/icons/32px_icon.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/docs/grad_generator_js/assets/icons/128px_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/docs/grad_generator_js/assets/icons/16px_icon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/docs/grad_generator_js/assets/icons/144px_icon.png">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="/docs/grad_generator_js/style.css">
+    <title>Gradient Generator</title>
+</head>
+<body>
+   <!-- MAIN START -->
+   <main class="container">
+      <!-- COLOR PICKER START -->
+      <section class="color-picker">
+         <h1>gradient generator</h1>
+         <!-- FORM COLORS START -->
+         <section class="color-container">
+            <form action="#" class="form-color">
+               <!-- 1st COLOR START -->
+               
+                  <label for="lcolor" class="colors">C1:
+                     <input type="color" name="lcolor" class="color c1" >
+                  </label>
+                  <label for="deg" class="deg-label">%:
+                     <input type="number" name="deg" class="deg1" min="0" max="100" >
+                  </label>
+                  <p class="hex-text">HEX:</p>
+              
+               <!-- 1st COLOR END -->
+               <!-- 2nd COLOR START -->
+               
+                  <label for="lcolor" class="colors">C2:
+                     <input type="color" name="lcolor" class="color c2" >
+                  </label>
+                  <label for="deg2" class="deg-label">%:
+                     <input type="number" name="deg2" class="deg2" min="0" max="100" >
+                  </label>
+                  <p class="hex-text">HEX:</p>
+              
+               <!-- 2nd COLOR END -->
+            </form>
+            <!-- FORM COLORS END -->
+            
+            <!-- GRADIENT PROPERTIES START -->
+            <form action="#" class="gradient-form">
+               <label for="linear" class="g_label">Linear
+                  <input type="radio" name="grad_display" id="linear" value="linear">
+               </label>
+               <label for="radial" class="g_label">Radial
+                  <input type="radio" name="grad_display" id="radial" value="radial">
+               </label>
+               <label for="conic" class="g_label">Conic
+                  <input type="radio" name="grad_display" id="conic" value="conic">
+               </label>
+            </form>
+            <!-- GRADIENT PROPERTIES END -->
+            <!-- BACKGROUND PROPERTY START -->
+            <form action="#" class="bck__form">
+               <label for="ort" class="hide bck_label">Orientation:
+                  <input type="number" name="ort" id="ort" min="0" max="360">
+               </label>
+               <label for="prop" class="bck_label">Property:
+                  <input type="text" id="prop">
+               </label>
+            </form>
+            <!-- BACKGROUND PROPERTY END-->
+         </section>
+      </section>
+      <!-- COLOR PICKER END -->
+      
+   </main>
+   <!-- MAIN END -->
+
+   <!-- SCRIPTS -->
+   <script src="./app.js" type="text/javascript"></script>
+</body>
+</html>
