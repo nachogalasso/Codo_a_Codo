@@ -5,17 +5,22 @@ const alert = document.querySelector(".alert"); // alert messages
 const form = document.querySelector(".gift-entry"); // list gift form
 const giftEntry = document.getElementById("ventry"); // input value
 const entryBtn = document.getElementById("entryBtn"); // add button
+const numGifts = document.getElementById("numentry"); // number of gifts
+const namEntry = document.getElementById("namentry"); // name value
+const giftLink  = document.getElementById("giftlink"); // image link
 const container = document.querySelector(".container-list"); // container List
 const list = document.getElementById("list"); // Gift list
 const deleteAll = document.querySelector(".clearBtn"); // delete all list button
 const text = document.querySelector(".text"); // info text
-const numGifts = document.getElementById("numentry"); // number of gifts
 const modal = document.querySelector('.modal'); // modal form
 const openModal = document.querySelector('.modalBtn'); // open modal
 const closeModal = document.querySelector('.closeModal') // close modal
 
 /* Variables for later use */
 let editElement;
+let editName;
+let editNumber;
+let editImage;
 let editItems = false;
 let editID = "";
 
@@ -36,22 +41,28 @@ function addItem(e) {
   // console.log(iValue);
   // console.log(id);
   const num = numGifts.value;
+  const honored = namEntry.value.toLowerCase();
+  const image = giftLink.value;
   // FORM ENTRY LOGIC
   // First Element entry
   if (iValue !== "" && editItems === false) {
-    createGiftList(id, iValue, num);
+    createGiftList(id, iValue, num, honored, image);
 
     displayAlert("Regalo ingresado", "exito");
     container.classList.add("show-container");
     text.classList.add("container-list");
-    addToLocalStorage(id, iValue, num);
+    addToLocalStorage(id, iValue, num, honored, image);
     setBackToDefault();
     // checkItem(iValue);
   } else if (iValue !== "" && editItems === true) {
     editElement.innerHTML = iValue;
+    editName.innerHTML = honored;
+    editNumber.innerHTML = num;
+    editImage.src = image; 
     displayAlert("Regalo Moficicado", "exito");
-    editLocalStorage(editID, iValue);
+    editLocalStorage(editID, iValue, honored, image, num);
     setBackToDefault();
+    modal.classList.remove('show')
   } else {
     displayAlert("Por favor ingresa un regalo", "error");
   }
@@ -100,12 +111,22 @@ function deleteGift(e) {
 
 function editGift(e) {
   const element = e.currentTarget.parentElement.parentElement;
-  editElement = e.currentTarget.parentElement.previousElementSibling;
+  console.log(element)
+  // editElement = e.currentTarget.parentElement.previousElementSibling;
+  editElement = e.currentTarget.parentElement.previousElementSibling.childNodes[1];
+  editNumber = e.currentTarget.parentElement.previousElementSibling.childNodes[3];
+  editName = e.currentTarget.parentElement.previousElementSibling.childNodes[5];
+  editImage = e.currentTarget.parentElement.parentElement.childNodes[1];
+  console.log(editImage)
   giftEntry.value = editElement.innerHTML;
+  numGifts.value = editNumber.innerHTML;
+  namEntry.value = editName.innerHTML;
+  giftLink.value = editImage.textContent;
   editItems = true;
-  editID = element.id;
+  editID = element.dataset.id; // here we access the data by our id in the localStorage
   displayAlert("Edita tu regalo", "error");
   entryBtn.textContent = "Editar";
+  modal.classList.add("show");
 }
 
 // function checkItem(iValue) {
@@ -126,15 +147,21 @@ function editGift(e) {
 function setBackToDefault() {
   giftEntry.value = "";
   numGifts.value = "";
+  namEntry.value = "";
+  giftLink.value = "";
   editItems = false;
   editID = "";
+  editElement = "";
+  editName = "";
+  editImage = "";
+  editNumber = 1;
   entryBtn.textContent = "Agregar";
 }
 
 /* LOCALSTORAGE */
 // Add items to LocalStorage
-function addToLocalStorage(id, iValue, num) {
-  const toDo = { id: id, value: iValue, quantity: num };
+function addToLocalStorage(id, iValue, num, honored, image) {
+  const toDo = { id: id, value: iValue, quantity: num, person: honored, photo: image };
   let item = getLocalStorage();
   item.push(toDo);
   localStorage.setItem("giftList", JSON.stringify(item));
@@ -152,11 +179,14 @@ function removeItemLocalStorage(id) {
 }
 
 // Change items from LocalStorage
-function editLocalStorage(id, iValue) {
+function editLocalStorage(id, iValue, num, honored, image) {
   let item = getLocalStorage();
   item = item.map(function (items) {
     if (items.id === id) {
       items.value = iValue;
+      items.quantity = num;
+      items.person = honored;
+      items.photo = image;
     }
     return items;
   });
@@ -175,7 +205,7 @@ function setupItems() {
   let items = getLocalStorage();
   if (items.length > 0) {
     items.forEach(function (item) {
-      createGiftList(item.id, item.value, item.quantity);
+      createGiftList(item.id, item.value, item.quantity, item.person, item.photo);
     });
     container.classList.add("show-container");
     text.classList.add("container-list");
@@ -183,7 +213,7 @@ function setupItems() {
 }
 
 /* SETUP ITEMS */
-function createGiftList(id, iValue, num) {
+function createGiftList(id, iValue, honored, image, num) {
   // New HTML element with its class
   const element = document.createElement("section");
   element.classList.add("gift-item");
@@ -195,7 +225,12 @@ function createGiftList(id, iValue, num) {
 
   // HTML for the list items
   element.innerHTML = `
-      <p class="gift-text">${iValue} x${num}</p>
+      <img src="${image}">
+      <div class="display-item">
+        <p class="gift-text">${iValue}</p>
+        <p class="gift-text">${num}</p>
+        <p class="gift-text">${honored}</p>
+      </div>
         <div class="btns">
           <button type="button" class="editBtn btn" title="Editar Regalo">
             <i class="fas fa-edit"></i>
@@ -215,8 +250,8 @@ function createGiftList(id, iValue, num) {
 }
 
 
-openModal.addEventListener('click', () => {
-  modal.classList.add('show');
+openModal.addEventListener('click', () =>  {
+    modal.classList.add('show');
 })
 
 closeModal.addEventListener('click', () => {
