@@ -55,25 +55,28 @@
             <form action="#" class="form-color">
                <!-- 1st COLOR START -->
                
-                  <label for="lcolor" class="colors">C1:
-                     <input type="color" name="lcolor" class="color c1" >
-                  </label>
-                  <label for="deg" class="deg-label">%:
-                     <input type="number" name="deg" class="deg1" min="0" max="100" >
-                  </label>
-                  <p class="hex-text">HEX:</p>
+                  <div class="color-display">
+                     <label for="lcolor" class="colors">C1:
+                        <input type="color" name="lcolor" class="color c1" >
+                     </label>
+                     <label for="deg" class="deg-label">%:
+                        <input type="number" name="deg" class="deg d1" min="0" max="100" >
+                     </label>
+                     <p class="hex-text">Hex:</p>
+                  </div>
               
                <!-- 1st COLOR END -->
                <!-- 2nd COLOR START -->
                
-                  <label for="lcolor" class="colors">C2:
-                     <input type="color" name="lcolor" class="color c2" >
-                  </label>
-                  <label for="deg2" class="deg-label">%:
-                     <input type="number" name="deg2" class="deg2" min="0" max="100" >
-                  </label>
-                  <p class="hex-text">HEX:</p>
-              
+                  <div class="color-display">
+                     <label for="lcolor" class="colors">C2:
+                        <input type="color" name="lcolor" class="color c2" >
+                     </label>
+                     <label for="deg2" class="deg-label">%:
+                        <input type="number" name="deg2" class="deg d2" min="0" max="100" >
+                     </label>
+                     <p class="hex-text">Hex:</p>
+                  </div>
                <!-- 2nd COLOR END -->
             </form>
             <!-- FORM COLORS END -->
@@ -81,13 +84,13 @@
             <!-- GRADIENT PROPERTIES START -->
             <form action="#" class="gradient-form">
                <label for="linear" class="g_label">Linear
-                  <input type="radio" name="grad_display" id="linear" value="linear">
+                  <input type="radio" name="grad_display" id="linear" class="grad" value="linear">
                </label>
                <label for="radial" class="g_label">Radial
-                  <input type="radio" name="grad_display" id="radial" value="radial">
+                  <input type="radio" name="grad_display" id="radial" class="grad" value="radial">
                </label>
                <label for="conic" class="g_label">Conic
-                  <input type="radio" name="grad_display" id="conic" value="conic">
+                  <input type="radio" name="grad_display" id="conic" class="grad" value="conic">
                </label>
             </form>
             <!-- GRADIENT PROPERTIES END -->
