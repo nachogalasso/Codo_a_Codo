@@ -9,6 +9,12 @@ const gradients = [...document.querySelectorAll('.grad')];
 const ort = document.getElementById('ort')
 const container = document.querySelector(".container");
 let hex = [...document.querySelectorAll(".hex-text")];
+const copyBtn = document.querySelector('.fa-copy');
+
+const copyToClipboard = str => (
+	navigator.clipboard?.writeText?.(str)
+	?? Promise.reject('The Clipboard is not working')
+)
 
 
 
@@ -109,3 +115,11 @@ function getProperty() {
 		});
 	});
 }
+
+copyBtn.addEventListener('click', async () => {
+	try {
+		await copyToClipboard(property.value)
+	}catch(err){
+		console.error(err)
+	}
+})
