@@ -51,7 +51,9 @@
 
       <!-- IMAGE START -->
       <section class="img-section">
-         
+         <figure>
+            <img src="./assets/login_logo.webp" alt="login_logo" loading="lazy">
+         </figure>
       </section>
       <!-- IMAGE END -->
 
@@ -69,7 +71,7 @@
          <div class="email">
             <label for="email">Email</label>
             <i class="fa-solid fa-envelope"></i>
-            <input type="text" name="email" id="email" placeholder="example@email.com">
+            <input type="email" name="email" id="email" placeholder="example@email.com">
             <i class="fa-solid fa-circle-exclamation failure"></i>
             <i class="fa-solid fa-circle-check success"></i>
             <p class="error"></p>
@@ -77,7 +79,7 @@
          <div class="pass">
             <label for="password">Password</label>
             <i class="fa-solid fa-lock"></i>
-            <input type="text" name="password" id="password" placeholder="Enter you password here">
+            <input type="password" name="password" id="password" placeholder="Enter you password here">
             <i class="fa-solid fa-circle-exclamation failure"></i>
             <i class="fa-solid fa-circle-check success"></i>
             <p class="error"></p>
@@ -85,7 +87,7 @@
 
          
          <div class="btns-section">
-            <button class="btn cancel" type="submit">Cancel</button>
+            <button class="btn cancel" type="reset">Cancel</button>
             <button class="btn" type="submit" id="submit">Log in</button>
          </div>
          <div></div>
