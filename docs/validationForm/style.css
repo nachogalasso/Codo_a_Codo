@@ -48,9 +48,6 @@ label, input, legend {
 body {
   background-color: rgba(245, 245, 245);
   color: var(--primaryBlue);
-  display: grid;
-  place-content: center;
-  height: 100vh;
 }
 
 /* ===== MAIN START ===== */
@@ -59,19 +56,21 @@ body {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   margin: 5rem auto;
 }
 
 @media screen and (min-width: 768px) {
    .container {
       flex-direction: row;
       gap: 2rem;
+      max-width: 100rem;
    }
 }
 /* ===== MAIN END ===== */
 
 /* ===== IMAGE START ===== */
 .img-section {
-   width: 32rem;
+   width: 40rem;
 }
 
 figure img {
@@ -80,31 +79,26 @@ figure img {
 
 @media screen and (min-width: 768px) {
    .img-section {
-      flex: 0 0 calc(50% - 1rem);
-      width: 100%;
+      flex: 0 0 calc(48% - 1rem);
+      /* width: 100%; */
    }
 
    figure img {
-      border-radius: 0;
+      border-radius: 1rem;
       box-shadow: .2rem .2rem .4rem rgba(0, 0, 0, 0.1);
    }
 }
 
-@media screen and (min-width: 1024px) {
-   .img-section {
-      flex: 0 0 calc(38% - 1rem);
-   }
-}
 /* ===== IMAGE END ===== */
 
 /* ===== FORM START ===== */
 .form-section {
    display: flex;
    flex-direction: column;
-   width: 32rem;
-   padding: 1.5rem;
-   border: .1rem solid #000;
+   width: 40rem;
+   padding: 1rem 1.5rem;
    border-radius: 0 0 1rem 1rem;
+   border: .1rem solid #000;
    box-shadow: .2rem .2rem .4rem rgba(0, 0, 0, 0.1);
 }
 
@@ -122,6 +116,7 @@ figure img {
 @media screen and (min-width: 768px) {
    .form-section {
       border-radius: 1rem;
+      flex: 0 0 calc(40% - 1rem)
    }
 }
 /* Labels */
