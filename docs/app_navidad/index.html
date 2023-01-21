@@ -38,12 +38,33 @@
       <form class="gift-entry">
         <p class="alert"></p>
         <section class="gift-input">
-          <input type="text" name="giftentry" id="ventry" placeholder="Ingresa tus Regalos" />
-          <input type="url" name="giftlink" id="giftlink" placeholder="https:\imagegift">
-          <input type="text" name="giftentry" id="namentry" placeholder="Regalar a..." />
-          <input type="number" name="numentry" id="numentry" placeholder="0" title="Cantidad de regalos" min="0">
+          <div class="gift">
+            <label for="giftfor">Regalo</label>
+            <i class="fa-solid fa-gift"></i>
+            <input type="text" name="giftentry" id="ventry" placeholder="Gift" />
+          </div>
+          <div class="link">
+            <label for="link">Link Imagen</label>
+            <i class="fa-solid fa-link"></i>
+            <input type="url" name="giftlink" id="giftlink" placeholder="https:\imagegift">
+          </div>
+          <div class="honored">
+            <label for="honored">Regalo para:</label>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="giftentry" id="namentry" placeholder="Para quién es el regalo?" />
+          </div>
+          <div class="price">
+            <label for="price">Precio</label>
+            <i class="fa-solid fa-dollar-sign"></i>
+            <input type="text" name="giftprice" id="priceentry" placeholder="0" />
+          </div>
+          <div class="quantity">
+            <label for="quantity">Unidades</label>
+            <input type="number" name="numentry" id="numentry" placeholder="0" title="Cantidad de regalos" min="0">
+          </div>
           <section class="btn-section">
-            <button type="submit" id="closeBtn" class="Btn close closeModal">Cerrar</button>
+            <button type="submit" id="randomBtn" class="Btn random">Sorprendeme!</button>
+            <button type="button" id="closeBtn" class="Btn close closeModal">Cerrar</button>
             <button type="submit" id="entryBtn" class="Btn entry">Agregar</button>
           </section>
         </section>
@@ -61,7 +82,7 @@
     <!-- Alert End -->
 
     <!-- List Container Start -->
-    <section class="container-list">
+    <section class="container-list hide">
       <article class="gift-list" id="list">
         
       </article>
@@ -70,9 +91,18 @@
       <!-- Delete End -->
 
     </section>
+    <p class="alert2"></p>
+
     <!-- List Container End -->
   </main>
  </body>
 
- <script src="/docs/app_navidad/scripts.js"></script>
+ <!-- <script src="/docs/app_navidad/scripts.js"></script> -->
+ <script src="/docs/app_navidad/scripts2.js"></script>
 </html>
+
+<!-- image links
+https://iili.io/Hc3X8tR.webp enlace imagen
+https://freeimage.host/i/Hc3X8tR url
+<a href="https://freeimage.host/es"><img src="https://iili.io/Hc3X8tR.webp" alt="Hc3X8tR.webp" border="0" /></a>
+[url=https://freeimage.host/es][img]https://iili.io/Hc3X8tR.webp[/img][/url] -->
