@@ -17,7 +17,7 @@ const text = document.querySelector(".text"); // info text
 const modal = document.querySelector(".modal"); // modal form
 const openModal = document.querySelector(".modalBtn"); // open modal
 const closeModal = document.querySelector(".closeModal"); // close modal
-const randomBtn = document.getElementById("randomBtn");
+const randomBtn = document.getElementById("randomBtn"); // random present btn
 
 /* Variables for later use */
 let editElement;
@@ -31,6 +31,7 @@ let editID = "";
 /* LIST EVENTLISTENERS */
 openModal.addEventListener("click", () => {
 	closeModal.classList.remove("hide");
+	randomBtn.classList.remove("hide");
 	modal.classList.add("show");
 
 });
@@ -49,6 +50,8 @@ deleteAll.addEventListener('click', clearItems);
 // Setup items from LocalStorage
 window.addEventListener('DOMContentLoaded', setupItems)
 
+randomBtn.addEventListener("click", getRandomGifts);
+
 // Getting items from Form
 function addItem(e) {
 	e.preventDefault()
@@ -60,6 +63,7 @@ function addItem(e) {
 	const price = giftPrice.value;
 
 	if(iValue !== "" && editItems === false) {
+		
 		createGiftList(iValue, id, num, honored, image, price);
     	displayAlert("Regalo ingresado", "exito");
 
@@ -67,7 +71,9 @@ function addItem(e) {
 		text.classList.add('hide');
 		addToLocalStorage(iValue, id, num, honored, image, price);
 		setBackToDefault()
+
 	} else if(iValue !== "" && editItems === true) {
+
 		editElement.innerHTML = iValue;
 		editNumber.innerHTML = num;
 		editPerson.innerHTML = honored;
@@ -77,8 +83,9 @@ function addItem(e) {
 		editLocalStorage(iValue, editID, honored, image, num, price);
 		setBackToDefault();
 		modal.classList.remove("show");
+		
 	} else {
-		displayAlert("Por favor ingresa un regalo", "error")
+		displayAlert("Por favor ingresa un regalo", "error");
 	}
 }
 
@@ -157,6 +164,7 @@ function setBackToDefault() {
   numGifts.value = "";
   namEntry.value = "";
   giftLink.value = "";
+  giftPrice.value = "";
   editItems = false;
   editID = "";
   editElement = "";
@@ -164,9 +172,41 @@ function setBackToDefault() {
   editImage = "";
   editNumber = 1;
   entryBtn.textContent = "Agregar";
-randomBtn.classList.remove("hide");
-
+//   randomBtn.classList.remove("hide");
 }
+
+// random Gifts
+async function getRandomGifts() {
+	try {
+		let result = await fetch('gifts.json');
+		let data = await result.json();
+		let products = data.gifts
+		products = products.map(item => {
+			const id = item.id;
+			const value = item.value;
+			const link = item.link;
+			const price = item.price;
+			return {id, value, link, price}
+		}) 
+		// add products to a variable
+		let glist = products
+
+		// get a random ID to bring an item
+		rdmGift = Math.floor(Math.random() * 11);
+		// loop through the list of products to match ID´s and bring the values
+		for (let i = 0; i < glist.length; i++) {
+			if (glist[i].id == rdmGift) {
+				console.log(glist[i].id);
+				giftEntry.value = glist[i].value;
+				giftPrice.value = glist[i].price;
+				giftLink.value = glist[i].link;
+			}
+		}
+	} catch (err) {
+		console.error(err);
+	}
+}
+
 
 // LocalStorage Items
 function addToLocalStorage(iValue, id, num, honored, image, price) {
