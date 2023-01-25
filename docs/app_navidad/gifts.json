@@ -1,0 +1,64 @@
+{
+   "gifts": [
+      {
+         "id": "1",
+         "value": "chocolates",
+         "link": "https://cdn.pixabay.com/photo/2017/02/11/14/19/valentines-day-2057745_960_720.jpg",
+         "price": "2800"
+      },
+      {
+         "id": "2",
+         "value": "cookies",
+         "link": "https://cdn.pixabay.com/photo/2017/11/24/20/01/christmas-cookies-2975570_960_720.jpg",
+         "price": "2200"
+      },
+      {
+         "id": "3",
+         "value": "Mytery Box",
+         "link": "https://cdn.pixabay.com/photo/2019/11/30/13/21/gift-4663231_960_720.jpg",
+         "price": "1000"
+      },
+      {
+         "id": "4",
+         "value": "Marco cuadro",
+         "link": "https://cdn.pixabay.com/photo/2017/11/07/13/40/mockup-2926956_960_720.jpg",
+         "price": "2700"
+      },
+      {
+         "id": "5",
+         "value": "Marco fotos",
+         "link": "https://cdn.pixabay.com/photo/2014/08/25/17/17/picture-frame-427298_960_720.jpg",
+         "price": "1500"
+      },
+      {
+         "id": "6",
+         "value": "Bufanda y Guantes",
+         "link": "https://cdn.pixabay.com/photo/2020/11/14/16/53/knitted-5742293_960_720.jpg",
+         "price": "4500"
+      },
+      {
+         "id": "7",
+         "value": "Agenda",
+         "link": "https://cdn.pixabay.com/photo/2017/05/13/21/41/coffee-2310750_960_720.jpg",
+         "price": "3000"
+      },
+      {
+         "id": "8",
+         "value": "Guantes",
+         "link": "https://cdn.pixabay.com/photo/2016/02/03/14/56/mittens-1177211_960_720.jpg",
+         "price": "3300"
+      },
+      {
+         "id": "9",
+         "value": "Yoga Mat",
+         "link": "https://cdn.pixabay.com/photo/2016/10/15/18/29/yoga-mat-1743203_960_720.jpg",
+         "price": "4000"
+      },
+      {
+         "id": "10",
+         "value": "Alfombra",
+         "link": "https://cdn.pixabay.com/photo/2016/06/06/17/25/home-1439966_960_720.jpg",
+         "price": "2900"
+      }
+   ]
+}
