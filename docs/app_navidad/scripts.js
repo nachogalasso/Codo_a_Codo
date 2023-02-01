@@ -18,6 +18,11 @@ const modal = document.querySelector(".modal"); // modal form
 const openModal = document.querySelector(".modalBtn"); // open modal
 const closeModal = document.querySelector(".closeModal"); // close modal
 const randomBtn = document.getElementById("randomBtn"); // random present btn
+const giftsTotal = document.querySelector('.gift-total'); // show gifts subtotal
+const subtotal = document.querySelector('.subtotal'); // show preview container
+const preview = document.querySelector('.gift-content') // preview items
+const previewBtn = document.querySelector('.previewBtn') // display the preview gift list
+const closePreview = document.querySelector('.close-list') // btn to close the preview list
 
 /* Variables for later use */
 let editElement;
@@ -27,6 +32,7 @@ let editLink;
 let editPrice;
 let editItems = false;
 let editID = "";
+let giftLocalStorage = []
 
 /* LIST EVENTLISTENERS */
 openModal.addEventListener("click", () => {
@@ -41,6 +47,10 @@ closeModal.addEventListener("click", () => {
 	setBackToDefault()
 });
 
+closePreview.addEventListener('click', () => {
+	subtotal.classList.remove('subtotal');
+})
+
 // Submit form items
 form.addEventListener("submit", addItem); // Submit form items
 
@@ -48,9 +58,15 @@ form.addEventListener("submit", addItem); // Submit form items
 deleteAll.addEventListener('click', clearItems); 
 
 // Setup items from LocalStorage
-window.addEventListener('DOMContentLoaded', setupItems)
+window.addEventListener('DOMContentLoaded', setupItems);
 
+// random gift function
 randomBtn.addEventListener("click", getRandomGifts);
+
+// preview modal
+previewBtn.addEventListener('click', () => {
+	subtotal.classList.add("subtotal");
+});
 
 // Getting items from Form
 function addItem(e) {
@@ -65,11 +81,13 @@ function addItem(e) {
 	if(iValue !== "" && editItems === false) {
 		
 		createGiftList(iValue, id, num, honored, image, price);
-    displayAlert("Regalo ingresado", "exito");
+    	displayAlert("Regalo ingresado", "exito");
 
 		container.classList.add('show-container');
 		text.classList.add('hide');
 		addToLocalStorage(iValue, id, num, honored, image, price);
+		setGiftValues();
+
 		setBackToDefault()
 
 	} else if(iValue !== "" && editItems === true) {
@@ -81,6 +99,8 @@ function addItem(e) {
 		editPrice.innerHTML = price;
 		displayAlert('Gift modified', 'exito');
 		editLocalStorage(iValue, editID, honored, image, num, price);
+		setGiftValues();
+
 		setBackToDefault();
 		modal.classList.remove("show");
 		
@@ -208,7 +228,20 @@ async function getRandomGifts() {
 }
 
 // Set GiftList Values
-
+function setGiftValues() {
+	let tempTotal = 0;
+	let giftTotal = 0;
+	let items = getLocalStorage();
+	giftLocalStorage = [...items]
+	console.log(giftLocalStorage)
+	giftLocalStorage.map(item => {
+		tempTotal += item.quantity * item.price;
+		giftTotal += item.quantity
+	})
+	console.log(tempTotal, giftTotal)
+	giftsTotal.textContent = tempTotal;
+}
+// setGiftValues()
 
 // LocalStorage Items
 function addToLocalStorage(iValue, id, num, honored, image, price) {
@@ -270,6 +303,8 @@ function setupItems() {
 				item.price
 			);
 		});
+		setGiftValues();
+
 		container.classList.add("show-container");
 		text.classList.add("hide");
 	}
@@ -292,7 +327,7 @@ function createGiftList(iValue, id, num, honored, image, price) {
 		<p class="gift-text">${iValue}</p>
 		<p class="gift-text">${honored}</p>
 		<p class="gift-text">${num}</p>
-		<p class="gift-text">${price}</p>
+		<p class="gift-text">${num * price}</p>
 	</div>
 	<div class="btns">
 		<button type="button" class="editBtn btn" title="Edit Gift">
@@ -312,3 +347,30 @@ function createGiftList(iValue, id, num, honored, image, price) {
 	// Append the whole gift list
 	list.appendChild(element);
 }
+
+// Preview Gift List
+function showPreviewList() {
+	const element = document.createElement("div");
+	element.classList.add("gift-prev");
+	let items = getLocalStorage()
+	console.log(items)
+	let result = "";
+	items.forEach(item => {
+		result = `
+		<!-- cart item start -->
+			<div class="items-cont" id=${item.id}>
+				<img src=${item.link} alt=${item.value}>
+				<div class="items">
+				<p class="gift-text">${item.value}</p>
+				<p class="gift-text">${item.person}</p>
+				<p class="gift-text">${item.quantity}</p>
+			</div>
+		<!-- cart item end -->
+			`;
+		
+	});
+		element.innerHTML = result;
+		preview.appendChild(element);
+
+}
+showPreviewList()
