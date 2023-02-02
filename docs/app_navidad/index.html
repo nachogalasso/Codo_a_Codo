@@ -30,9 +30,17 @@
     href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet" />
     <!-- STYLE -->
     <link rel="stylesheet" href="style.css" />
+    
+    <style type="text/css" media="print">
+      .noPrint {
+        display: none;
+      }
+    </style>
+
     <title>Lista de Regalos</title>
   </head>
   <body>
+    <div id="nonPrintable">
     <!-- Entry Modal Form Start -->
     <section class="modal" id="modalEntry">
       <form class="gift-entry">
@@ -112,14 +120,16 @@
 
     <!-- List Container End -->
   </main>
+  </div>
     
-  <section class="subtotal hide">
+  <section class="subtotal hide"> <!-- arreglar acá -->
     <section class="gifts-subtotal_container">
       <span class="close-list">
         <i class="fa-solid fa-square-xmark"></i>
       </span>
       <h2>lista de regalos</h2>
       <div class="gift-content"></div>
+      <i class="fa-solid fa-print"></i>
     </section>
   </section>        
 
