@@ -23,7 +23,9 @@ const subtotal = document.querySelector('.subtotal'); // show preview container
 const preview = document.querySelector('.gift-content') // preview items
 const previewBtn = document.querySelector('.previewBtn') // display the preview gift list
 const closePreview = document.querySelector('.close-list') // btn to close the preview list
+const print = document.querySelector('.fa-print'); // print preview btn
 
+console.log(print)
 /* Variables for later use */
 let editElement;
 let editPerson;
@@ -33,6 +35,11 @@ let editPrice;
 let editItems = false;
 let editID = "";
 let giftLocalStorage = []
+
+print.addEventListener("click", () => {
+	document.getElementById("nonPrintable").className += "noPrint";
+	window.print();
+});
 
 /* LIST EVENTLISTENERS */
 openModal.addEventListener("click", () => {
@@ -48,7 +55,7 @@ closeModal.addEventListener("click", () => {
 });
 
 closePreview.addEventListener('click', () => {
-	subtotal.classList.remove('subtotal');
+	subtotal.classList.remove('show-subtotal');
 })
 
 // Submit form items
@@ -65,7 +72,8 @@ randomBtn.addEventListener("click", getRandomGifts);
 
 // preview modal
 previewBtn.addEventListener('click', () => {
-	subtotal.classList.add("subtotal");
+	subtotal.classList.add("show-subtotal");
+	showPreviewList()
 });
 
 // Getting items from Form
@@ -153,16 +161,17 @@ function deleteGift(e) {
 	}
 	displayAlert("Regalo Eliminado", "error");
 	setBackToDefault();
-	removeItemLocalStorage(id)
+	removeItemLocalStorage(id);
+	setGiftValues();
 }
 
 function editGift(e) {
 	const element = e.currentTarget.parentElement.parentElement;
 	editLink = e.currentTarget.parentElement.parentElement.childNodes[1]
-	editElement = e.currentTarget.parentElement.previousElementSibling.childNodes[1];
-	editPerson = e.currentTarget.parentElement.previousElementSibling.childNodes[3];
-	editNumber = e.currentTarget.parentElement.previousElementSibling.childNodes[5];
-	editPrice = e.currentTarget.parentElement.previousElementSibling.childNodes[7];
+	editElement = e.currentTarget.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.childNodes[1];
+	editPerson = e.currentTarget.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.childNodes[3];
+	editNumber = e.currentTarget.parentElement.previousElementSibling.previousElementSibling;
+	editPrice = e.currentTarget.parentElement.previousElementSibling;
 	// display values in inputs
 	giftEntry.value = editElement.textContent;
 	namEntry.value = editPerson.textContent;
@@ -233,12 +242,10 @@ function setGiftValues() {
 	let giftTotal = 0;
 	let items = getLocalStorage();
 	giftLocalStorage = [...items]
-	console.log(giftLocalStorage)
 	giftLocalStorage.map(item => {
 		tempTotal += item.quantity * item.price;
 		giftTotal += item.quantity
 	})
-	console.log(tempTotal, giftTotal)
 	giftsTotal.textContent = tempTotal;
 }
 // setGiftValues()
@@ -326,9 +333,9 @@ function createGiftList(iValue, id, num, honored, image, price) {
 	<div class="display-item">
 		<p class="gift-text">${iValue}</p>
 		<p class="gift-text">${honored}</p>
+		</div>
 		<p class="gift-text">${num}</p>
 		<p class="gift-text">${num * price}</p>
-	</div>
 	<div class="btns">
 		<button type="button" class="editBtn btn" title="Edit Gift">
 			<i class="fas fa-edit"></i>
@@ -350,27 +357,27 @@ function createGiftList(iValue, id, num, honored, image, price) {
 
 // Preview Gift List
 function showPreviewList() {
-	const element = document.createElement("div");
-	element.classList.add("gift-prev");
+
 	let items = getLocalStorage()
-	console.log(items)
-	let result = "";
+	let result = [];
 	items.forEach(item => {
-		result = `
+		result += `
 		<!-- cart item start -->
-			<div class="items-cont" id=${item.id}>
-				<img src=${item.link} alt=${item.value}>
-				<div class="items">
-				<p class="gift-text">${item.value}</p>
-				<p class="gift-text">${item.person}</p>
-				<p class="gift-text">${item.quantity}</p>
+			<div class="gift-prev">
+				<div class="items-cont" id=${item.id}>
+					<img src=${item.link} alt=${item.value}>
+					<div class="items">
+						<p class="gift-text">${item.value}</p>
+						<p class="gift-text">${item.person}</p>
+					</div>
+					<p class="gift-text">${item.quantity}</p>
+				</div>
 			</div>
 		<!-- cart item end -->
 			`;
 		
 	});
-		element.innerHTML = result;
-		preview.appendChild(element);
+		preview.innerHTML = result;
 
 }
-showPreviewList()
+
