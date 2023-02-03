@@ -329,7 +329,7 @@ function createGiftList(iValue, id, num, honored, image, price) {
 	element.setAttributeNode(attr);
 	// Whole element code
 	element.innerHTML = `
-	<img src="${image}" alt="${iValue}">
+	<img src="${image}" alt="${iValue}" loading="lazy">
 	<div class="display-item">
 		<p class="gift-text">${iValue}</p>
 		<p class="gift-text">${honored}</p>
@@ -344,7 +344,7 @@ function createGiftList(iValue, id, num, honored, image, price) {
 			<i class="fas fa-trash"></i>
 		</button>
 	</div>
-	`
+	`;
 	// Edit and Delete buttons
 	const deleteBtn = element.querySelector('.deleteBtn');
 	const editBtn = element.querySelector('.editBtn');
@@ -365,7 +365,7 @@ function showPreviewList() {
 		<!-- cart item start -->
 			<div class="gift-prev">
 				<div class="items-cont" id=${item.id}>
-					<img src=${item.link} alt=${item.value}>
+					<img src=${item.link} alt=${item.value} loading="lazy">
 					<div class="items">
 						<p class="gift-text">${item.value}</p>
 						<p class="gift-text">${item.person}</p>
