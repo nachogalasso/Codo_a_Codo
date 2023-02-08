@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- FONT AWESOME KIT CDN -->
+   <script src="https://kit.fontawesome.com/ef268928f6.js" crossorigin="anonymous"></script>
+   <!-- PYSCRIPT CDN -->
+   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+   <!-- PYODIDE CDN 
+   <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script> -->
+   <title>ToDo List - Python</title>
+</head>
+<body>
+
+   <h1>ToDo List with Python and <span>PyScript</span></h1>
+
+   <p class="error" id="error"></p>
+
+   <!-- MAIN CONTAINER START -->
+   <main class="container">
+
+      <!-- TASK FORM START -->
+      <form action="#" id="form" class="form">
+         <div class="tasks">
+            <label for="task">Enter you task</label>
+            <i class="fa-solid fa-list-check"></i>
+            <input type="text" name="task" id="task-input" placeholder="Enter you task">
+            <!-- <p class="error"></p> -->
+         </div>
+         <button type="button" id="submit" class="btn submit" py-onClick="add_todo()">Add Task</button>
+      </form>
+      <!-- TASK FORM END -->
+      <!-- TASK LIST CONTAINER START -->
+      <section class="task-list">
+         <ul id="items">
+            <template id="item">
+               <li class="list_item">
+                  <input type="checkbox" name="task-done" id="task-done">
+                  <p class="task_item"></p>
+                  <div class="btns">
+                     <i class="fas fa-edit edit" title="Edit"></i>
+                     <i class="fas fa-trash-alt delete" title="Delete"></i>
+                  </div>
+               </li>
+            </template>
+         </ul>
+      </section>
+      <!-- TASK LIST CONTAINER END -->
+   </main>
+   <!-- MAIN CONTAINER END -->
+
+   <!-- PyScript -->
+   <!-- So we need to use our PYSCRIPT tag in the body tag of out HTML page. Now we can write our Python code to run the task list. We see that the command of print shows in our HTML. But is recommended to use a separate file. We use the command as we use for a JS file. So in our tag we reference to the main.py 
+   <py-script>
+      print("Hello World")
+   </py-script> -->
+   <py-script src="./main.py"></py-script>
+</body>
+</html>
