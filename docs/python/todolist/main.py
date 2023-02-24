@@ -13,7 +13,9 @@ error_message = Element("error")
 taskList = Element("item").select(".list_item", from_content=True)
 # now we need the element to append the tasks and that is our ul
 list = Element("items")
-
+# task_edit = Element('edit')
+# task_trash = Element("trash")
+# task_item = Element()
 
 # js.console.log(todo_input.element) this is how we get access to the input element
 def add_todo(*args):
@@ -43,6 +45,8 @@ def add_todo(*args):
       task_content.element.textContent = input_value
       task_checkbox = task.select("input")
       task_checkbox.element.checked = False
+      task_edit = task.select(".edit")
+      task_trash = task.select(".delete")
       # now we append all the elements to our list. Don´t forget the element and to appendChild
       list.element.appendChild(task.element)
       # to put the input in blank
@@ -55,8 +59,24 @@ def add_todo(*args):
          task_checkbox_element.disabled = True
          task_content.element.style.textDecoration = "line-through"
          task_content.element.style.color = "red"
+      
+      def delete_task(task_id):
+         task_trash_element = task_trash.element
+         # js.console.log(task_trash_element)
+         task.element.remove(task.element)
+            
+      def edit_task(task_id):
+         task_edit_element = task_edit.element
+         # js.console.log(task_edit_element)
+         input_value = task_content.element.textContent
+         js.console.log(input_value)
+         todo_input.element.value = input_value
+         
+         
          
       task_checkbox.element.onclick = complete_task
+      task_trash.element.onclick = delete_task
+      task_edit.element.onclick = edit_task
       
    else:
       error_message.element.textContent = "Please insert a Task"   
