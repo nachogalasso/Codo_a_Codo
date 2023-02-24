@@ -1,0 +1,160 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;700&display=swap');
+
+/* ===========
+    1. RESET
+   =========== */
+:root {
+  --title: 'Open Sans', Arial, Helvetica, sans-serif;
+  --text: 'Merriweather Sans', Arial, Helvetica, sans-serif;
+  --mainTransition: all 0.3s linear;  
+  /* muzli colors */
+  --primaryGreen: rgba(0,179,0);
+  --mainDarkgreen: rgba(0,125,0);
+  --mainLightgreen: rgba(191,255,191);
+  --mainRed: rgba(179,0,0);
+  --mainDarkred: rgba(125,0,0);
+  --mainSpacing: .1rem;
+}
+
+html {
+  font-size: 62.5%; 
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
+  object-fit: contain;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: var(--title);
+}
+
+p, a, li,
+label, input, legend {
+  font-family: var(--text);
+}
+
+/* PYTHON TODO LIST */
+.title {
+   font-size: 2.5rem;
+   text-align: center;
+}
+
+.title span {
+   color: var(--mainRed);
+   text-decoration: underline;
+}
+.container {
+   margin: 2rem auto;
+   width: 42rem;
+}
+
+@media screen and (min-width: 768px) {
+   .container {
+      margin-top: 3.5rem;
+      width: 65rem;
+   }
+}
+
+.form {
+   padding: 1rem 1.5rem;
+   display: flex;
+}
+
+.task-list {
+   margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+   .task-list {
+      margin-top: 3.5rem;
+   }
+}
+
+.tasks {
+   position: relative;
+   width: 100%;
+}
+
+.tasks input {
+   font-size: 1.3rem;
+   width: 100%;
+   padding-left: 3rem;
+   height: 3rem;
+   outline: none;
+   box-shadow: .2rem .2rem .4rem rgba(0, 0, 0, 0.1);
+}
+
+.tasks i {
+   position: absolute;
+   padding: 1rem;
+   top: -.25rem;
+   font-size: 1.5rem;
+}
+
+.btn {
+   width: 25%;
+   padding: .5rem;
+   font-size: 1.3rem;
+   cursor: pointer;
+   background-color: var(--mainDarkred);
+   color: var(--mainLightgreen);
+   border: none;
+}
+
+@media screen and (min-width: 768px) {
+   .btn {
+      font-size: 1.5rem;
+   }
+}
+
+
+.list_item {
+   margin: 1.5rem 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 1.5rem;
+}
+
+.task_item {
+   font-size: 1.6rem;
+   padding: 0 2rem;
+   justify-content: flex-start;
+   flex-grow: 1;
+   letter-spacing: .2rem;
+}
+
+.btns i {
+   font-size: 1.4rem;
+   padding: 0 1rem
+}
+
+.fa-edit {
+   color: var(--mainDarkgreen);
+}
+
+.fa-trash-alt {
+   color: var(--mainRed);
+}
+
+@media screen and (min-width: 768px) {
+   .task_item {
+      font-size: 1.8rem;
+   }
+   .btns i {
+      font-size: 1.6rem;
+   }
+}

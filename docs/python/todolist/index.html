@@ -11,11 +11,13 @@
    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
    <!-- PYODIDE CDN 
    <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script> -->
+   <!-- STYLE SHEET -->
+   <link rel="stylesheet" href="./syle.css">
    <title>ToDo List - Python</title>
 </head>
 <body>
 
-   <h1>ToDo List with Python and <span>PyScript</span></h1>
+   <h1 class="title">ToDo List with Python and <span>PyScript</span></h1>
 
    <p class="error" id="error"></p>
 
@@ -25,7 +27,6 @@
       <!-- TASK FORM START -->
       <form action="#" id="form" class="form">
          <div class="tasks">
-            <label for="task">Enter you task</label>
             <i class="fa-solid fa-list-check"></i>
             <input type="text" name="task" id="task-input" placeholder="Enter you task">
             <!-- <p class="error"></p> -->
@@ -41,8 +42,8 @@
                   <input type="checkbox" name="task-done" id="task-done">
                   <p class="task_item"></p>
                   <div class="btns">
-                     <i class="fas fa-edit edit" title="Edit"></i>
-                     <i class="fas fa-trash-alt delete" title="Delete"></i>
+                     <i class="fas fa-edit edit" title="Edit" id="edit"></i>
+                     <i class="fas fa-trash-alt delete" title="Delete" id="trash"></i>
                   </div>
                </li>
             </template>
