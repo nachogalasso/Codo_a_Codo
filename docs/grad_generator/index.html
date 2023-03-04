@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
     <!-- ICONS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ef268928f6.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/docs/grad_generator/assets/icons/48px_icon.png" type="image/png">
     <link rel="apple-touch-icon" href="/docs/grad_generator/assets/icons/48px_icon.png">
     <link rel="apple-touch-startup-image" href="/docs/grad_generator/assets/icons/48px_icon.png">
@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="/docs/grad_generator/style.css">
     <title>Gradient Generator</title>
     <!-- VUE CDN -->
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <!-- OUR APP - GRADIENT GENERATOR -->
@@ -77,7 +77,9 @@
                             </label>
                             <p class="text">HEX 2: {{scolor}}</p>
                         </section>
-                        <app-btn></app-btn>
+                        <div class="btn">
+                            <button title="Add Color" @click="createNewColor"><i class="fa-solid fa-circle-plus"></i></i></button>
+                        </div>
                     </form>
                     <!-- GRADIENT PROPERTIES -->
                     <form action="#" class="gradient__form">
@@ -108,7 +110,7 @@
     </main>
 
     <script src="/docs/grad_generator/js/main.js"></script>
-    <!-- <script src="/docs/grad_generator/components/Color.js"></script> -->
     <script src="/docs/grad_generator/js/mountapp.js"></script>
+    
 </body>
 </html>

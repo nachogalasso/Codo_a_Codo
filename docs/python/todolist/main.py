@@ -5,6 +5,7 @@
 # First we need to gather our input and its value
 # we create a List to gather all the tasks
 tasks = []
+editTasks = False
 
 # Get elements. We need to use the "id" from the input
 todo_input = Element("task-input")
@@ -18,6 +19,7 @@ list = Element("items")
 # task_item = Element()
 
 # js.console.log(todo_input.element) this is how we get access to the input element
+"""
 def add_todo(*args):
    # js.console.log('button-clicked')
    input_value = todo_input.element.value
@@ -83,6 +85,8 @@ def add_todo(*args):
    # is important that if we are gonna use the py-onClick="function()" we need to add an 'id' to the button
    
 """
+   
+"""
 an other way to use the button, we can use an addEventListener which we can use with 'pyodide'
 addButton = document.getElementById('submit')
 
@@ -92,3 +96,58 @@ def add_todo(e):
 event = creat_proxy(add_todo)
 addButton.addEventListener("click", event)
 """
+
+def add_todo (*args):
+   input_value = todo_input.element.value
+   if input_value != "" and editTasks == False:
+      error_message.element.textContent = ""
+      todo_id = f"todo_{len(tasks)}"
+      todo = {
+         "id": todo_id,
+         "text": input_value,
+         "done": False
+      }
+      
+      tasks.append(todo)
+      task = taskList.clone(todo_id, to=list)
+      task_content = task.select("p")
+      task_content.element.textContent = input_value
+      task_checkbox = task.select("input")
+      task_checkbox.element.checked = False
+      task_edit = task.select(".edit")
+      task_trash = task.select(".delete")
+      list.element.appendChild(task.element)
+      todo_input.clear()
+      
+      def edit_task(task_id):
+         task_edit_element = task_edit.element
+         input_value = task_content.element.textContent
+         todo_input.element.value = input_value
+         task_content.element.textContent = todo_input.element.value
+         task_edit.element.onclick = edit_task
+   
+      def delete_task(task_id):
+         task_trash_element = task_trash.element
+         task.element.remove(task.element)
+         error_message.element.textContent = "Task Deleted"
+         task_trash.element.onclick = delete_task
+      
+      def complete_task(task_id):
+         task_checkbox_element = task_checkbox.element
+         task_checkbox_element.checked = True
+         task_checkbox_element.disabled = True
+         task_content.element.style.textDecoration = "line-through"
+         task_content.element.style.color = "red"
+         task_checkbox.element.onclick = complete_task
+      
+      task_checkbox.element.onclick = complete_task
+      task_trash.element.onclick = delete_task
+      task_edit.element.onclick = edit_task
+      
+   elif input_value != "" and editTasks == True:
+      edit_task()
+      
+      
+   else:
+      error_message.element.textContent = "Please insert a Task"
+         
