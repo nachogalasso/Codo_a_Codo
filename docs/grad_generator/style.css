@@ -58,6 +58,14 @@ body {
     font-variant: small-caps;
     margin: 1rem 0;
 }
+
+.color__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .colors {
     display: flex;
     align-items: center;
@@ -128,4 +136,11 @@ input[type="text"] {
 
 .show {
     display: block;
+}
+
+.btn button {
+    border-radius: 50%;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
 }
