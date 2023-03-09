@@ -1,5 +1,8 @@
 <script setup>
-const title = "gradient generator"
+import Color from "./components/Color.vue";
+
+const title = "gradient generator";
+
 
 </script>
 
@@ -10,6 +13,8 @@ const title = "gradient generator"
     <!-- APP FUNCTION CONTAINER START -->
     <section class="main__container">
       <h1 class="main__container-title">{{title}}</h1>
+      <Color />
+      <Color />
     </section>
     <!-- APP FUNCTION CONTAINER END -->
 
@@ -35,6 +40,12 @@ const title = "gradient generator"
   font-size: 2.5rem;
   font-variant: small-caps;
   margin: 1rem 0;
+}
+
+.grad__container {
+  
+  width: 90vw;
+  max-width: 65rem;
 }
 
 </style>

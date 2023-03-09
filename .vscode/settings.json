@@ -2,9 +2,15 @@
    "liveServer.settings.port": 5502,
    "files.autoSave": "afterDelay",
    "editor.fontFamily": "Ubuntu, Consolas, 'Courier New', monospace",
-   "editor.tabSize": 3,
+   "editor.tabSize": 4,
    "editor.defaultFormatter": "esbenp.prettier-vscode",
    "editor.autoIndent": "full",
    "prettier.tabWidth": 3,
-   "editor.letterSpacing": 1
+   "editor.letterSpacing": 1,
+   "[dockercompose]": {
+      "editor.tabSize": 4
+   },
+   "[yaml]": {
+      "editor.tabSize": 4
+   }
 }
