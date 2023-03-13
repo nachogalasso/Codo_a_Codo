@@ -1,0 +1,48 @@
+{% extends 'accounts/main.html' %}
+
+{% comment %} Ahora como tengo el main, le tengo que indicar donde encontrarlo y el bloque de codigo que tiene que renderizar {% endcomment %}
+
+{% block content %}
+
+{% include 'accounts/status.html' %}
+
+<main class="dashboard-container">
+
+    <section class="customers">
+        <h5 class="acc-title">Customers:</h5>
+        <div class="customers-section">
+            <button type="button"   class="co-btn">Create Customers</button>
+            <table class="co-table">
+                <tr>
+                    <th>Customers</th>
+                    <th>Orders</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <section class="orders">
+        <h5 class="acc-title">last 5 orders:</h5>
+        <div class="orders-section">
+            <button type="button"   class="co-btn">Create Orders</button>
+            <table class="co-table">
+                <tr>
+                    <th>Product</th>
+                    <th>Date Ordered</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                    <th>Remove</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+</main>
+
+
+{% endblock  %}
+
+
+
