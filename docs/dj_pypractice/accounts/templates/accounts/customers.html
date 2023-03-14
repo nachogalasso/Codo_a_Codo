@@ -2,8 +2,47 @@
 
 {% block content %}
 
-{% include 'accounts/products.html' %}
-<h1>Customers</h1>
+<section class="cust-container">
+
+    <div class="cust-info_cards">
+        <div class="cust-card">
+            <h5 class="co-title">Customer:</h5>
+            <button type="button" class="cust-btn blue">Update Customer</button>
+            <button type="button" class="cust-btn orange">Delete Customer</button>
+        </div>
+        <div class="cust-card">
+            <h5 class="co-title">Contact Information</h5>
+            <p>Email: </p>
+            <p>Phone: </p>
+        </div>
+        <div class="cust-card">
+            <h5 class="co-title">Total Orders</h5>
+            <h2></h2>
+        </div>
+    </div>
+
+    <div class="cust-search_form">
+        <div class="cust-card">
+            <form method="get">
+                <button type="submit" class="cust-form_btn">Search</button>
+            </form>
+        </div>
+        
+        <div class="cust-card">
+            <table class="co-table">
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Date Ordered</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                    <th>Remove</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</section>
 
 
 {% endblock  %}
