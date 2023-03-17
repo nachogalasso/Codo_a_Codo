@@ -59,10 +59,11 @@ body {
 .main_navbar {
   position: relative;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   background-color: var(--mainBlue);
-  height: 4.5rem;
+  gap: .5rem;
 }
 
 .main_navbar i {
@@ -73,13 +74,14 @@ body {
 }
 
 .main_navbar span {
-  height: 100%;
+  padding: .6rem 0;
   background-color: var(--sdnOrange);
 }
 
 .nav-links {
-  display: flex;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .links-list {
@@ -89,20 +91,17 @@ body {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  flex-grow: 1;
   transition: var(--mainTransition);
 }
 
 .show {
-  left: 15%;
+  left: 10%;
 }
 
 .logo {
-  position: fixed;
-  top: 0;
-  right: .5rem;
-  width: 4rem;
-  height: 4rem;
-  
+  margin-right: .5rem;
+  width: 5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -115,12 +114,12 @@ body {
 
 .list-item {
   list-style-type: none;
-  padding: 1rem 1.5rem;
+  padding: 1.55rem;
 }
 
 .list-item:hover {
   background-color: var(--sdnOrange);
-  color: var(--mainBlue);
+  color: var(--mainLightSilver);
 }
 
 .list-item a {
