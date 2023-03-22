@@ -4,6 +4,13 @@ import Color from "./components/Color.vue";
 const title = "gradient generator";
 
 
+
+function addOtherColor() {
+  const newColor = document.querySelector('.colors-container');
+  newColor.append(Color)
+}
+
+
 </script>
 
 <template>
@@ -13,8 +20,9 @@ const title = "gradient generator";
     <!-- APP FUNCTION CONTAINER START -->
     <section class="main__container">
       <h1 class="main__container-title">{{title}}</h1>
-      <Color />
-      <Color />
+        <Color />
+        <Color />
+      
     </section>
     <!-- APP FUNCTION CONTAINER END -->
 
