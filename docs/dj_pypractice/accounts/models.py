@@ -57,3 +57,5 @@ class Order(models.Model):
     
     def __str__(self):
         return self.status
+    
+    # estoy en el video 8 rendering data templates

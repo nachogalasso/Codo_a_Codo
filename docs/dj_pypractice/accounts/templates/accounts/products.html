@@ -13,6 +13,22 @@
                 <th>Category</th>
                 <th>Price</th>
             </tr>
+
+            {% comment %} Aquí es donde vamos a pasar nuestros datos de la base products, podemos crear un template para que se rendericen nuestros datos {% endcomment %}
+            {% for i in products %}
+            <tr>
+                <td>
+                    {{i.name}}
+                </td>
+                <td>
+                    {{i.category}}
+                <td>
+                    {{i.price}}
+                </td>
+            </tr>
+            {% endfor %}
+
+
         </table>
     </div>
 </section>

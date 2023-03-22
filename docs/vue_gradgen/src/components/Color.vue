@@ -21,23 +21,14 @@ let deg = ref(0);
 let id = ref(crypto.randomUUID())
 
 function addColors() {
-    class CreateColor {
-		constructor(id, color, deg) {
-			this.id=id;
-			this.color=color;
-			this.deg=deg;
-		}
-	}
-    
-    const newColor = new CreateColor(id, color, deg)
-    const newColorChange = Object.entries(newColor)
-    console.log(newColorChange)
-    // colorStore.colorPair.push({...newColor})
-
+    colorStore.colorPair.push({
+        id: crypto.randomUUID(),
+        color: color.value,
+        deg: deg.value,
+    })
     console.log(colorStore.colorPair)
-
-    // addColors()
-}    
+}
+    
 </script>
 
 <style scoped>

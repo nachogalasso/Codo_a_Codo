@@ -178,6 +178,7 @@ body {
 .co-table {
   width: 100%;
   font-family: var(--title);
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
