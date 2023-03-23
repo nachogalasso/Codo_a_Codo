@@ -12,12 +12,12 @@
         </div>
         <div class="cust-card">
             <h5 class="co-title">Contact Information</h5>
-            <p>Email: </p>
-            <p>Phone: </p>
+            <p>Email: {{customers.email}} </p>
+            <p>Phone: {{customers.phone}} </p>
         </div>
         <div class="cust-card">
             <h5 class="co-title">Total Orders</h5>
-            <h2></h2>
+            <h2 class="ord-count">{{orders_count}}</h2>
         </div>
     </div>
 
@@ -38,6 +38,17 @@
                     <th>Update</th>
                     <th>Remove</th>
                 </tr>
+
+                {% for order in orders %}
+                    <tr>
+                        <td>{{ order.product }}</td>
+                        <td>{{ order.product.category }}</td>
+                        <td>{{ order.date_created }}</td>
+                        <td>{{ order.status }}</td>
+                        <td><a class="btn btn-info" href="">Update</a></td>
+                        <td><a class="btn btn-danger" href="">Delete</a></td>
+                    </tr>
+                {% endfor %}
             </table>
         </div>
     </div>

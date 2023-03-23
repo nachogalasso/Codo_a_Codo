@@ -27,8 +27,17 @@ def home(request):
     # Como aquí tenemos las ordenes y los clientes vamos renderizar ambas bases
     orders = Order.objects.all()
     customers = Customer.objects.all()
+    
+    # traemos el total de los clientes y las ordenes
+    total_customers = customers.count()
+    total_orders = orders.count()
+    
+    # Ahora creamos un filtro que nos muestre las ordenes segun sus status
+    delivered = orders.filter(status='Delivered').count()
+    pending = orders.filter(status='Pending').count()
+    
     #  como vamos a pasar más de una base de datos, creamos un diccionario externo y allí colocamos las bases
-    context = {'orders': orders, 'customers': customers}
+    context = {'orders': orders, 'customers': customers, 'total_orders': total_orders, 'delivered': delivered, 'pending': pending, 'total_customers': total_customers}
     return render(request, 'accounts/dashboard.html', context);
 
 def products(request):
@@ -37,5 +46,14 @@ def products(request):
     products = Product.objects.all()
     return render(request, 'accounts/products.html', {'products': products});
 
-def customers(request):
-    return render(request, 'accounts/customers.html')
+# Aqui tenemos que pasar también el id del cliente que queremos renderizar, lo vamos a indentificar como pk
+def customers(request, pk_test):
+    customers = Customer.objects.get(id=pk_test)
+    
+    # traemos las ordenes de los clientes
+    orders = customers.order_set.all() 
+    # traemos el total de las ordenes
+    orders_count = orders.count()
+    
+    context = {'customers': customers, 'orders': orders, 'orders_count': orders_count}
+    return render(request, 'accounts/customers.html', context)

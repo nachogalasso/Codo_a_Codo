@@ -9,7 +9,7 @@ from . import views
 # No olvidar agregar los urlpatterns de nuestros paths
 urlpatterns = [
     # Aquí estamos llamando a las functions que se encuentran en views.py
-    path('',views.home),
-    path('products/',views.products),
-    path('customers/',views.customers),
+    path('',views.home, name="home"),
+    path('products/',views.products, name="products"),
+    path('customers/<str:pk_test>/',views.customers, name="customers"),
 ]

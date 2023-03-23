@@ -240,6 +240,7 @@ body {
 .card-body {
   width: 100%;
   padding: 1.2rem .5rem;
+  color: var(--mainLightSilver);
 }
 
 .fbc {
@@ -255,10 +256,11 @@ body {
   opacity: 0.7;
 }
 
-.co-title {
+.co-title, .ord-count {
   font-variant: small-caps;
   letter-spacing: var(--mainSpacing);
   font-size: 1.2rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -271,6 +273,10 @@ body {
 
   .co-title {
     font-size: 1.6rem;
+  }
+
+  .ord-count {
+    font-size: 1.8rem;
   }
 
 }
@@ -324,7 +330,7 @@ body {
   margin-bottom: .8rem;
 }
 
-.cust-btn {
+.cust-btn, .btn {
   margin: .5rem 0;
   padding: .5rem 0;
   background-color: inherit;
@@ -332,24 +338,25 @@ body {
   letter-spacing: var(--mainSpacing);
   transition: var(--mainTransition);
   border-radius: .3rem;
+  text-decoration: none;
 }
 
-.blue {
+.blue, .btn-info {
   color: var(--mainBlue);
   border: .2rem solid var(--mainBlue);
 }
 
-.blue:hover {
+.blue:hover, .btn-info:hover {
   color: var(--mainLightSilver);
   background-color: var(--mainBlue);
 }
 
-.orange {
+.orange, .btn-danger {
   color: var(--sdnOrange);
   border: .2rem solid var(--sdnOrange);
 }
 
-.orange:hover {
+.orange:hover, .btn-danger:hover {
   color: var(--mainLightSilver);
   background-color: var(--sdnOrange);
 }
