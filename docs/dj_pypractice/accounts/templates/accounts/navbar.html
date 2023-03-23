@@ -6,14 +6,14 @@
     <div class="nav-links">
         <ul class="links-list">
             <li class="list-item">
-                <a href="#">Dashboard</a>
+                <a href="{% url 'home' %}">Dashboard</a>
             </li>
             <li class="list-item">
-                <a href="#">Products</a>
+                <a href="{% url 'products' %}">Products</a>
             </li>
-            <li class="list-item">
-                <a href="#">Customers</a>
-            </li>
+            {% comment %} <li class="list-item">
+                <a href="{% url 'customers' %}">Customers</a>
+            </li> {% endcomment %}
         </ul>
     </div>
     <figure class="logo">
