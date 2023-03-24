@@ -175,11 +175,24 @@ body {
   cursor: pointer;
 }
 
+.co-btn a {
+  color: var(--mainLightSilver);
+  text-decoration: none;
+}
+
 .co-table {
   width: 100%;
   font-family: var(--title);
   text-align: center;
+  border-collapse: collapse;
 }
+
+.co-table tr {
+  height: 3.8rem;
+  border-bottom: .1rem solid var(--mainBlue);
+}
+
+
 
 @media screen and (min-width: 1024px) {
   .dashboard-container {
@@ -193,6 +206,10 @@ body {
 
   .co-table th {
     font-size: 1.6rem;
+  }
+
+  .co-table td {
+    font-size: 1.4rem;
   }
 
 }
@@ -332,7 +349,7 @@ body {
 
 .cust-btn, .btn {
   margin: .5rem 0;
-  padding: .5rem 0;
+  padding: .5rem;
   background-color: inherit;
   cursor: pointer;
   letter-spacing: var(--mainSpacing);
