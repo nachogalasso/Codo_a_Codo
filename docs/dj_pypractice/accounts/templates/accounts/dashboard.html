@@ -11,7 +11,8 @@
     <section class="customers">
         <h5 class="acc-title">Customers:</h5>
         <div class="customers-section">
-            <button type="button"   class="co-btn">Create Customers</button>
+            <a href="#"><button type="button"   class="co-btn">Create Customers</button></a>
+            {% comment %} <a href="#"   class="co-btn">Create Customers</a> {% endcomment %}
             <table class="co-table">
                 <tr>
                     <th></th>
@@ -21,7 +22,7 @@
 
                 {% for customer in customers %}
                     <tr>
-                        <td><a href="{% url 'customers' customer.id %}">View</a></td>
+                        <td><a href="{% url 'customers' customer.id %}" class="btn">View</a></td>
                         <td>{{ customer.name }}</td>
                         <td>{{ customer.phone }}</td>
                     </tr>
@@ -35,7 +36,8 @@
     <section class="orders">
         <h5 class="acc-title">last 5 orders:</h5>
         <div class="orders-section">
-            <button type="button"   class="co-btn">Create Orders</button>
+            <a href="{% url 'create_order' %}"><button type="button"   class="co-btn">Create Orders</button><a>
+            {% comment %} <a href="{% url 'create_order' %}" class="co-btn">Create Orders</a> {% endcomment %}
             <table class="co-table">
                 <tr>
                     <th>Product</th>
@@ -50,7 +52,7 @@
                         <td>{{ order.product }}</td>
                         <td>{{ order.date_created }}</td>
                         <td>{{ order.status }}</td>
-                        <td><a class="btn btn-info" href="">Update</a></td>
+                        <td><a class="btn btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
                         <td><a class="btn btn-danger" href="">Delete</a></td>
                     </tr>
                 {% endfor %}

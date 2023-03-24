@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 # Create your views here.
 # vamos a tener que importar todos los modelos para poder usarlos en la aplicacion
 from .models import *
+# traemos nuestro formulario para que se pueda renderizar el template
+from .forms import OrderForm
 
 # vamos a tener que crear una urls.py dentro de la carpeta de nuestro proyecto.
 # def home(request):
@@ -57,3 +59,30 @@ def customers(request, pk_test):
     
     context = {'customers': customers, 'orders': orders, 'orders_count': orders_count}
     return render(request, 'accounts/customers.html', context)
+
+
+# creamos la function del form para que django nos renderice el template order_form.html
+def createOrder(request):
+    
+    # Aqui vamos usar nuestra function de OrderForm para crear un formulario
+    form = OrderForm()
+    if request.method == 'POST':
+        #print('Printing POST:', request.POST)
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/') 
+        
+    context = {'form': form}
+    
+    return render(request, 'accounts/order_form.html', context)
+
+# Ahora creamos la function para poder actualizar los datos de nuestras ordenes
+def updateOrder(request, pk):
+    # vamos a tener que traer nuestro modelo de order
+    order = Order.objects.get(id=pk)
+    form = OrderForm(instance=order)
+    context = {'form': form}
+    return render(request, 'accounts/order_form.html', context)
+
+# estoy en el minuto 14:50 del video 11

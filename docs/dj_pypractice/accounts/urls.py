@@ -12,4 +12,9 @@ urlpatterns = [
     path('',views.home, name="home"),
     path('products/',views.products, name="products"),
     path('customers/<str:pk_test>/',views.customers, name="customers"),
+    
+    # Creamos el path para nuestro form de order
+    path('create_order/',views.createOrder, name="create_order"),
+    # Creamos el path para el update de un producto
+    path('update_order/<str:pk>/', views.updateOrder, name="update_order"),
 ]
