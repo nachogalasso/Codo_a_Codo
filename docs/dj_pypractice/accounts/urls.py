@@ -17,4 +17,6 @@ urlpatterns = [
     path('create_order/',views.createOrder, name="create_order"),
     # Creamos el path para el update de un producto
     path('update_order/<str:pk>/', views.updateOrder, name="update_order"),
+    # Creamos el path para el template del delete de un producto
+    path('delete_order/<str:pk>/', views.deleteOrder, name="delete_order"),
 ]

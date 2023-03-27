@@ -1,0 +1,23 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="confirm-container">
+
+    <p>Are you sure you want to delete "{{item}}"?</p>
+{% comment %} Para ello creamos un formulario por el cual va a tener 2 acciones, si se quiere continuar con el proceso de eliminar o si se quiere cancelar el mismo {% endcomment %}
+
+    <form action="{% url 'delete_order' item.id %}" method="POST" class="confirm-form">
+    
+        {% csrf_token %}
+    
+        <a href="{% url 'home' %}" class="btn blue">Cancel</a>
+    
+        <input type="submit" value="Confirm" class="btn orange" />
+    
+    </form>
+</div>
+
+
+{% endblock %}
