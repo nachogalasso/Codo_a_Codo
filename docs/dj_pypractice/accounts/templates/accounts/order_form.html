@@ -3,14 +3,16 @@
 
 {% block content %}
 
-<form action="" method="POST">
-    {% comment %} Aquí pasamos nuestro formulario para que se renderice {% endcomment %}
-    {% csrf_token %}
-    {{form}}
-
-    <input type="submit" name="Submit">
-
-</form>
+<div class="form-container">
+    <form action="" method="POST" class="ud-form">
+        {% comment %} Aquí pasamos nuestro formulario para que se renderice {% endcomment %}
+        {% csrf_token %}
+        {{form}}
+    
+        <input type="submit" value="Submit">
+    
+    </form>
+</div>
 
 
 {% endblock %}
