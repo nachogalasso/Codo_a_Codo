@@ -8,7 +8,7 @@
         <div class="cust-card">
             <h5 class="co-title">Customer:</h5>
             <button type="button" class="cust-btn blue">Update Customer</button>
-            <button type="button" class="cust-btn orange">Delete Customer</button>
+            <a href="{% url 'create_order' customers.id %}"><button type="button" class="cust-btn orange">Place Order</button></a>
         </div>
         <div class="cust-card">
             <h5 class="co-title">Contact Information</h5>
@@ -24,6 +24,8 @@
     <div class="cust-search_form">
         <div class="cust-card">
             <form method="get">
+                {% comment %} Aquí colocamos los filtros de busqueda de datos, vamos a tener que crear un query para poder procesar toda la información {% endcomment %}
+                {{myFilter.form}}
                 <button type="submit" class="cust-form_btn">Search</button>
             </form>
         </div>
@@ -32,7 +34,7 @@
             <table class="co-table">
                 <tr>
                     <th>Product</th>
-                    <th>Category</th>
+                    <th>Note</th>
                     <th>Date Ordered</th>
                     <th>Status</th>
                     <th>Update</th>
@@ -42,7 +44,7 @@
                 {% for order in orders %}
                     <tr>
                         <td>{{ order.product }}</td>
-                        <td>{{ order.product.category }}</td>
+                        <td>{{ order.note }}</td>
                         <td>{{ order.date_created }}</td>
                         <td>{{ order.status }}</td>
                         <td><a class="btn btn-info" href="{% url 'update_order' order.id %}">Update</a></td>

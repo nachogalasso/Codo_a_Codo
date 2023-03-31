@@ -54,6 +54,8 @@ class Order(models.Model):
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     # Le pasamos los valores de Status para poder modificarlos cuando lo necesitemos.
     status = models.CharField(max_length=100, null=True, choices=STATUS)
+    # creamos un nuevo valor para poder usar con nuestro filtro de busqueda
+    note = models.CharField(max_length=100, null=True)
     
     def __str__(self):
         return self.product.name

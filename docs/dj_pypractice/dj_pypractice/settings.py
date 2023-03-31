@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     
     # Aqui es dónde le avisamos a django de que creamos una app
     'accounts',
+    
+    'django_filters',
 ]
 
 MIDDLEWARE = [

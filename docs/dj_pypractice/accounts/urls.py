@@ -14,7 +14,9 @@ urlpatterns = [
     path('customers/<str:pk_test>/',views.customers, name="customers"),
     
     # Creamos el path para nuestro form de order
-    path('create_order/',views.createOrder, name="create_order"),
+    # path('create_order/',views.createOrder, name="create_order"),
+    # Ahora le vamos a agregar el id del cliente para tener las órdenes no desde los productos, sino desde los clieentes
+    path('create_order/<str:pk>/', views.createOrder, name="create_order"),
     # Creamos el path para el update de un producto
     path('update_order/<str:pk>/', views.updateOrder, name="update_order"),
     # Creamos el path para el template del delete de un producto
