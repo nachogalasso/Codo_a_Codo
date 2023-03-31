@@ -412,7 +412,7 @@ body {
   margin: 2rem auto;
   display: flex;
   width: 90vw;
-  max-width: 100rem;
+  max-width: 90rem;
   justify-content: center;
   padding: 2rem;
   border: .1rem solid var(--mainBlue);
@@ -421,7 +421,7 @@ body {
 }
 
 .ud-form {
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: column;
 }
@@ -441,7 +441,7 @@ body {
 }
 
 .ud-form input {
-  margin: 2rem 0 1rem;
+  margin: .5rem 0 2rem;
   padding: .8rem;
   letter-spacing: var(--mainSpacing);
   font-size: 1.3rem;
@@ -450,6 +450,7 @@ body {
   border-radius: .5rem;
   transition: var(--mainTransition);
   cursor: pointer;
+  align-self: flex-start;
 }
 
 .ud-form input:hover {
@@ -462,19 +463,10 @@ body {
   }
 
   .ud-form {
-    width: 100%;
-    flex-direction: row;
+    margin: 0 auto;
     justify-content: space-between;
-    align-items: center;
   }
-
-  .ud-form input {
-    margin: 0;
-  }
-  .ud-form  select {
-    width: 100%;
-    margin: 0 .5rem;
-  }
+  
 }
 
 .confirm-container {

@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.forms import inlineformset_factory
 
 # Create your views here.
 # vamos a tener que importar todos los modelos para poder usarlos en la aplicacion
 from .models import *
 # traemos nuestro formulario para que se pueda renderizar el template
 from .forms import OrderForm
+# Tenemos que importar los filtros para poder usarlos en la aplicacion y luego indicarlos dónde queremos que
+# se rendericen y es en la function de customers
+from .filters import OrderFilter
 
 # vamos a tener que crear una urls.py dentro de la carpeta de nuestro proyecto.
 # def home(request):
@@ -57,23 +61,38 @@ def customers(request, pk_test):
     # traemos el total de las ordenes
     orders_count = orders.count()
     
-    context = {'customers': customers, 'orders': orders, 'orders_count': orders_count}
+    # traemos los filtros para poder usarlos en la aplicacion en las busquedas
+    myFilter = OrderFilter(request.GET, queryset=orders)
+    orders = myFilter.qs
+    
+    context = {'customers': customers, 'orders': orders, 'orders_count': orders_count, 'myFilter': myFilter}
     return render(request, 'accounts/customers.html', context)
 
 
 # creamos la function del form para que django nos renderice el template order_form.html
-def createOrder(request):
-    
+def createOrder(request, pk):
+    # Para poder crear varios formularios
+    OrderFormSet = inlineformset_factory(Customer, Order, fields=('product', 'status'))
+    # Ahora vamos a crear las ordenes desde los clientes
+    customers = Customer.objects.get(id=pk)
     # Aqui vamos usar nuestra function de OrderForm para crear un formulario
-    form = OrderForm()
+    # form = OrderForm(initial={'customer': customers}) 
+    # Ahora que creamos el OrderFormSet vamos a tener que crear una nueva instancia del formulario
+    formset = OrderFormSet(instance=customers)
     if request.method == 'POST':
         #print('Printing POST:', request.POST)
-        form = OrderForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/') 
-        
-    context = {'form': form}
+        # form = OrderForm(request.POST)
+        # if form.is_valid():
+        #     form.save()
+        #     return redirect('/') 
+        formset = OrderFormSet(request.POST, instance=customers)
+        if formset.is_valid():
+            formset.save()
+            return redirect('/')
+    # Ahora como context tenemos que pasar el formulario y el formset. En el template de order_form.html 
+    # tenemos que pasar tambien el formset.
+    # context = {'form': form}
+    context = {'formset': formset}
     
     return render(request, 'accounts/order_form.html', context)
 
@@ -102,3 +121,5 @@ def deleteOrder(request, pk):
     
     context = {'item': order}
     return render(request, 'accounts/delete.html', context)
+
+# Estoy en el video 14 User login and registration

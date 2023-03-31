@@ -7,7 +7,11 @@
     <form action="" method="POST" class="ud-form">
         {% comment %} Aquí pasamos nuestro formulario para que se renderice {% endcomment %}
         {% csrf_token %}
-        {{form}}
+        {{formset.management_form}}
+        {% comment %} {{form}} en vez de form pasamos el nuevo formset, podemos crear un bucle for para crear varios {{formset}} {% endcomment %}
+        {% for form in formset %}
+                {{form}}
+            {% endfor %}
     
         <input type="submit" value="Submit">
     
