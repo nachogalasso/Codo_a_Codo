@@ -16,6 +16,12 @@
             </li> {% endcomment %}
         </ul>
     </div>
+    <div class="user-links">
+        <ul class="user_links-list">
+            <li class="user_list-item">Hello {{request.user}}</li>
+            <li class="user_list-item"><a href="{% url 'logoutPage' %}">Logout</a></li>
+        </ul>
+    </div>
     <figure class="logo">
         <img src="{% static 'accounts/images/logodjpy.webp' %}" alt="Project_Logo">
     </figure>
