@@ -1,4 +1,4 @@
-// Tag all our id and classes from the HTML
+   // Tag all our id and classes from the HTML
 // let username = document.getElementById('username');
 // let email = document.getElementById('email');
 // let password = document.getElementById('password');

@@ -8,6 +8,10 @@ from . import views
 
 # No olvidar agregar los urlpatterns de nuestros paths
 urlpatterns = [
+    # añadimos las rutas para registro y login
+    path('register/', views.registerPage, name='registerPage'),
+    path('login/', views.loginPage, name='loginPage'),
+    path('logout/', views.logoutUser, name='logoutPage'),
     # Aquí estamos llamando a las functions que se encuentran en views.py
     path('',views.home, name="home"),
     path('products/',views.products, name="products"),
