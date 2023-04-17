@@ -5,12 +5,14 @@
     </span>
     <div class="nav-links">
         <ul class="links-list">
+            {% if request.user.is_staff %}
             <li class="list-item">
                 <a href="{% url 'home' %}">Dashboard</a>
             </li>
             <li class="list-item">
                 <a href="{% url 'products' %}">Products</a>
             </li>
+            {% endif %}
             {% comment %} <li class="list-item">
                 <a href="{% url 'customers' %}">Customers</a>
             </li> {% endcomment %}
