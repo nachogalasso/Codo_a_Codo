@@ -60,6 +60,8 @@ def registerPage(request):
             group = Group.objects.get(name='customer')
             # le añadimos el usuario
             user.groups.add(group)
+            # Ahora lo asociamos a un grupo
+            Customer.objects.create(user=user)
             messages.success(request, 'Tu usuario: ' + username + ' ha sido creado con éxito')
             return redirect('loginPage')
         
@@ -203,5 +205,15 @@ def deleteOrder(request, pk):
     return render(request, 'accounts/delete.html', context)
 
 
+@login_required(login_url='loginPage')
+@allowed_users(allowed_roles=['customer'])
 def userPage(request):
-    return render(request, 'accounts/userpage.html')
+    orders = request.user.customer.order_set.all()
+    # para saver si la info se está pasando bien # print('ORDERS: ', orders)
+    
+    total_orders = orders.count()
+    delivered = orders.filter(status='Delivered').count()
+    pending = orders.filter(status='Pending').count()
+    
+    context = {'orders': orders, 'total_orders': total_orders, 'pending': pending, 'delivered': delivered}
+    return render(request, 'accounts/userpage.html', context)
