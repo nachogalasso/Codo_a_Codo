@@ -18,7 +18,7 @@ from .decorators import unauthenticated_user, allowed_users, admin_only
 # vamos a tener que importar todos los modelos para poder usarlos en la aplicacion
 from .models import *
 # traemos nuestro formulario para que se pueda renderizar el template
-from .forms import OrderForm, CreateUserForm
+from .forms import OrderForm, CreateUserForm, CustomForm
 # Tenemos que importar los filtros para poder usarlos en la aplicacion y luego indicarlos dónde queremos que
 # se rendericen y es en la function de customers
 from .filters import OrderFilter
@@ -217,3 +217,21 @@ def userPage(request):
     
     context = {'orders': orders, 'total_orders': total_orders, 'pending': pending, 'delivered': delivered}
     return render(request, 'accounts/userpage.html', context)
+
+
+@login_required(login_url='loginPage')
+@allowed_users(allowed_roles=['customer'])
+def accountSettings(request):
+    # acá estamos creando una instancia del usuario que se loguea para que después tome los datos el formulario
+    customer = request.user.customer
+    # creamos el formulario y le indicamos que tiene que tomar los datos de user
+    form = CustomForm(instance=customer)
+    
+    if request.method == 'POST':
+        form = CustomForm(request.POST, request.FILES, instance=customer)
+        if form.is_valid():
+            form.save()
+            
+            
+    context = {'form':form}
+    return render(request, 'accounts/account_settings.html', context)

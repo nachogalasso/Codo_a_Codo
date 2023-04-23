@@ -637,3 +637,12 @@ label {
 
 /* ===== FORM END ===== */
 /* ===== REGISTER FORM END ===== */
+
+
+/* ===== USER ACCOUNT SETTINGS START ===== */
+.profile-image {
+  width: 15rem;
+  border-radius: 50%;
+}
+
+/* ===== USER ACCOUNT SETTINGS END ===== */

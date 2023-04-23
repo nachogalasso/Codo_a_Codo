@@ -18,6 +18,7 @@ urlpatterns = [
     path('customers/<str:pk_test>/',views.customers, name="customers"),
     
     path('userpage/',views.userPage, name="user-page"),
+    path('account/',views.accountSettings, name="account"),
     
     
     # Creamos el path para nuestro form de order

@@ -1,0 +1,68 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans:wght@400;700&display=swap');
+
+/* === RESET === */
+:root {
+  --title: 'Noto Sans', Arial, Helvetica, sans-serif;
+  --text: 'Montserrat', Arial, Helvetica, sans-serif;
+  --mainTransition: all 0.3s linear;  
+  /* muzli colors */
+  --mainLightBlue: #00a7e1;
+  --mainGold: #eddea4;
+  --mainLightgreen: #d9e5d6;
+  --mainPurple: #3b1f2b;
+  /* text decoration */
+  --mainSpacing: .1rem;
+}
+
+html {
+  font-size: 62.5%; 
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: var(--title);
+}
+
+p, a, li,
+label, input, legend {
+  font-family: var(--text);
+}
+
+body {
+  background-color: var(--mainLightSilver);
+  color: var(--sdnOrange);
+}
+
+/* ==== HEADER ==== */
+.nav__header {
+  display: flex;
+
+}
+
+.nav__header-logo {
+  width: 10rem;
+}
+
+.nav__header-linkslist {
+  display: flex;
+}
+
+.nav__header-linkitem {
+  list-style-type: none;
+}
