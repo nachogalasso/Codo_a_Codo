@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web con el fin de practicar algunos diseños">
+    <meta name="keywords" content="inmobiliaria, casas, vivendas, alquiler, departamentos">
+    <meta name="author" content="Galasso, Ignacio">
+    <link rel="stylesheet" href="/docs/pp_advisors/style.css">
+    
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/docs/pp_advisors/assets/icons/48px_icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/docs/pp_advisors/assets/icons/48px_icon.png">
+    <link rel="apple-touch-startup-image" href="/docs/pp_advisors/assets/icons/48px_icon.png">
+    <link rel="apple-touch-icon" sizes="16x16" href="/docs/pp_advisors/assets/icons/16px_icon.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="/docs/pp_advisors/assets/icons/32px_icon.png">
+    <link rel="apple-touch-icon" sizes="64x64" href="/docs/pp_advisors/assets/icons/64px_icon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/docs/pp_advisors/assets/icons/128px_icon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/docs/pp_advisors/assets/icons/144px_icon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/docs/pp_advisors/assets/icons/192px_icon.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/docs/pp_advisors/assets/icons/256px_icon.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/docs/pp_advisors/assets/icons/512px_icon.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/docs/pp_advisors/assets/icons/1024px_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/docs/pp_advisors/assets/icons/192px_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/pp_advisors/assets/icons/32px_icon.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/docs/pp_advisors/assets/icons/128px_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/docs/pp_advisors/assets/icons/16px_icon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/docs/pp_advisors/assets/icons/144px_icon.png">
+    <!-- FONT AWESOME KIT -->
+    <script src="https://kit.fontawesome.com/ef268928f6.js" crossorigin="anonymous"></script>
+    <!-- Page info -->
+    <meta property="og-title" content="PP - Premium Property Advisors" />
+    <meta property="og-type" content="website" />
+    <meta property="og-url" content="https://myportfoliogalasso.vercel.app/" />
+    <meta property="og-image" content="" />
+    <meta property="og-description" content="Web con el fin de practicar algunos diseños" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@galasso22">
+    <meta name="twitter:title" content="PP - Premium Property Advisors" />
+    <meta name="twitter:description" content="Web con el fin de practicar algunos diseños" />
+    <meta name="twitter:image" content="" />
+    <title>PP - Premier Property Advisors</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav__header">
+            <i class="fa-solid fa-bars"></i>
+            <figure class="nav__header-logo">
+                <img src="./assets/images/logo_li2nbg.png" alt="PP_Logo">
+            </figure>
+            <ul class="nav__header-linkslist">
+                <li class="nav__header-linkitem">Home</li>
+                <li class="nav__header-linkitem">Houses</li>
+                <li class="nav__header-linkitem">Apartments</li>
+                <li class="nav__header-linkitem">Sales</li>
+                <li class="nav__header-linkitem">Reviews</li>
+                <li class="nav__header-linkitem">Contact</li>
+            </ul>
+        </nav>
+        <button class="modal-btn">Login</button>
+        <i class="fa-solid fa-circle-user"></i>
+        <section class="modal">
+            <div class="modal-content">
+                <span class="close-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+                <!-- FORM START -->
+                <form class="form-section" action="#" method="POST">
+                    <section class="img-section">
+                        <h2 class="form-title">Log in</h2>
+                        <figure>
+                        <img src="./assets/images/logo_web.webp" alt="login_logo" loading="lazy" class="login_logo">
+                        </figure>
+                    </section>
+                    <div class="user">
+                        <label for="username">User name</label>
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="username" id="id_username" placeholder="Enter your user name">
+                        <i class="fa-solid fa-circle-exclamation failure"></i>
+                        <i class="fa-solid fa-circle-check success"></i>
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="pass">
+                        <label for="password">Password</label>
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" id="id_password1" placeholder="Enter you password here">
+                        <i class="fa-solid fa-circle-exclamation failure"></i>
+                        <i class="fa-solid fa-circle-check success"></i>
+                        <p class="error"></p>
+
+                    
+                    <div class="btns-section">
+                        <button class="btns cancel btn-danger" type="reset">Cancel</button>
+                        <button class="btns btn-info" type="submit" id="submit">Log In</button>
+                    </div>
+                    <div></div>
+                </form>
+                    <p id="messages">{{message}}</p>
+                <!-- FORM END -->
+                <section class="relog">
+                    <p>If you don´t have an account you can <a href="">Register</a></p>
+                </section>
+            </div>
+        </section>
+    </header>
+    
+</body>
+</html>

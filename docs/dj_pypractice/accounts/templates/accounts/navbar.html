@@ -12,6 +12,10 @@
             <li class="list-item">
                 <a href="{% url 'products' %}">Products</a>
             </li>
+            {% else %}
+            <li class="list-item">
+                <a href="{% url 'account' %}">Settings</a>
+            </li>
             {% endif %}
             {% comment %} <li class="list-item">
                 <a href="{% url 'customers' %}">Customers</a>

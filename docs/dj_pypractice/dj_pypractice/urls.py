@@ -18,6 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# Tenemos que importar el archivo de settings.py para que funcionen las rutas de las imágenes
+from django.conf.urls.static import static
+from django.conf import settings
+
 # importamos el HttpResponse con el fin de poder utilizar las functiones y conectar con las webs
 # from django.http import HttpResponse
 
@@ -39,3 +43,6 @@ urlpatterns = [
     # reconozca y se pueda navegar por las rutas sin problemas
     path('', include('accounts.urls')),
 ]
+
+# Sumamos una urlpattern para poder utilizar las imágenes
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
