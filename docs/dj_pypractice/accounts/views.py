@@ -83,7 +83,7 @@ def loginPage(request):
             return redirect('home')
         else:
             messages.info(request, 'Usuario o contraseña incorrecta')
-            return render(request, 'accounts/login.html')
+            # return render(request, 'accounts/login.html')
             
     context = {}
     return render(request, 'accounts/login.html', context)
