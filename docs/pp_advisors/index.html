@@ -45,11 +45,12 @@
 </head>
 <body>
     <header class="header">
+        <figure>
+            <img src="./assets/images/logo_li2nbg.png" alt="PP_Logo" class="header-logo">
+        </figure>
+
         <nav class="nav__header">
-            <i class="fa-solid fa-bars"></i>
-            <figure class="nav__header-logo">
-                <img src="./assets/images/logo_li2nbg.png" alt="PP_Logo">
-            </figure>
+            <i class="fa-solid fa-bars display-nav"></i>
             <ul class="nav__header-linkslist">
                 <li class="nav__header-linkitem">Home</li>
                 <li class="nav__header-linkitem">Houses</li>
@@ -59,8 +60,9 @@
                 <li class="nav__header-linkitem">Contact</li>
             </ul>
         </nav>
-        <button class="modal-btn">Login</button>
-        <i class="fa-solid fa-circle-user"></i>
+        <button class="btns modal-btn btn-log">Login</button>
+        <i class="fa-solid fa-circle-user modal-btn" title="Log in"></i>
+
         <section class="modal">
             <div class="modal-content">
                 <span class="close-modal">
@@ -68,19 +70,21 @@
                 </span>
                 <!-- FORM START -->
                 <form class="form-section" action="#" method="POST">
-                    <section class="img-section">
+
+                    <section class="form_img-section">
                         <h2 class="form-title">Log in</h2>
-                        <figure>
+                        <figure class="form-logo">
                         <img src="./assets/images/logo_web.webp" alt="login_logo" loading="lazy" class="login_logo">
                         </figure>
                     </section>
-                    <div class="user">
+
+                    <div class="form_user-section">
                         <label for="username">User name</label>
                         <i class="fa-solid fa-user"></i>
                         <input type="text" name="username" id="id_username" placeholder="Enter your user name">
                         <i class="fa-solid fa-circle-exclamation failure"></i>
                         <i class="fa-solid fa-circle-check success"></i>
-                        <p class="error"></p>
+                        <p class="alert"></p>
                     </div>
 
                     <div class="pass">
@@ -89,16 +93,16 @@
                         <input type="password" name="password" id="id_password1" placeholder="Enter you password here">
                         <i class="fa-solid fa-circle-exclamation failure"></i>
                         <i class="fa-solid fa-circle-check success"></i>
-                        <p class="error"></p>
+                        <p class="alert"></p>
 
                     
                     <div class="btns-section">
-                        <button class="btns cancel btn-danger" type="reset">Cancel</button>
-                        <button class="btns btn-info" type="submit" id="submit">Log In</button>
+                        <button class="btns cancel btn-cancel" type="reset">Cancel</button>
+                        <button class="btns btn-log" type="submit" id="submit">Log In</button>
                     </div>
                     <div></div>
                 </form>
-                    <p id="messages">{{message}}</p>
+                    <p id="messages"></p>
                 <!-- FORM END -->
                 <section class="relog">
                     <p>If you don´t have an account you can <a href="">Register</a></p>
@@ -107,5 +111,7 @@
         </section>
     </header>
     
+
+    <script src="./scripts.js" type="text/javascript"></script>
 </body>
 </html>
