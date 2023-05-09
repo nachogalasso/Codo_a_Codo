@@ -297,12 +297,13 @@ body {
 }
 
 .btns {
-  width: 10rem;
   height: 4rem;
+  padding: 1rem 2rem;
   /* background-color: var(--primaryBlue);
   border: .2rem solid var(--primaryBlue); */
   border-radius: .8rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-variant: small-caps;
   cursor: pointer;
   transition: all 0.1s ease;
 }
@@ -326,4 +327,119 @@ body {
   background-color: var(--mainGold);
   border: none;
 }
+
+
+/* ==== MAIN START ==== */
+
+/* ==== MAIN CONTAINER ==== */
+.main_container {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 90vw;
+  max-width: 110rem; */
+  gap: 1rem;
+}
+
+/* ==== MAIN TITLE ==== */
+.main_title {
+  width: 90vw;
+  max-width: 110rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_title h1 {
+  margin: 2rem 0 1.5rem;
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  letter-spacing: var(--mainSpacing);
+}
+
+.bkg_title {
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 21.5rem;
+  /* background: url('./assets/images/bkg2.webp') no-repeat center; */
+  background: url('./assets/images/bkg3.webp') no-repeat center;
+  background-size: cover;
+  /* filter: drop-shadow(.1rem .1rem 1rem var(--mainPurple)); */
+}
+
+@media screen and (min-width: 768px) {
+
+  .main_title h1 {
+    font-size: 3.6rem;
+  }
+
+  .bkg_title {
+    height: 35rem;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+
+  .main_title h1 {
+    margin: 1rem 0 1.5rem;
+    font-size: 4.5rem;
+  }
+
+  .bkg_title {
+    height: 45rem;
+  }
+
+}
+
+/* ==== MINI BOXES ==== */
+.main_boxes {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 3rem 2rem;
+  background-color: #cecece;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box-container {
+  width: 90vw;
+  max-width: 110rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.boxes {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem .5rem;
+  gap: 1.5rem;
+  width: 15rem;
+  background-color: var(--mainGold);
+  border-radius: .5rem;
+}
+
+.box-text p:first-child {
+  font-weight: bold;
+}
+
+.boxes i {
+  /* margin-left: 1rem; */
+  border-radius: 50%;
+  background-color: #cecece;
+  padding: 1rem;
+  color: var(--mainPurple);
+  font-size: 1.5rem;
+}
+
+.boxes p {
+
+}
+
+/* ==== MAIN END ==== */
 
