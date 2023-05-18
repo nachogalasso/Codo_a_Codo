@@ -1,0 +1,58 @@
+{
+    "houses": [
+      {
+        "title": "Old Cliff House",
+        "description": "Morbi ipsum massa, porta maximus nunc vel, semper rutrum orci. Proin maximus augue vitae lacus euismod rhoncus. Nulla elementum aliquam.",
+        "image": "./assets/images/houses/cliff_house.webp",
+        "price": "85.000",
+        "bedrooms": 4,
+        "toilet": 3
+      },
+      {
+        
+        "title": "Luxury House",
+        "description": "Praesent sapien odio, tempus quis maximus ut, dapibus vitae nibh. Vivamus eros.",
+        "image":"./assets/images/houses/luxury_house.webp",
+        "price": "105.000",
+        "bedrooms": 6,
+        "toilet": 5
+      },
+      {
+        
+        "title": "Tradicional Club House",
+        "description": "Nulla posuere, nisi id blandit vehicula, quam enim feugiat mi.",
+        "image": "./assets/images/houses/traditional_house.webp",
+        "price": "65.000",
+        "bedrooms": 4,
+        "toilet": 2
+      },
+      {
+        
+        "title": "Mountain House",
+        "description": "In convallis arcu eu nibh semper, vitae bibendum.",
+        "image": "./assets/images/houses/mountain_house.webp",
+        "price": "90.000",
+        "bedrooms": 5,
+        "toilet": 3
+      },
+      {
+        
+        "title": "Farm House",
+        "description": "Phasellus ante massa, pharetra sit amet diam sit amet, ultricies eleifend dolor. Aliquam.",
+        "image": "./assets/images/houses/farm_house.webp",
+        "price": "55.000",
+        "bedrooms": 4,
+        "toilet": 2
+      
+      },
+      {
+        
+        "title": "Beach House",
+        "description": "Nulla facilisi. Phasellus vitae pellentesque urna. Pellentesque eu condimentum arcu. Praesent nec.",
+        "image": "./assets/images/houses/beach_house.webp",
+        "price": "120.000",
+        "bedrooms": 7,
+        "toilet": 5
+      }
+    ]
+  }
