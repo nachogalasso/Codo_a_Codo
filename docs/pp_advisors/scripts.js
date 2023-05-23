@@ -1,14 +1,18 @@
 const modal = document.querySelector('.modal');
 const modalBtn = document.querySelectorAll('.modal-btn');
 const navBtn = document.querySelector('.display-nav');
-const closeModalBtn = document.querySelector('.close-modal')
-const navList = document.querySelector('.nav__header-linkslist')
-const sliderContainer = document.querySelector('.slide_container')
+const closeModalBtn = document.querySelector('.close-modal');
+const navList = document.querySelector('.nav__header-linkslist');
+const sliderContainer = document.querySelector('.slide_container');
+// firstSlide = sliderContainer.querySelectorAll('.slide')[0];
+const arrowIcons = document.querySelectorAll('.slider-btn i');
+
+let isDragStart = false, prevPageX, prevScrollLeft;
 
 
 document.addEventListener('DOMContentLoaded', getHouses)
 
-
+// Modal Event Handler
 modalBtn.forEach(item => {
     item.addEventListener('click', () => {
         modal.classList.add('show');
@@ -22,6 +26,8 @@ closeModalBtn.addEventListener('click', () => {
 navBtn.addEventListener('click', () => {
     navList.classList.toggle('show-nav');
 });
+
+
 
 
 // Get images from JSON
@@ -50,6 +56,11 @@ async function getHouses() {
 }
 
 function displayHouses(card) {
+    const dragging = (e) => {
+        carrouselSlider.scrollLeft = e.pageX;
+        console.log(e.pageX)
+    }
+
     let fragment = "";
     card.forEach(item => {
         fragment += `
@@ -77,4 +88,41 @@ function displayHouses(card) {
         `
     })
     sliderContainer.innerHTML = fragment
+    
+    
 }
+firstSlide = sliderContainer.querySelectorAll('.slide')[0];
+
+let firstSlideWidth = firstSlide.clientWidth + 1.4;
+
+
+// Carrousel drag
+const dragStart = (e) => {
+    // update the values with movedown event
+    isDragStart = true;
+    prevPageX = e.pageX;
+    prevScrollLeft = sliderContainer.scrollLeft;
+}
+
+const dragging = (e) => {
+    // scroll the images to left according to mouse pointer
+    if(!isDragStart) return;
+    e.preventDefault();
+    let positionDiff = e.pageX - prevPageX;
+    sliderContainer.scrollLeft = prevScrollLeft - positionDiff;
+}
+
+const dragStop = () => {
+    isDragStart = false
+}
+
+sliderContainer.addEventListener('mousedown', dragStart);
+sliderContainer.addEventListener('mousemove', dragging);
+sliderContainer.addEventListener('mouseup', dragStop);
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+        sliderContainer.scrollLeft += icon.id == 'left' ? -firstSlideWidth : firstSlideWidth;
+    })
+
+})
