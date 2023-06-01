@@ -30,7 +30,9 @@
     <meta name="msapplication-TileImage" content="/docs/pp_advisors/assets/icons/144px_icon.png">
     <!-- FONT AWESOME KIT -->
     <script src="https://kit.fontawesome.com/ef268928f6.js" crossorigin="anonymous"></script>
-    <!-- Page info -->
+    <!-- SWIPER CAROUSEL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- PAGE INFO -->
     <meta property="og-title" content="PP - Premium Property Advisors" />
     <meta property="og-type" content="website" />
     <meta property="og-url" content="https://myportfoliogalasso.vercel.app/" />
@@ -166,38 +168,357 @@
         <!-- MAIN MINI BOXES END -->
 
         <!-- MAIN IMAGE SLIDER START -->
-        <article class="imageslider_container">
+        <article class="imageslider_container" id="imageslider_container">
             <h2 class="sections_title">Popular <span>houses</span></h2>
-            <section class="slide_container">
-                <!-- <section class="slide">
-                    <div class="slide_card_container">
+            <section class="slide_container swiper"> 
+                <section class="slide swiper-wrapper">
+                    <!-- 1st CARD START -->
+                    <div class="slide_card_container swiper-slide">
                         <figure class="img-cont">
-                            <img src=${item.image} alt=${item.title} loading="lazy">
+                            <img src="assets/images/houses/beach_house.webp" alt="Beach_House" loading="lazy">
                         </figure>
-                        <h4 class="slide_title">${item.title}</h4>
-                        <p class="slide_price">€${item.price}</p>
-                        <div class="slide-description">
-                            <p>${item.description}</p>
-                            <p><i class="fa-solid fa-bath"></i>${item.toilet}</p>
-                            <p><i class="fa-solid fa-bed"></i>${item.rooms}</p>
-                        </div>
-                        <a href="" class="">visit</a>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Beach House</h4>
+                                <p class="list-price">$120.000</p>
+                                <p class="list-text">Nulla facilisi. Phasellus vitae pellentesque urna. Pellentesque eu condimentum arcu. Praesent nec.</p>
+                            </li>
+                            <li class="list-icons">
+                                <p><i class="fa-solid fa-bath"></i>5</p>
+                                <p><i class="fa-solid fa-bed"></i>7</p>
+                            </li>
+                            <li>
+                                <a href="" class="btns btn-log">visit</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 1st CARD END -->
+                    <!-- 2nd CARD START -->
+                    <div class="slide_card_container swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/houses/cliff_house.webp" alt="Old_Cliff_House" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Old Cliff House</h4>
+                                <p class="list-price">$850.000</p>
+                                <p class="list-text">Morbi ipsum massa, porta maximus nunc vel, semper rutrum orci. Proin maximus augue vitae lacus euismod rhoncus. Nulla elementum aliquam.</p>
+                            </li>
+                            <li class="list-icons">
+                                <p><i class="fa-solid fa-bath"></i>3</p>
+                                <p><i class="fa-solid fa-bed"></i>4</p>
+                            </li>
+                            <li>
+                                <a href="" class="btns btn-log">visit</a>
+                            </li>
+                        </ul>
                     </div>    
-                </section> -->
+                    <!-- 2nd CARD END -->
+                    <!-- 3rd CARD START -->
+                    <div class="slide_card_container swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/houses/farm_house.webp" alt="Farm_House" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Farm House</h4>
+                                <p class="list-price">$550.000</p>
+                                <p class="list-text">Phasellus ante massa, pharetra sit amet diam sit amet, ultricies eleifend dolor. Aliquam.</p>
+                            </li>
+                            <li class="list-icons">
+                                <p><i class="fa-solid fa-bath"></i>2</p>
+                                <p><i class="fa-solid fa-bed"></i>4</p>
+                            </li>
+                            <li>
+                                <a href="" class="btns btn-log">visit</a>
+                            </li>
+                        </ul>
+                    </div>   
+                    <!-- 3rd CARD END -->
+                    <!-- 4rd CARD START -->
+                    <div class="slide_card_container swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/houses/luxury_house.webp" alt="Luxury_Cliff_House" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Luxury House</h4>
+                                <p class="list-price">$105.000</p>
+                                <p class="list-text">Praesent sapien odio, tempus quis maximus ut, dapibus vitae nibh. Vivamus eros.</p>
+                            </li>
+                            <li class="list-icons">
+                                <p><i class="fa-solid fa-bath"></i>5</p>
+                                <p><i class="fa-solid fa-bed"></i>6</p>
+                            </li>
+                            <li>
+                                <a href="" class="btns btn-log">visit</a>
+                            </li>
+                        </ul>
+                    </div>   
+                    <!-- 4th CARD END -->
+                    <!-- 5th CARD START -->
+                    <div class="slide_card_container swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/houses/mountain_house.webp" alt="Mountain_House" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Mountain House</h4>
+                                <p class="list-price">$90.000</p>
+                                <p class="list-text">In convallis arcu eu nibh semper, vitae bibendum.</p>
+                            </li>
+                            <li class="list-icons">
+                                <p><i class="fa-solid fa-bath"></i>3</p>
+                                <p><i class="fa-solid fa-bed"></i>5</p>
+                            </li>
+                            <li>
+                                <a href="" class="btns btn-log">visit</a>
+                            </li>
+                        </ul>
+                    </div>   
+                    <!-- 5th CARD END -->
+                    <!-- 6th CARD START -->
+                
+                    <div class="slide_card_container swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/houses/traditional_house.webp" alt="Traditional_Club_House" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Traditional Club House</h4>
+                                <p class="list-price">$65.000</p>
+                                <p class="list-text">Nulla posuere, nisi id blandit vehicula, quam enim feugiat mi.</p>
+                            </li>
+                            <li class="list-icons">
+                                <p><i class="fa-solid fa-bath"></i>2</p>
+                                <p><i class="fa-solid fa-bed"></i>4</p>
+                            </li>
+                            <li>
+                                <a href="" class="btns btn-log">visit</a>
+                            </li>
+                        </ul>
+                    </div>   
+                    <!-- 6th CARD END -->
+
+                </section>
+                <div class="swiper-pagination"></div>
             </section>   
-            <div class="slider-btn">
-                <i id="left" class="fa-solid fa-angle-left"></i>
-                <i id="right" class="fa-solid fa-angle-right"></i>
-                <!-- <button type="button" class="prevBtn">Prev</button>
-                <button type="button" class="nextBtn">Next</button> -->
-            </div>
+            
         </article>
         <!-- MAIN IMAGE SLIDER END -->
-        
 
+        <!-- SERVICE BOXES START -->
+        <article class="box-services">
+            <h2 class="sections_title">Our <span>services</span></h2>
+            <div class="box-container">
+                <section class="box">
+                    <i class="fa-solid fa-house-user"></i>
+                    <h2>Buy House</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, saepe?</p>
+                    <button class="btns btn-log">Read More</button>
+                </section>
+                <section class="box">
+                    <i class="fa-solid fa-house-circle-exclamation"></i>
+                    <h2>Market rates</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sequi cupiditate voluptas.</p>
+                    <button class="btns btn-log">Read More</button>
+                </section>
+                <section class="box">
+                    <i class="fa-solid fa-stamp"></i>
+                    <h2>notary service</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti voluptates ut illum alias voluptatem eius?</p>
+                    <button class="btns btn-log">Read More</button>
+                </section>
+                <section class="box">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <h2>houses selling</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste.</p>
+                    <button class="btns btn-log">Read More</button>
+                </section>
+                <section class="box">
+                    <i class="fa-solid fa-pencil"></i>
+                    <h2>interior decoration</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, aliquid?</p>
+                    <button class="btns btn-log">Read More</button>
+                </section>
+                <section class="box">
+                    <i class="fa-solid fa-truck-moving"></i>
+                    <h2>moving services</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <button class="btns btn-log">Read More</button>
+                </section>
+            </div>
+        </article>
+        <!-- SERVICE BOXES END -->
+
+        <!-- FEATURED HOUSES START -->
+        
+        <article class="featured-houses">
+            <h2 class="sections_title"><span>Featured</span> Properties</h2>
+            <section class="featured-container swiper">
+                <div class="swiper-wrapper">
+                    <section class="featured-box swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/houses/castle_house.webp" alt="Country_House" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Country House</h4>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <!-- <i class="fa-regular fa-star-half-stroke"></i> -->
+                                <i class="fa-regular fa-star"></i>
+                                <p class="list-price">$165.000</p>
+                                <a href="" class="btns btn-log">More info</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="featured-box swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/houses/lake_house.webp" alt="Lake_House" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Lake House</h4>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <p class="list-price">$225.000</p>
+                                <a href="" class="btns btn-log">More info</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="featured-box swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/houses/island_beach_house.webp" alt="Island_Beach_House" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Island Beach House</h4>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <!-- <i class="fa-regular fa-star-half-stroke"></i> -->
+                                <!-- <i class="fa-regular fa-star"></i> -->
+                                <p class="list-price">$355.000</p>
+                                <a href="" class="btns btn-log">More info</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="featured-box swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/apartments/apartment-2138949_1280.webp" alt="Luxury_Apartment" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Luxury Apartments</h4>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <!-- <i class="fa-regular fa-star-half-stroke"></i> -->
+                                <i class="fa-regular fa-star"></i>
+                                <p class="list-price">$135.000</p>
+                                <a href="" class="btns btn-log">More info</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="swiper-pagination"></div>
+            </section>
+
+            <section class="featured-container swiper">
+                <div class="swiper-wrapper">
+                    <section class="featured-box swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/apartments/apartment-building-1026475_1280.webp" alt="Avalon_Residences" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Avalon Residences</h4>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <p class="list-price">$105.000</p>
+                                <a href="" class="btns btn-log">More info</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="featured-box swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/interior/living-room-1622401_1280.webp" alt="Libertador_Aparts_Deluxe" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Libertador Aparts Deluxe</h4>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <!-- <i class="fa-regular fa-star-half-stroke"></i> -->
+                                <i class="fa-regular fa-star"></i>
+                                <p class="list-price">$185.000</p>
+                                <a href="" class="btns btn-log">More info</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="featured-box swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/apartments/apartment-6479849_1280.webp" alt="High_Tower_Apartements" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">High TowerApartements</h4>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <!-- <i class="fa-regular fa-star-half-stroke"></i> -->
+                                <!-- <i class="fa-regular fa-star"></i> -->
+                                <p class="list-price">$245.000</p>
+                                <a href="" class="btns btn-log">More info</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="featured-box swiper-slide">
+                        <figure class="img-cont">
+                            <img src="assets/images/apartments/apartment-building-1026489_1280.webp" alt="Santa_Bárbara_Apartments" loading="lazy">
+                        </figure>
+                        <ul class="slide-description">
+                            <li class="list-desc">
+                                <h4 class="list-title">Sta. Bárbara Apartments</h4>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <p class="list-price">$167.000</p>
+                                <a href="" class="btns btn-log">More info</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="swiper-pagination"></div>
+            </section>
+
+        </article>
+        <!-- FEATURED HOUSES END -->
+        
     </main>
     <!-- MAIN CONTAINER END -->
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 
     <script src="./scripts.js" type="text/javascript"></script>
 </body>
