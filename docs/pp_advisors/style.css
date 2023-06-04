@@ -164,8 +164,7 @@ body {
     display: block;
   }
 
-  .modal-logo,
-  .display-nav {
+  .modal-logo {
     display: none;
   }
 
