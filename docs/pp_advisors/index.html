@@ -55,15 +55,16 @@
             <i class="fa-solid fa-bars display-nav"></i>
             <ul class="nav__header-linkslist">
                 <li class="nav__header-linkitem">Home</li>
-                <li class="nav__header-linkitem">Houses</li>
-                <li class="nav__header-linkitem">Apartments</li>
-                <li class="nav__header-linkitem">Sales</li>
-                <li class="nav__header-linkitem">Reviews</li>
-                <li class="nav__header-linkitem">Contact</li>
+                <li class="nav__header-linkitem"><a href="#imageslider_container">Houses</a></li>
+                <li class="nav__header-linkitem"><a href="#services">Services</a></li>
+                <li class="nav__header-linkitem"><a href="#featured">Featured</a></li>
+                <li class="nav__header-linkitem"><a href="#subscribe">Subscribe</a></li>
+                <li class="nav__header-linkitem"><a href="#reviews">Reviews</a></li>
+                <li class="nav__header-linkitem"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <button class="btns modal-btn btn-log">Login</button>
-        <i class="fa-solid fa-circle-user modal-btn" title="Log in"></i>
+        <i class="fa-solid fa-circle-user modal-logo" title="Log in"></i>
 
         <section class="modal">
             <div class="modal-content">
@@ -308,7 +309,7 @@
         <!-- MAIN IMAGE SLIDER END -->
 
         <!-- SERVICE BOXES START -->
-        <article class="box-services">
+        <article class="box-services" id="services">
             <h2 class="sections_title">Our <span>services</span></h2>
             <div class="box-container">
                 <section class="box">
@@ -353,7 +354,7 @@
 
         <!-- FEATURED HOUSES START -->
         
-        <article class="featured-houses">
+        <article class="featured-houses" id="featured">
             <h2 class="sections_title"><span>Featured</span> Properties</h2>
             <section class="featured-container swiper">
                 <div class="swiper-wrapper">
@@ -513,9 +514,137 @@
 
         </article>
         <!-- FEATURED HOUSES END -->
+
+        <!-- SUBSCRIBE START -->
+        <article class="subscribe-container" id="subscribe">
+            <div class="bkg-img"></div>
+            <section class="subscribe-box">
+                <h2>Subscribe for updates</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, necessitatibus!</p>
+                <form action="" class="subscribe-form">
+                    <input type="text" name="text" id="text" placeholder="Please enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+        </article>
+        <!-- SUSBCRIBE END -->
+
+        <!-- CLIENTS REVIEWS START -->
+        <article class="clients-container" id="reviews">
+            <h2 class="sections_title">Clients <span>Reviews</span></h2>
+            <div class="review-card">
+                <div class="card">
+                    <figure class="round">
+                        <span class="quotes">&Prime;</span>
+                        <img src="./assets/images/users/undraw_male_avatar_g98d.svg" class="rd-img" alt="Person_Avatar">
+                    </figure>
+                </div>
+                <div class="card-text">
+                    <h4 class="author mg">Chester Pitts</h4>
+                    <p class="job mg">Web Designer</p>
+                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem tenetur quod, perspiciatis dolorum nihil architecto molestiae est perferendis hic quam impedit qui debitis, obcaecati officia alias, deleniti ex recusandae nobis?</p>
+                </div>
+                <div class="card-carousel">
+                    <div class="carousel-btn">
+                        <span id="left">&lsaquo;</span>
+                        <span id="right">&rsaquo;</span>
+                    </div>
+                    <button class="surpriseBtn">Surprise Me</button>
+                </div>
+            </div>
+        </article>
+        <!-- CLIENTS REVIEWS END -->
+
+        <!-- CONTACT FORM START -->
+        <article class="contact-container" id="contact">
+            <h2 class="sections_title"><span>Contact</span> Us</h2>
+            <section class="contact-iform">
+                <div class="contact-iframe">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5805.056940597583!2d-1.9355053550733778!3d43.32412938447817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51a59292876a19%3A0x6613c844362878cf!2sPasajes%2C%20Gipuzkoa!5e0!3m2!1ses-419!2ses!4v1685803194438!5m2!1ses-419!2ses" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-form">
+                    <h4>feel free to send us a message</h4>
+                    <form action="">
+                        <input type="text" name="name" id="name" placeholder="Your Name">
+                        <input type="email" name="email" id="email" placeholder="Your Email">
+                        <input type="text" name="subject" id="subject" placeholder="Why you contact us?">
+                        <textarea name="message" id="message" placeholder="Please, leave us your message"></textarea>
+                        <button type="submit" class="btns btn-log">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </article>
+        <!-- CONTACT FORM END -->
         
     </main>
     <!-- MAIN CONTAINER END -->
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+        <section class="footer-list-container">
+            <div class="list">
+                <h5>Other locations</h5>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Madrid</p>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Barcelona</p>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Valencia</p>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Sevilla</p>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>La Coruña</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="list">
+                <h5>Contact Information</h5>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>34-658-524-683</p>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>+34-654-524-472</p>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-solid fa-at"></i>
+                        <p>pp.prop.advisors@ppadvisors.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="list">
+                <h5>Social Media</h5>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <i class="fa-brands fa-facebook"></i>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-brands fa-twitter"></i>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-brands fa-instagram"></i>
+                    </li>
+                    <li class="footer-item">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+        
+    <!-- FOOTER END -->
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
