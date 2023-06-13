@@ -8,7 +8,7 @@
 // 3.- SE RECOMIENDA USAR POSTMAN, tambien instalar nodemon para no tener que andar recargando el server x cambios
 // luego tenemos que crear en el JSON un comando para correr el server desde nodemon => npm run dev
 
-
+const password = require('./node_API_pass')
 const express = require('express');
 // para conectar con mongodb
 const mongoose = require('mongoose');
@@ -115,7 +115,7 @@ app.delete('/products/:id', async (req, res) => {
 // })
 
 mongoose.
-connect('mongodb+srv://admin:nakio789@cluster0.ml7fvj6.mongodb.net/CRUD-API_NODE?retryWrites=true&w=majority')
+connect(`mongodb+srv://admin:${password}@cluster0.ml7fvj6.mongodb.net/CRUD-API_NODE?retryWrites=true&w=majority`)
 .then(() => {
     console.log('Conectado a Mongo')
     app.listen(port, () => {
