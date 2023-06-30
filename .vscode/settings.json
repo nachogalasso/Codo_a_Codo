@@ -1,12 +1,23 @@
 {
    "liveServer.settings.port": 5502,
    "files.autoSave": "afterDelay",
+   "workbench.colorTheme": "One Dark Pro Darker",
    "editor.fontFamily": "Ubuntu, Consolas, 'Courier New', monospace",
+   "editor.fontSize": 14,
    "editor.tabSize": 4,
    "editor.defaultFormatter": "esbenp.prettier-vscode",
+   "terminal.integrated.fontFamily": "'Fira Code', 'Courier New', monospace",
+   "terminal.integrated.fontSize": 16,
    "editor.autoIndent": "full",
-   "prettier.tabWidth": 3,
+   "prettier.tabWidth": 4,
    "editor.letterSpacing": 1,
+   "editor.guides.indentation": true,
+   "editor.lightbulb.enabled": true,
+   "editor.autoClosingBrackets": "languageDefined",
+   "editor.bracketPairColorization.enabled": true,
+   "workbench.colorCustomizations": {
+      "editorLineNumber.foreground": "#fff700da"
+   },
    "[dockercompose]": {
       "editor.tabSize": 4
    },
