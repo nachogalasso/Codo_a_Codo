@@ -7,8 +7,9 @@ const dotenv =require('dotenv');
 const port = 8800
 
 // Routes
-const userRouter = require('./routes/users')
-const authRouter = require('./routes/auth')
+const userRouter = require('./routes/users');
+const authRouter = require('./routes/auth');
+const postRouter = require('./routes/posts');
 
 dotenv.config();
 // app.listen(port, () => {
@@ -22,6 +23,7 @@ app.use(morgan("common"));
 
 app.use('/api/users', userRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/posts', postRouter);
 
 // get pages, pero las vamos a crear en la carpeta routes
 // app.get('/', (req, res) => {
