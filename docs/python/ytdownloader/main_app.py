@@ -1,6 +1,6 @@
 # YOTUBE DOWNLOADER with PYTUBE and STREAMLIT
 
-import pytube
+"""
 from pytube import YouTube
 import streamlit as st
 import os
@@ -8,14 +8,7 @@ import os
 class YouTubeDownloader:
     def __init__(self, url):
         self.url = url
-        try:
-            self.youtube = pytube.YouTube(self.url, on_progress_callback=YouTubeDownloader.onProgress)
-            self.stream = None
-        except pytube.exceptions.PytubeError as e:
-            st.error(f"Error al procesar el video: {str(e)}")
-        except Exception as e:
-            st.error(f"Un error inesperado ocurrió: {str(e)}")
-        self.youtube = pytube.YouTube(self.url, on_progress_callback=YouTubeDownloader.onProgress)
+        self.youtube = YouTube(self.url, on_progress_callback=YouTubeDownloader.onProgress)
         self.stream = None
         
     # Creamos una function para el título
@@ -78,8 +71,24 @@ if __name__ == "__main__":
     
     if url:
         # downloader = YouTubeDownloader(url)
-        downloader = YouTube(url)
-        downloader.showTitle()
-        if downloader.stream:
-            file_size = downloader.getFileSize()
+        ytd = YouTube(url)
+        ytd.title
+        if ytd.streams:
+            file_size = ytd.streams.getFileSize()
             downloader.getPermissionToContinue(file_size)
+"""            
+
+from pytube import YouTube, Stream
+
+get_url_video = input('paste the url video: ')
+ytUrl = YouTube(get_url_video, 
+                use_oauth=False,allow_oauth_cache=True)
+
+# print(ytUrl.streams.filter(progressive=True, file_extension='mp4'))
+ytUrl.streams
+
+"""
+on_progress_callback=progress_func,
+                on_complete_callback=complete_func,
+                proxies=my_proxies,
+"""
