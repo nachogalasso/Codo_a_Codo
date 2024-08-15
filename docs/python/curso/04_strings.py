@@ -203,3 +203,145 @@ print(word_split_2.split(', ')) # a list with the whole sentence
 # .startswith(): Checks if String Starts with the Specified String
 
 # EXERCISES - Day 4
+#1
+concat_1 = ['Thirty', 'Days', 'Of', 'Python']
+result_concat_1 = ' '.join(concat_1)
+print(result_concat_1)
+
+#2
+concat_2 = 'Coding'
+concat_2a = 'For'
+concat_2b = 'All'
+result_concat_2 = concat_2 + ' ' + concat_2a + ' ' + concat_2b
+print(result_concat_2)
+
+#3
+company = 'coding for all'
+
+#4
+print(company)
+
+#5
+print(len(company))
+
+#6
+print(company.upper())
+
+#7
+print(company.lower())
+
+#8
+print(company.capitalize())
+print(company.title())
+print(company.swapcase())
+
+#9
+print(company[0:6])
+
+#10
+print(company.find('coding'))
+print(company.index('coding'))
+print('coding' in company)
+
+#11
+company_replace = company.replace('coding', 'python')
+print(company_replace)
+
+#12
+print(company.replace('all', 'everyone'))
+
+#13
+comp = 'Python, for, Everyone'
+print(company.split())
+print(comp.split(', '))
+
+#14
+tech_comp = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
+print(tech_comp.split(', '))
+
+#15
+print(company[0])
+
+#16
+print(company[-1])
+
+#17
+print(company[10])
+
+#18
+acronym_1 = 'Python For Everyone'
+acronym_1_split = acronym_1.split()
+acro_1 = acronym_1_split[0][0] + acronym_1_split[1][0] + acronym_1_split[2][0]
+print(acro_1)
+#19
+acronym_2 = 'coding for all'
+acronym_2_upper = acronym_2.title()
+acronym_2_upsp = acronym_2_upper.split()
+result_acronym_2 = acronym_2_upsp[0][0] + acronym_2_upsp[1][0] + acronym_2_upsp[2][0]
+print(result_acronym_2)
+
+
+
+#20 #21
+phrase = 'Coding For All'
+print(phrase.index('C'))
+print(phrase.index('F'))
+
+#22
+phrase_2 = 'Coding For All People'
+print(phrase_2.rfind('i'))
+
+#23 #24
+sentence = 'You cannot end a sentence with because because because is a conjunction'
+print(sentence.find('because'))
+print(sentence.rindex('because'))
+
+#25
+print(sentence[31:54])
+
+#28  #29
+sub_string = 'Coding'
+print(phrase.startswith(sub_string))
+print(phrase.endswith(sub_string))
+
+#30
+phrase_2 = '   Coding For All      '
+print(phrase_2.strip())
+
+#31
+phrase_identifier = '30DaysOfPython'
+phrase_identifier_2 = 'thirty_days_of_python'
+print(phrase_identifier.isidentifier())
+print(phrase_identifier_2.isidentifier())
+
+#32
+py_libraries = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+pylib_join = '# '.join(py_libraries)
+print(pylib_join)
+
+#33
+sentence_newline = 'I am enjoying this challenge.\nI just wonder what is next.'
+print(sentence_newline)
+
+#34
+print('Name\tAge\tCountry\tCity')
+print('Asabeneh\t25\tFinland\tHelsinki')
+
+#35
+rad = 10
+cir_area = 3.14 * rad ** 2
+cir_area_format = 'The area of a circle with radius {} is {} meters square'.format(rad, cir_area)
+print(cir_area_format)
+
+#36
+f = 8
+g= 6
+
+print(f'{f} + {g} = {f + g}')
+print(f'{f} - {g} = {f - g}')
+print(f'{f} * {g} = {f * g}')
+print(f'{f} / {g} = {f / g}')
+print(f'{f} % {g} = {f % g}')
+print(f'{f} // {g} = {f // g}')
+print(f'{f} ** {g} = {f ** g}')
+
