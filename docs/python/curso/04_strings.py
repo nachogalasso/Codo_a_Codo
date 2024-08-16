@@ -344,4 +344,3 @@ print(f'{f} / {g} = {f / g}')
 print(f'{f} % {g} = {f % g}')
 print(f'{f} // {g} = {f // g}')
 print(f'{f} ** {g} = {f ** g}')
-
