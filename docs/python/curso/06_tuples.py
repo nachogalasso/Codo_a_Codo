@@ -203,3 +203,37 @@ print(type(family_members))
 print(family_members)
 
 # Exercises: Level 2
+siblings1 = family_members[0:8]
+parents1= family_members[8:]
+print(siblings1)
+print(parents1)
+
+fruits1 = ('Apple', 'Melon', 'Orange', 'Lemon', 'Banana')
+vegetables1= ('Tomato', 'Potato', 'Onion', 'Lettuce', 'Bell Pepper')
+animal1 = ('Meat', 'Chicken', 'Eggs', 'Ham','Cheese')
+food_stuff_tp = fruits1 + vegetables1 + animal1
+print(food_stuff_tp)
+
+# TUPLE
+middle_food_tp = len(food_stuff_tp) // 2
+first_food_stuff_tp = food_stuff_tp[:middle_food_tp]
+print(first_food_stuff_tp)
+
+# LIST
+food_stuff_lt = list(food_stuff_tp)
+middle_food = len(food_stuff_lt) // 2
+print('The middle of food_stuff_tp is: ', middle_food)
+first_food_stuff_lt = food_stuff_lt[:middle_food]
+print(first_food_stuff_lt)
+
+first_three_food_lt = food_stuff_lt[0:3]
+last_three_food_lt = food_stuff_lt[-4:-1]
+print(first_three_food_lt)
+print(last_three_food_lt)
+
+del food_stuff_tp
+# print(food_stuff_tp)
+
+nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
+print('Estonia' in nordic_countries) # False
+print('Iceland' in nordic_countries) # True
