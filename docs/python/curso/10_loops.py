@@ -3013,10 +3013,53 @@ countries_data = [
     }
 ]
 
+all_languages = []
+
 for key in countries_data:
-    if key == 'languages':
-        for language in countries_data['languages']:
-            count = 0
-            if i != language:
-                count += i
+    if 'languages' in key:
+        for i in key['languages']:
+            all_languages.append(i)
                 
+                
+print(all_languages)
+print('The total languages spoken are:', len(all_languages))
+
+# Let`s find unique languages`
+unique_languages = []
+
+for item in all_languages:
+    if item not in unique_languages:
+        unique_languages.append(item)
+        
+print(unique_languages)
+print('The total of unique languagues spoken is: ', len(unique_languages))
+
+# Let's find the most popular languages
+lang_counts = {}
+
+for item in all_languages:
+    if item in lang_counts:
+        lang_counts[item] += 1
+    else:
+        lang_counts[item] = 1
+        
+print(lang_counts)
+
+for key, obj in lang_counts.items():
+    if obj > 5:
+        print('The most popular languages are: ', key, obj)
+        
+
+# Find the most populated countries
+most_populated = list()
+
+for item in countries_data:
+    new_data = {
+        'name': item['name'],
+        'population': item['population']
+    }
+    if new_data['population'] >= 100000000:
+        most_populated.append(new_data)
+        
+            
+print(most_populated)
