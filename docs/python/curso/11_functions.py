@@ -1,0 +1,310 @@
+# 30 Days Of Python: Day 11 - Functions
+
+"""Functions
+So far we have seen many built-in Python functions. In this section, we will focus on custom functions. What is a function? Before we start making functions, let us learn what a function is and why we need them?
+
+Defining a Function
+A function is a reusable block of code or programming statements designed to perform a certain task. To define or declare a function, Python provides the def keyword. The following is the syntax for defining a function. The function block of code is executed only if the function is called or invoked.
+
+Declaring and Calling a Function
+When we make a function, we call it declaring a function. When we start using the it, we call it calling or invoking a function. Function can be declared with or without parameters.
+
+# syntax
+# Declaring a function
+def function_name():
+    codes
+    codes
+# Calling a function
+function_name()
+
+"""
+"""
+Function without Parameters
+
+Function can be declared without parameters. We can create a function without parameters with all the tasks we want to be performed. If we want to pass parameters to the function we need to add them into between the ()
+
+"""
+def practice_function():
+    name = 'Tito'
+    surname = 'Colazzo'
+    space = ' '
+    full_name = name + space + surname
+    print(full_name)
+    
+# Now we need to call the function to make it work
+practice_function()
+
+# We can also perform calculations with the functions
+def practice_func_calculation():
+    num_one = 4
+    num_two = 8
+    total_sum = num_one + num_two
+    print(total_sum)
+    
+# Now we call the function
+practice_func_calculation()
+
+"""Function Returning a Value - Part 1
+Function can also return values, if a function does not have a return statement, the value of the function is None. Let us rewrite the above functions using return. From now on, we get a value from a function when we call the function and print it.
+
+Remember that because the variables are inside the function, they only work in there, so we can create a new function with a different name and use the same variables.
+
+Don't forget the RETURN statement if we want the result of our function
+"""
+def generate_full_name():
+    name = 'Esteban'
+    surname = 'Cochi'
+    space = ' '
+    full_name = name + space + surname
+    return full_name
+
+# If we only call the function nothing will happen, so we need to call it into a print()
+# generate_full_name()
+print(generate_full_name())
+
+def working_with_num():
+    num_one = 6
+    num_two = 8
+    total_sum = num_one + num_two
+    return total_sum
+
+# print(working_with_sum())
+print(working_with_num())
+
+"""Function with Parameters
+In a function we can pass different data types(number, string, boolean, list, tuple, dictionary or set) as a parameter
+
+Single Parameter: If our function takes a parameter we should call our function with an argument
+  # syntax
+  # Declaring a function
+  def function_name(parameter):
+    codes
+    codes
+  # Calling function
+  print(function_name(argument))
+  
+  That parameter is gonna be used by the function to perform itself
+  """
+
+# What we are doing is passing name and whatever value name recieve is going to be
+# used by our function
+def prac_greetings(name):
+    message = 'Hi ' + name + ', I hope you enjoy using Python'
+    return message
+
+print(prac_greetings('Jorge'))
+
+def prac_add_number(number):
+    # total_sum = 90 + number
+    num = 90
+    total_sum = num + number
+    return total_sum
+
+print(prac_add_number(50))
+
+def prac_square_number(x):
+    return x * x
+
+print(prac_square_number(5))
+
+def prac_area_of_circle(r):
+    PI = 3.14
+    area = PI * r ** 2
+    return area
+
+print(prac_area_of_circle(6))
+""" We are indicating that r is our parameter that later we pass the value of r when we write it at the moment we call the function
+"""
+
+# We can aslo use a loop into our function. Let's do one
+def prac_sum_loop(n):
+    total = 0
+    for i in range(n+1):
+        total +=i
+        print(total)
+        
+# print(prac_sum_loop(50))
+# print(prac_sum_loop(100))
+print(prac_sum_loop(10))
+
+"""Two Parameter: A function may or may not have a parameter or parameters. A function may also have two or more parameters. If our function takes parameters we should call it with arguments. Let us check a function with two parameters:
+
+# syntax
+  # Declaring a function
+  def function_name(para1, para2):
+    codes
+    codes
+  # Calling function
+  print(function_name(arg1, arg2))
+
+It's important when we call the function to pass both parameters
+
+"""
+
+def func_with_two_param(first_name, last_name):
+    space = ' '
+    full_name = first_name + space + last_name
+    return full_name;
+
+print('The client name is: ', func_with_two_param('Carlos', 'Costas'))
+
+# Now with numbers
+def func_with_numbers(num_one, num_two):
+    total_sum = num_one + num_two
+    return total_sum;
+
+print('The total sum is: ', func_with_numbers(5, 14))
+
+def calc_current_age(current_year, birth_year):
+    age = current_year - birth_year
+    return age;
+
+print('Carlos current age is: ', calc_current_age(2024, 1982))
+
+def calc_object_weight(mass, gravity):
+    weight = str(mass * gravity) + ' N' # After the calculation we convert the value into a string
+    return weight;
+
+print('The weight of our client is: ', calc_object_weight(82, 9.81)) # It is expresed in newtons
+
+"""Passing Arguments with Key and Value
+If we pass the arguments with key and value, the order of the arguments does not matter.
+
+# syntax
+# Declaring a function
+def function_name(para1, para2):
+    codes
+    codes
+# Calling function
+print(function_name(para1 = 'John', para2 = 'Doe')) # the order of arguments does not matter here
+
+We can pass the key-value pair from the dictionaries as arguments in our functions
+"""
+
+def print_full_name(firstname, lastname):
+    space = ' '
+    full_name = firstname + space + lastname
+    return full_name
+
+print(print_full_name(firstname= 'Raul', lastname= 'Estevez'))
+
+def print_twonumb_add(num1, num2):
+    total_sum = num1 + num2
+    return total_sum
+
+print(print_twonumb_add(num1= 4, num2 = 8))
+
+"""Function Returning a Value - Part 2
+If we do not return a value with a function, then our function is returning None by default. To return a value with a function we use the keyword return followed by the variable we are returning. We can return any kind of data types from a function.
+
+Returning a string: Example:
+def print_name(firstname):
+    return firstname
+print_name('Asabeneh') # Asabeneh
+
+"""
+
+# Returning a boolean: Example:
+def is_even (n):
+    if n % 2 == 0:
+        print('even')
+        return True    # return stops further execution of the function, similar to break 
+    return False
+print(is_even(10)) # True
+print(is_even(7)) # False
+
+
+# Returning a list: Example:
+def find_even_numbers(n):
+    evens = []
+    for i in range(n + 1):
+        if i % 2 == 0:
+            evens.append(i)
+    return evens
+print(find_even_numbers(10))
+
+"""
+Function with Default Parameters
+
+Sometimes we pass default values to parameters, when we invoke the function. If we do not pass arguments when calling the function, their default values will be used.
+
+# syntax
+# Declaring a function
+def function_name(param = value):
+    codes
+    codes
+# Calling function
+function_name()
+function_name(arg)
+
+The default value is the one that we pass with the params => def afunction(param = default_value)
+
+"""
+
+def param_greettings(name = 'Pedro'):
+    message = name + ', welcome to this program'
+    return message
+
+print(param_greettings())
+print(param_greettings('Gonzalo'))
+
+def param_greettings_fullname(name = 'Ramiro', surname = 'Colacho'):
+    space = ' '
+    full_name = name + space + surname
+    return full_name
+
+print(param_greettings_fullname())
+print(param_greettings_fullname(name = 'Juan', surname = 'Mosquito'))
+
+def param_calculate_age (birth_year,current_year = 2021):
+    age = current_year - birth_year
+    return age;
+
+print('Age: ', param_calculate_age(1821))
+
+def param_weight_of_object (mass, gravity = 9.81):
+    weight = str(mass * gravity)+ ' N' # the value has to be changed to string first
+    return weight
+
+print('Weight of an object in Newtons: ', param_weight_of_object(100)) # 9.81 - average gravity on Earth's surface
+print('Weight of an object in Newtons: ', param_weight_of_object(100, 1.62)) # gravity on the surface of the Moon
+
+"""Arbitrary Number of Arguments
+If we do not know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding * before the parameter name.
+
+# syntax
+# Declaring a function
+def function_name(*args):
+    codes
+    codes
+# Calling function
+function_name(param1, param2, param3,..)
+
+We use the * when we don't know how many params we are going to pass. We can use the args
+"""
+
+def various_params(*args):
+    total = 0
+    for n in args:
+        total += n # It will take all the values passed to the function
+    return total
+
+print(various_params(10, 3, 5))
+
+# Default and Arbitrary Number of Parameters in Functions
+def param_generate_groups(team, *args):
+    print(team)
+    for i in args:
+        print(i)
+        
+print(param_generate_groups('Team-1','Asabeneh','Brook','David','Eyob'))
+
+# Function as a Parameter of Another Function
+#You can pass functions around as parameters
+
+def square_number (n):
+    return n * n
+def do_something(f, x):
+    return f(x)
+
+print(do_something(square_number, 3)) # 27
