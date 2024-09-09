@@ -24,6 +24,8 @@ Function without Parameters
 Function can be declared without parameters. We can create a function without parameters with all the tasks we want to be performed. If we want to pass parameters to the function we need to add them into between the ()
 
 """
+
+
 def practice_function():
     name = 'Tito'
     surname = 'Colazzo'
@@ -308,3 +310,110 @@ def do_something(f, x):
     return f(x)
 
 print(do_something(square_number, 3)) # 27
+
+# EXERCISES - DAY 11
+
+#1
+def add_two_numbers(num1, num2):
+    total_sum = num1 + num2
+    return total_sum
+
+add_two_numbers(2, 6)
+
+#2
+def area_of_circle(r):
+    PI = 3.14
+    circle_area = PI * r ** 2
+    return circle_area
+
+area_of_circle(6)
+
+#3
+def add_all_nums(*args):
+    total_sum = 0
+    for i in args:
+            if not isinstance(i, (int, float)):
+                return 'Please insert a number'
+    else:
+        for n in args:
+            total_sum += n # Don't forget to declare before the variable
+        
+    return total_sum
+print(add_all_nums('house'))
+print(add_all_nums(3, 6, 7))
+
+#4
+def cel_to_fah(c):
+    
+    if not isinstance(c, (int, float)):
+        return 'Please insert a celcius number'
+    else:
+        f = (c * 9 / 5) + 32
+        return print(f'Your {c}ºC temperature to fahrenheit is {f}ºF')
+    
+cel_to_fah(32)
+
+#5
+def check_season(x):
+    x = str(x)
+    if x == 'december' or x == 'january' or x == 'febrary' or x == 'march':
+        return 'Your season is Winter'
+    elif x == 'april' or x == 'may' or x == 'june':
+        return 'Your season is Spring'
+    elif x == 'july' or x == 'august' or x == 'september':
+        return 'Your season is Summer'
+    else:
+        return 'Your season is Autumn'
+        
+# check_season(input('Enter your month:'))
+
+#7
+def solve_quadratic_eqn():
+    a = float(input('Enter the value of a:'))
+    b = float(input('Enter the value of b:'))
+    c = float(input('Enter the value of c:'))
+    d = b**2-4*a*c
+    
+    if d < 0:
+        return 'This equation has no real solution'
+    elif d == 0:
+        x = -b +- (b ** 2 - 4 * a * c) ** 0.5 / 2 * a
+        return f'The solution to this equation is {x}'
+    
+# solve_quadratic_eqn()
+
+#8
+def print_list(x):
+    for i in range(len(x)):
+        print(x[i])
+        
+print_list(x = ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'])
+
+#9
+def reverse_list(x):
+    return x[::-1]
+
+def reverse_list1(lst):
+    reversed_list = []
+    for i in range(len(lst) -1, -1, -1):
+        reversed_list.append(lst[i])
+        
+    return reversed_list
+
+print(reverse_list([1, 2, 3, 4, 5]))
+# [5, 4, 3, 2, 1]
+print(reverse_list1(["A", "B", "C"]))
+# ["C", "B", "A"]
+
+#10
+cars = ['bmw', 'toyota', 'audi', 'porsche', 'ferrari']
+
+def capitalize_items(lst):
+    capitalize_list = ' '.join(lst)
+    x = capitalize_list.upper()
+    s = x.split(' ')
+    return s
+
+capitalize_items(cars)
+
+#11
