@@ -417,3 +417,153 @@ def capitalize_items(lst):
 capitalize_items(cars)
 
 #11
+
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+numbers = [2, 3, 7, 9]
+
+def add_item(lst, item):
+    if type(item) == str:
+        
+        lst.append(item)
+        return lst
+    else:
+        lst.append(item)
+        return lst
+        
+print(add_item(food_staff, 'Meat')) # ['Potato', 'Tomato', 'Mango', 'Milk','Meat']
+print(add_item(numbers, 5)) # [2, 3, 7, 9, 5]
+
+#12
+def remove_item(lst, item):
+    if item in lst:
+        lst.remove(item)
+        return lst
+    
+print(remove_item(food_staff, 'Mango'))  # ['Potato', 'Tomato', 'Milk'];
+print(remove_item(numbers, 3))  # [2, 7, 9]
+
+#13
+def sum_all_range_num(num):
+    total_sum = 0
+    for i in range(num + 1):
+        total_sum += i
+        
+    return total_sum
+
+print(sum_all_range_num(5))  # 15
+print(sum_all_range_num(10)) # 55
+print(sum_all_range_num(100)) # 5050
+
+#14
+def sum_all_odds(num):
+    odds = []
+    for i in range(num + 1):
+        if i % 2 != 0:
+            odds.append(i)
+            
+    return odds
+
+print(sum_all_odds(100))
+
+#15
+def sum_all_evens(num):
+    evens = []
+    for i in range(num + 1):
+        if i % 2 == 0:
+            evens.append(i)
+            
+    return evens
+
+print(sum_all_evens(80))
+
+# Exercises level 2
+
+#1
+def evens_and_odds(num):
+    evens = []
+    odds = []
+    for i in range(num + 1):
+        if i % 2 == 0:
+            evens.append(i)
+        else:
+            odds.append(i)
+
+    return f'The number off evens is: {len(evens)}, the number of odds is: {len(odds)}'
+
+print(evens_and_odds(100))
+print(evens_and_odds(75))
+
+#2
+# A example using a recursive function
+def factorial(x):
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return (x * factorial(x-1))
+    
+print(factorial(8))
+
+#3
+def is_empty(param):
+    if param is None:
+        return True
+    elif isinstance(param, str) and len(param) == 0:
+        return True
+    elif isinstance(param, (list, tuple, dict)) and len(param) == 0:
+        return True
+    
+    return False
+
+print(is_empty(""))          # True (empty string)
+print(is_empty([]))          # True (empty list)
+print(is_empty({}))          # True (empty dictionary)
+print(is_empty(None))        # True (None)
+print(is_empty("Hello"))     # False (non-empty string)
+print(is_empty([1, 2, 3]))   # False (non-empty list)
+
+#4
+# They should calculate_mean, calculate_median, calculate_mode, 
+# calculate_range, calculate_variance, calculate_std (standard deviation).
+numb_to_calculate = [10, 26, 68, 23 , 45, 32, 85, 11, 9, 5]
+
+def calculate_mean(data):
+    total_sum = 0
+    for i in range(len(data)):
+        total_sum += data[i]
+    
+    return total_sum / len(data)
+
+print(calculate_mean(numb_to_calculate))
+
+def calculate_median(data):
+    x = data.copy()
+    sorted_data = x.sort()
+    n = len(x)
+    mid = n // 2
+    if n % 2 == 0:
+        return (x[mid - 1] + x[mid]) / 2
+    else:
+        return x[mid]
+    
+print(calculate_median(numb_to_calculate))
+
+def calculate_mode(data):
+    mode = {}
+    for n in data:
+        mode[n] = mode.get(n, 0) + 1
+    
+    max_freq = max(mode.values())
+    modes = [key for key, value in mode.items() if value == max_freq]
+    return modes
+
+print(calculate_mode(numb_to_calculate))
+
+def calculate_range(data):
+    sort_min_data = sorted(data)
+    sort_max_data = sorted(data, reverse = True)
+    min = sort_min_data[0]
+    max = sort_max_data[0]
+    
+    return max - min
+
+print(calculate_range(numb_to_calculate))
