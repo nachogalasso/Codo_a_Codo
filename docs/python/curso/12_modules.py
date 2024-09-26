@@ -23,6 +23,7 @@ We can have many functions in a file and we can import all the functions differe
 Now let's import the module from mymodule.py
 """
 
+from hashlib import new
 import mymodule # then we will required to indicate the module and function
 
 # Let's use the function inside mymodule.py
@@ -183,6 +184,7 @@ print(randint(5, 20)) # it returns a random integer number between [5, 20] inclu
 #1
 import string
 from random import randint
+import random
 
 print(string.ascii_letters) 
 print(string.digits) 
@@ -239,8 +241,99 @@ def total_num_id(lst):
     return user_ids    
 
 
-user_ids = total_num_id(cht_list())
-for user_id in user_ids:
-    print(f'Your user id is:', {user_id})
+# user_ids = total_num_id(cht_list())
+# for user_id in user_ids:
+#     print(f'Your user id is:', {user_id})
 
 #3
+def rgb_color_gen():
+    num1= randint(0, 256)
+    num2= randint(0, 256)
+    num3= randint(0, 256)
+    return f'rgb({num1}, {num2}, {num3})'
+
+print('Your random rgb color is: ', rgb_color_gen())
+
+# Exercises 2
+
+#1
+def list_of_hexa_colors(num):
+    h_lst = []
+    hexa_colors = []
+    
+    for i in string.ascii_letters:
+        h_lst += i
+        if i == 'f':
+            break
+
+    for j in string.digits:
+        h_lst.append(j)
+    
+
+    for k in range(num):
+        hexa = []
+        for n in range(0, 6):
+            hexa.append(randint(0, len(h_lst) - 1))
+        color = ''.join(h_lst[index] for index in hexa)
+        h_color = '#' + color
+        hexa_colors.append(h_color)
+    
+    return hexa_colors
+   
+
+def list_of_rgb_colors(num):
+    rgb_colors = []
+    
+    for i in range(num):
+        num1= randint(0, 256)
+        num2= randint(0, 256)
+        num3= randint(0, 256)
+        rgb_colors.append(f'rgb({num1}, {num2}, {num3})')
+        
+    return rgb_colors
+
+print(list_of_hexa_colors(3))
+print(list_of_rgb_colors(3))
+
+
+def generate_colors(str, num):
+    
+    if str == 'hexa':
+        return list_of_hexa_colors(num)
+    else:
+        return list_of_rgb_colors(num)
+    
+
+print(generate_colors('hexa', 3))
+print(generate_colors('hexa', 1))
+print(generate_colors('rgb', 3))
+print(generate_colors('rgb', 1))
+
+# Exercises 3
+
+#1
+def shuffled_lst(lst):
+    print(lst)
+    n = len(lst)
+    
+    for i in range(n-1, 0, -1):
+        q = randint(0, i)
+        lst[i], lst[q] = lst[q], lst[i]
+    
+    return lst
+    
+
+lst_to_shuffle = [0, 1, 2, 3, 4, 5]
+print(shuffled_lst(lst_to_shuffle))
+
+#2
+def unique_random_num():
+    unique_num = set()
+    
+    while len(unique_num) < 7:
+        number = random.randint(0, 9)
+        unique_num.add(number)
+        
+    return list(unique_num)
+
+print(unique_random_num())
