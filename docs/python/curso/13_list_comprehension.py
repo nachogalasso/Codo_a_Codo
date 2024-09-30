@@ -145,3 +145,50 @@ two_power_five = power(2)(5)
 print(two_power_five)
 
 # EXERCISES DAY 13
+
+#1
+numbers1 = [-4, -3, -2, -1, 0, 2, 4, 6]
+negative_num = [i for i in numbers1 if i < 0]
+positive_num = [i for i in numbers1 if i >= 0]
+print(negative_num)
+print(positive_num)
+
+#2
+list_of_lists =[[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]]
+flttd_list = [number for row in list_of_lists for number in row]
+flattened_list = [number for row in flttd_list for number in row]
+print(flattened_list)
+
+#3
+lst_of_tuples = [(i, 1, i ** 2, i ** 3, i ** 4, i ** 5) for i in range(11)]
+for tup in lst_of_tuples:
+    print(f'{tup}')
+    
+
+#4
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+
+upper_countries = [
+    (country[0].upper(), country[0][:3].upper(), country[1].upper()) 
+    for country_lst in countries
+    for country in country_lst]
+    
+print(upper_countries)
+
+#5
+country_dict = [
+    {'country':country[0].upper(), 'city':country[1].upper()} 
+    for country_lst in countries 
+    for country in country_lst]
+print(country_dict)
+
+#6
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+
+con_strings = [' '.join(name) 
+               for name_list in names 
+               for name in name_list]
+
+print(con_strings)
+
+#7
