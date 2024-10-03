@@ -409,3 +409,77 @@ chain_lst_iterator = map(upper_countries, filter(country_with_land, countries))
 print(list(chain_lst_iterator))
 
 #9
+alst = [1, 'hello', 3.14, 'world', True, 'Python', False, 'here', 2.58, 'to practice']
+
+def get_string_lst(lst):
+    string_lst = []
+    for item in lst:
+        if isinstance(item, str):
+            string_lst.append(item)
+    return string_lst
+
+print(get_string_lst(alst))
+
+#10
+num_sum = reduce(lambda x, y: x + y, numbers)
+print(num_sum)
+
+#11
+def countries_sentence(accumulated, current):
+    # If the accumulated string is empty, just return the current country
+    if accumulated == "":
+        return current
+    # If it's the last country, format it with 'and'
+    elif current == countries[-1]:
+        return f"{accumulated}, and {current} are north European countries"
+    else:
+        return f"{accumulated}, {current}"
+
+# Use reduce to create the sentence
+new_sentence = reduce(countries_sentence, countries)
+print(new_sentence)
+
+#12
+countries_lst = [
+'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', "Cote d'Ivoire", 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gabon', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Korea, North', 'Korea, South', 'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macedonia', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'Norway', 'Oman', 'Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Qatar', 'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia and Montenegro', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Swaziland', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'];
+
+def categorized_countries(type, country):
+    
+    country_filtered = filter(lambda country: True if type in country else False, country )
+    return list(country_filtered)
+
+print(categorized_countries('land', countries_lst))
+print(categorized_countries('ia', countries_lst))
+print(categorized_countries('island', countries_lst))
+print(categorized_countries('stan', countries_lst))
+
+#13
+def count_countries_by_letter(countries):
+    letter_count = {}
+    for country in countries:
+        fst_letter = country[0].upper()
+        if fst_letter in letter_count:
+            letter_count[fst_letter] += 1
+        else:
+            letter_count[fst_letter] = 1
+            
+    return letter_count
+
+countries_dict = count_countries_by_letter(countries_lst)
+print(countries_dict)
+
+#14
+def first_ten_countries(lst):
+    return lst[:10]
+
+fst_ten_countries = first_ten_countries(countries_lst)
+print(fst_ten_countries)
+
+#15
+def last_ten_countries(lst):
+    return lst[-10:]
+
+lst_ten_countries = last_ten_countries(countries_lst)
+print(lst_ten_countries)
+
+# Exercises 3
