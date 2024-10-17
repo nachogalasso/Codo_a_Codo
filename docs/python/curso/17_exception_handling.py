@@ -168,4 +168,110 @@ If we user the command print(unpacking_person_info(*dct)) the dictionary doesn't
 """
 print(unpacking_person_info(**dct))
 
-"""Packing"""
+"""Packing
+
+Sometimes we never know how many arguments need to be passed to a python function. We can use the packing method to allow our function to take unlimited number or arbitrary number of arguments.
+
+Packing Lists
+
+"""
+
+def sum_all_args(*args):
+    s = 0 # variable to start counting
+    for i in args: # loop to pass through all the args we passed
+        s += i
+    return s
+
+print(sum_all_args(1, 2, 3))             # 6
+print(sum_all_args(1, 2, 3, 4, 5, 6, 7)) # 28
+
+"""
+Packing Dictionaries
+
+Remember when we pack dictionaries we are required to use the two ** before the args. And we are going to call them kwargs. Also remember to check if the type of the args passed are a dictionary.
+
+"""
+def packing_person_name(**kwargs):
+    # check the type of kwargs and it is a dict type
+    # print(type(kwargs))
+    # Printing dictionary items
+    # Again we need to create a loop to pass through all the kwargs we passed to our function
+    for key in kwargs:
+        print(f"{key} = {kwargs[key]}")
+    return kwargs
+
+print(packing_person_name(name="Asabeneh",
+      country="Finland", city="Helsinki", age=250))
+
+"""
+Spreading in Python
+
+Like in JavaScript, spreading is possible in Python. Let us check it in an example below:
+
+By usign the * we can spread list into another list.
+
+"""
+lst_one = [1, 2, 3]
+lst_two = [4, 5, 6, 7]
+# We can create a new list spreading the other ones =>
+lst_spread = [0, *lst_one, *lst_two]
+# Remember to spread a list into another list we need to use the * infront of our var name
+print(type(lst_spread))
+print(lst_spread)
+
+country_lst_one = ['Brasil', 'Argentina', 'Colombia']
+country_lst_two = ['Alemania', 'España', 'Inglaterra', 'Dinamarca']
+country_spread_lst = ['Suecia', 'Francia', *country_lst_one, *country_lst_two]
+print(type(country_spread_lst))
+print(country_spread_lst)
+# The list will be spread in the order we put them into the new list.
+
+"""
+Enumerate
+
+If we are interested in an index of a list, we use enumerate built-in function to get the index of each item in the list.
+
+It's like having or displaying the values into a table, were the index is the row and then the value
+"""
+def index_with_enumerate():
+    lst = [20, 30, 40]
+    for index, item in enumerate(lst):
+        print( index, item )
+    
+print(index_with_enumerate())
+
+def country_salute(countries):
+    for index, i in enumerate(countries):
+        print('hi')
+        if i == 'Argentina':
+            print(f'The country {i} has been found at index {index}')
+            
+print(country_salute(country_lst_one))
+
+"""
+Zip
+
+Sometimes we would like to combine lists when looping through them. See the example below:
+
+"""
+
+fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']                    
+vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']
+fruits_and_veges = []
+for f, v in zip(fruits, vegetables):
+    fruits_and_veges.append({'fruit':f, 'veg':v})
+
+print(fruits_and_veges)
+
+"""
+Exercises: Day 17
+
+names = ['Finland', 'Sweden', 'Norway','Denmark','Iceland', 'Estonia','Russia']. Unpack the first five countries and store them in a variable nordic_countries, store Estonia and Russia in es, and ru respectively.
+
+"""
+
+names = ['Finland', 'Sweden', 'Norway','Denmark','Iceland', 'Estonia','Russia']
+names_inverted = names[::-1]
+*nordic_countries, es, ru = names
+print(names_inverted)
+print(nordic_countries, es, ru)
