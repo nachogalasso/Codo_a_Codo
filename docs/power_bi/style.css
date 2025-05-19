@@ -1,0 +1,45 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+</style>
+
+/* ===  1. RESET  === */
+:root {
+  --title: 'Roboto', Arial, Helvetica, sans-serif;
+  --text: 'Ubuntu', Arial, Helvetica, sans-serif;
+  --mainTransition: all 0.3s linear;  
+  /* muzli colors */
+  --primaryGreen: rgba(0,179,0);
+  --mainDarkgreen: rgba(0,125,0);
+  --mainLightgreen: rgba(191,255,191);
+  --mainRed: rgba(179,0,0);
+  --mainDarkred: rgba(125,0,0);
+  --mainSpacing: .1rem;
+}
+
+html {
+  font-size: 62.5%; 
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
+  object-fit: contain;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: var(--title);
+}
+
+p, a, li,
+label, input, legend {
+  font-family: var(--text);
+}
