@@ -6,9 +6,10 @@
   --mainTransition: all 0.3s linear;  
   /* muzli colors */
   --primary: #f9f5ff;
-  --secondary:#1b365c;
-  --tertiary: #ffd581;
-  --quaternary: #fd9b9e;
+  --secondary:#004C54;
+  /* Darkmode */
+  --darkprimary: #313131;
+  --darksecondary: #f9f5ff;
   --mainSpacing: .1rem;
 }
 
