@@ -9,12 +9,6 @@ navBtn.addEventListener('click', () => {
     navList.classList.toggle('show_nav');
 });
 
-
-// Funciones
-navBtn.addEventListener('click', () => {
-    navList.classList.toggle('show_nav');
-});
-
 const activateDarkMode = () => {
     document.body.classList.add('darkmode');
     localStorage.setItem('darkmode', 'active');
