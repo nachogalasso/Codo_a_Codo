@@ -105,7 +105,6 @@ a {
   justify-content: space-around;
   margin: 1rem 0 0 0;
   padding: .5rem;
-  /* width: 80%; */
   position:sticky;
   top: 0;
   z-index: 1;
@@ -215,7 +214,7 @@ a {
 /* === NAVBAR === */
 .nav__listlinks {
   position: absolute;
-  width: 35rem;
+  width: 25rem;
   display: flex;
   flex-direction: column;
   margin: 0 .5rem;
@@ -240,17 +239,23 @@ a {
   height: 100vh;
 }
 
+.nav__init_lang img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.nav__init, .nav__init_lang {
+  padding: .5rem 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .nav__module, .nav__module li {
   padding: .5rem;
   font-size: 1.8rem;
   text-wrap: wrap;
   list-style-type: none;
-}
-
-.nav__init {
-  padding: .5rem 1rem;
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 .nav__module_links {
@@ -379,7 +384,7 @@ a:hover {
   }
 
   .main__intro_links a {
-    font-size: 2rem;;
+    font-size: 2rem;
   }
 
 }
@@ -392,7 +397,33 @@ a:hover {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 2rem 0 1rem;
   border-top: var(--secondary) solid .2rem;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  gap: 3rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.footer__contact-item {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__contact {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__contact {
+    font-size: 2.5rem;
+  }
 }
